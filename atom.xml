@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-07T16:55:52.782Z</updated>
+  <updated>2016-06-07T16:58:19.356Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,13 @@
     <link href="http://yoursite.com/2016/04/04/LINQ%20comes%20to%20rescue/"/>
     <id>http://yoursite.com/2016/04/04/LINQ comes to rescue/</id>
     <published>2016-04-03T18:30:00.000Z</published>
-    <updated>2016-06-07T16:55:52.782Z</updated>
+    <updated>2016-06-07T16:58:19.356Z</updated>
     
     <content type="html">&lt;p&gt;Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that we miss this in many places :)&lt;/p&gt;
 &lt;p&gt;Let’s first create a simple class&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/carClass.png&quot; alt=&quot;Car class&quot;&gt;&lt;/p&gt;
+&lt;p&gt;we have list of cars, like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/listOfCars.png&quot; alt=&quot;List of cars&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
