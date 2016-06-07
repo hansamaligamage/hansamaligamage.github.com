@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2016/04/04/LINQ%20comes%20to%20rescue/</loc>
+    
+    <lastmod>2016-06-07T13:08:26.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/02/ODATA%20Reads%20with%20Parameters/</loc>
+    
+    <lastmod>2016-06-05T17:17:11.961Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/19/ODATA%20Reads/</loc>
+    
+    <lastmod>2016-06-03T13:02:01.127Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/01/23/ODATAFeatures/</loc>
+    
+    <lastmod>2016-06-03T10:18:15.894Z</lastmod>
+    
+  </url>
+  
+</urlset>

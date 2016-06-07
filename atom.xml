@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tech Spot</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-06-07T13:08:26.138Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hansamali Gamage</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LINQ comes to rescue!</title>
+    <link href="http://yoursite.com/2016/04/04/LINQ%20comes%20to%20rescue/"/>
+    <id>http://yoursite.com/2016/04/04/LINQ comes to rescue/</id>
+    <published>2016-04-03T18:30:00.000Z</published>
+    <updated>2016-06-07T13:08:26.138Z</updated>
+    
+    <content type="html">&lt;p&gt;Today, I’m going to explain a very small but tricky code part, We daily see this, but never give it a second glance, because of that we miss this in many places :)&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Today, I’m going to explain a very small but tricky code part, We daily see this, but never give it a second glance, because of that we m
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ODATA Reads with Parameters</title>
+    <link href="http://yoursite.com/2016/03/02/ODATA%20Reads%20with%20Parameters/"/>
+    <id>http://yoursite.com/2016/03/02/ODATA Reads with Parameters/</id>
+    <published>2016-03-01T18:30:00.000Z</published>
+    <updated>2016-06-05T17:17:11.961Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Data-READs-with-Parameters&quot;&gt;&lt;a href=&quot;#Data-READs-with-Parameters&quot; class=&quot;headerlink&quot; title=&quot;Data READs with Parameters&quot;&gt;&lt;/a&gt;Data READs with Parameters&lt;/h2&gt;&lt;p&gt;In this post, We’ll focus on how to read a OData service with a parameter.&lt;/p&gt;
+&lt;h2 id=&quot;Service-method-with-a-parameter&quot;&gt;&lt;a href=&quot;#Service-method-with-a-parameter&quot; class=&quot;headerlink&quot; title=&quot;Service method with a parameter&quot;&gt;&lt;/a&gt;Service method with a parameter&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/GetMethodWithParameter.png&quot; alt=&quot;Get Method With a Parameter.&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Now, we’ll see how to retrieve data with a parameter,&lt;/p&gt;
+&lt;h2 id=&quot;Url-in-the-browser&quot;&gt;&lt;a href=&quot;#Url-in-the-browser&quot; class=&quot;headerlink&quot; title=&quot;Url in the browser&quot;&gt;&lt;/a&gt;Url in the browser&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/GetMethodUrl.png&quot; alt=&quot;Get Method Url With a Parameter.&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In browser, we can see only filtered students. in url, append the parameter with values.&lt;/p&gt;
+&lt;h2 id=&quot;Power-Query-Window&quot;&gt;&lt;a href=&quot;#Power-Query-Window&quot; class=&quot;headerlink&quot; title=&quot;Power Query Window&quot;&gt;&lt;/a&gt;Power Query Window&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/PowerQueryWindow.png&quot; alt=&quot;Power Query editor.&quot;&gt;&lt;/p&gt;
+&lt;p&gt;From the Power Query window, we can see dataset like this.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Data-READs-with-Parameters&quot;&gt;&lt;a href=&quot;#Data-READs-with-Parameters&quot; class=&quot;headerlink&quot; title=&quot;Data READs with Parameters&quot;&gt;&lt;/a&gt;Data REA
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ODATA Reads</title>
+    <link href="http://yoursite.com/2016/02/19/ODATA%20Reads/"/>
+    <id>http://yoursite.com/2016/02/19/ODATA Reads/</id>
+    <published>2016-02-19T13:15:36.000Z</published>
+    <updated>2016-06-03T13:02:01.127Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Data-READs&quot;&gt;&lt;a href=&quot;#Data-READs&quot; class=&quot;headerlink&quot; title=&quot;Data READs&quot;&gt;&lt;/a&gt;Data READs&lt;/h2&gt;&lt;p&gt;Let’s start with a newer version of ODATA to access data from a existing service, In this solution I have used &lt;em&gt; Web API 2.2 with ODATA v4 &lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ODATA-v4-package&quot;&gt;&lt;a href=&quot;#ODATA-v4-package&quot; class=&quot;headerlink&quot; title=&quot;ODATA v4 package&quot;&gt;&lt;/a&gt;ODATA v4 package&lt;/h2&gt;&lt;p&gt;Visual Studio has a built in package to create ODATA v4 services, Package contains all the libraries required to create a ODATA v4 endpoint.&lt;/p&gt;
+&lt;h2 id=&quot;Integrate-ODATA-v4-package-into-solution&quot;&gt;&lt;a href=&quot;#Integrate-ODATA-v4-package-into-solution&quot; class=&quot;headerlink&quot; title=&quot;Integrate ODATA v4 package into solution&quot;&gt;&lt;/a&gt;Integrate ODATA v4 package into solution&lt;/h2&gt;&lt;p&gt;We can add the necessary OData package into solution like this, Select &lt;em&gt; Microsoft ASP.NET Web API 2.2 for OData v4.0 &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nugetPackageManagementStore.png&quot; alt=&quot;nuget package management store.&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;All-the-relevant-libraries-are-installing&quot;&gt;&lt;a href=&quot;#All-the-relevant-libraries-are-installing&quot; class=&quot;headerlink&quot; title=&quot;All the relevant libraries are installing&quot;&gt;&lt;/a&gt;All the relevant libraries are installing&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/odataRelatedPackagesInstall.png&quot; alt=&quot;All the ODATA related libraries are installing.&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Register-OData-endpoint&quot;&gt;&lt;a href=&quot;#Register-OData-endpoint&quot; class=&quot;headerlink&quot; title=&quot;Register OData endpoint&quot;&gt;&lt;/a&gt;Register OData endpoint&lt;/h2&gt;&lt;p&gt;Register service endpoint in Register method of WebApiConfig file&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/registerServiceEndpoints.png&quot; alt=&quot;Register service endpoints.&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In line no 22, I have exposed the Student entity, Data read method is implemented in OData controller, &lt;em&gt; StudentController &lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Student-Controller-implements-OData-Controller&quot;&gt;&lt;a href=&quot;#Student-Controller-implements-OData-Controller&quot; class=&quot;headerlink&quot; title=&quot;Student Controller implements OData Controller&quot;&gt;&lt;/a&gt;Student Controller implements OData Controller&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/studentController.png&quot; alt=&quot;Student Controller&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;StudentController&lt;/em&gt; inherits from OData Controller, So all the CRUD operations related to student can be implemented in this controller.&lt;/p&gt;
+&lt;h2 id=&quot;How-it-works-in-the-browser&quot;&gt;&lt;a href=&quot;#How-it-works-in-the-browser&quot; class=&quot;headerlink&quot; title=&quot;How it works in the browser&quot;&gt;&lt;/a&gt;How it works in the browser&lt;/h2&gt;&lt;p&gt;now ping to the OData endpoint,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/allAvailableEntities.png&quot; alt=&quot;Available entities&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We can see all the available entities in the endpoint with metadata.&lt;/p&gt;
+&lt;h2 id=&quot;Read-Students&quot;&gt;&lt;a href=&quot;#Read-Students&quot; class=&quot;headerlink&quot; title=&quot;Read Students&quot;&gt;&lt;/a&gt;Read Students&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/readStudents.png&quot; alt=&quot;Read Students&quot;&gt;&lt;/p&gt;
+&lt;p&gt;By appending entity, &lt;em&gt; Student &lt;/em&gt; into url, we can read student data&lt;/p&gt;
+&lt;h2 id=&quot;Read-Data-types&quot;&gt;&lt;a href=&quot;#Read-Data-types&quot; class=&quot;headerlink&quot; title=&quot;Read Data types&quot;&gt;&lt;/a&gt;Read Data types&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/readDatatypes.png&quot; alt=&quot;Read data types&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We can read data types of student using the &lt;em&gt; $metadata &lt;/em&gt; tag&lt;/p&gt;
+&lt;h2 id=&quot;Excel-2016-with-OData-v4&quot;&gt;&lt;a href=&quot;#Excel-2016-with-OData-v4&quot; class=&quot;headerlink&quot; title=&quot;Excel 2016 with OData v4&quot;&gt;&lt;/a&gt;Excel 2016 with OData v4&lt;/h2&gt;&lt;p&gt;We already know office is not only for manipulating documents, We can perform many advanced queries with Excel. Excel supports to fetch data from different other sources, newer update is OData sources &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Excel2016odatav4.png&quot; alt=&quot;Excel 2016 - ODATA v4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In excel 2016, We can connect to a OData source like this,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/dataConnectionWizard.png&quot; alt=&quot;Data connection wizard&quot;&gt;&lt;/p&gt;
+&lt;p&gt;But we get an error!!!!!!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/errorDataConnectionWizard.png&quot; alt=&quot;error from Data connection wizard - office 2016 odata v4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It clearly says Excel 2016 can be only integrated with Odata v3 or any earlier data feeds :) But for your information, with Excel 2016 as well as Excel 2013, we can integrate OData v3 &lt;/p&gt;
+&lt;h2 id=&quot;Excel-2013-amp-OData-v4&quot;&gt;&lt;a href=&quot;#Excel-2013-amp-OData-v4&quot; class=&quot;headerlink&quot; title=&quot;Excel 2013 &amp;amp; OData v4 ?&quot;&gt;&lt;/a&gt;Excel 2013 &amp;amp; OData v4 ?&lt;/h2&gt;&lt;p&gt;With Excel 2013, ODATA v4 is not compatible. But we can use a V3 format service with Excel 2013.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/errorExcel2013ODatav4.png&quot; alt=&quot;error - office 2013 odata v4&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Excel-2016-with-OData-v4-Power-Query&quot;&gt;&lt;a href=&quot;#Excel-2016-with-OData-v4-Power-Query&quot; class=&quot;headerlink&quot; title=&quot;Excel 2016 with OData v4 - Power Query&quot;&gt;&lt;/a&gt;Excel 2016 with OData v4 - Power Query&lt;/h2&gt;&lt;p&gt;With ODATA v4, we can’t use ODATA source option, But we have Power Query option to analyse data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Excel2016ODatav4WithPowerQuery.png&quot; alt=&quot;Excel 2016 - ODATA v4 with Power Query&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In Data tab, we have many options to fetch data from different other sources, We can select &lt;em&gt;From OData Feed&lt;/em&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/powerQueryOdatafeed.png&quot; alt=&quot;PowerQuery - Odata feed&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We can use Office 2016 Power Query option with OData v4.&lt;/p&gt;
+&lt;h2 id=&quot;Power-Query-Editor&quot;&gt;&lt;a href=&quot;#Power-Query-Editor&quot; class=&quot;headerlink&quot; title=&quot;Power Query Editor&quot;&gt;&lt;/a&gt;Power Query Editor&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/powerQueryEditor.png&quot; alt=&quot;PowerQuery editor&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This is the query editor, we can select/remove columns, can remove duplicates, group by a column, create a new column based on a mathematical function and much more advanced operations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/queryEditorWindow.png&quot; alt=&quot;Query editor window&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In the next section, we’ll see how to read data by passing a value :)&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Data-READs&quot;&gt;&lt;a href=&quot;#Data-READs&quot; class=&quot;headerlink&quot; title=&quot;Data READs&quot;&gt;&lt;/a&gt;Data READs&lt;/h2&gt;&lt;p&gt;Let’s start with a newer version of OD
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ODATA Features</title>
+    <link href="http://yoursite.com/2016/01/23/ODATAFeatures/"/>
+    <id>http://yoursite.com/2016/01/23/ODATAFeatures/</id>
+    <published>2016-01-23T13:15:36.000Z</published>
+    <updated>2016-06-03T10:18:15.894Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;ODATA&quot;&gt;&lt;a href=&quot;#ODATA&quot; class=&quot;headerlink&quot; title=&quot;ODATA&quot;&gt;&lt;/a&gt;ODATA&lt;/h2&gt;&lt;p&gt;ODATA is a open data protocol to access data using REST architecture. ODATA is a Microsoft standard, but available with Android &amp;amp; IOS platforms as well. ODATA supports for JSON and Atom formats. With the help of ODATA , we can access data in variety of sources like relational databases, Web sites, File systems and Content Management Systems.&lt;/p&gt;
+&lt;h2 id=&quot;ODATA-has-more-features-than-REST&quot;&gt;&lt;a href=&quot;#ODATA-has-more-features-than-REST&quot; class=&quot;headerlink&quot; title=&quot;ODATA has more features than REST!&quot;&gt;&lt;/a&gt;ODATA has more features than REST!&lt;/h2&gt;&lt;p&gt;REST is an architectural pattern to implement a service, But with ODATA it’s going to provide more features to more sources like File systems, Content Management Systems. ODATA services supports for query options like filter, select, expand, order by and many more. As per our requirement, we can filter the result set, order as we want. And we can skip some rows, Even we can select the top row as well.&lt;/p&gt;
+&lt;h2 id=&quot;It’s-2016&quot;&gt;&lt;a href=&quot;#It’s-2016&quot; class=&quot;headerlink&quot; title=&quot;It’s 2016!!!!&quot;&gt;&lt;/a&gt;It’s 2016!!!!&lt;/h2&gt;&lt;p&gt;Microsoft has introduced variety of features with Office 2016, If your old REST services are using ODATA protocol, We can implement a simple power BI solution just with Excel itself.&lt;/p&gt;
+&lt;h2 id=&quot;ODATA-Versions-so-far&quot;&gt;&lt;a href=&quot;#ODATA-Versions-so-far&quot; class=&quot;headerlink&quot; title=&quot;ODATA Versions so far&quot;&gt;&lt;/a&gt;ODATA Versions so far&lt;/h2&gt;&lt;p&gt;After ODATA V2 and ODATA V3, Now ODATA V4 has been released as a major release. If you want to build a open data service, we can use &lt;strong&gt; ODATA v4 with WebAPI 2.2 &lt;/strong&gt; as a solution.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ODATA&quot;&gt;&lt;a href=&quot;#ODATA&quot; class=&quot;headerlink&quot; title=&quot;ODATA&quot;&gt;&lt;/a&gt;ODATA&lt;/h2&gt;&lt;p&gt;ODATA is a open data protocol to access data using REST ar
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
