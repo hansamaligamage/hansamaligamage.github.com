@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-07T13:08:26.138Z</updated>
+  <updated>2016-06-07T16:52:56.154Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,15 @@
     <link href="http://yoursite.com/2016/04/04/LINQ%20comes%20to%20rescue/"/>
     <id>http://yoursite.com/2016/04/04/LINQ comes to rescue/</id>
     <published>2016-04-03T18:30:00.000Z</published>
-    <updated>2016-06-07T13:08:26.138Z</updated>
+    <updated>2016-06-07T16:52:56.154Z</updated>
     
-    <content type="html">&lt;p&gt;Today, I’m going to explain a very small but tricky code part, We daily see this, but never give it a second glance, because of that we miss this in many places :)&lt;/p&gt;
+    <content type="html">&lt;p&gt;Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that we miss this in many places :)&lt;/p&gt;
+&lt;p&gt;Let’s first create a simple class&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;Today, I’m going to explain a very small but tricky code part, We daily see this, but never give it a second glance, because of that we m
+      &lt;p&gt;Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that
     
     </summary>
     
