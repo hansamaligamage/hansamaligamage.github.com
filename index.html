@@ -64,6 +64,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-NLog-Configurations" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/29/NLog-Configurations/" class="article-date">
+  <time datetime="2016-06-28T18:30:00.000Z" itemprop="datePublished">2016-06-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/29/NLog-Configurations/">NLog Configurations</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.</p>
+<h2 id="NLog"><a href="#NLog" class="headerlink" title="NLog"></a>NLog</h2><p>NLog is a free logging framework to log various kind of messages into a specified place. We can use NLog in a .NET environment, as well as with Xamarin and Windows phone.</p>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>If we want to log a message from our application, We can use EventViewer without any libraries. But If we want to share the log file with someone else and analyse it in the future, we can’t do that with Eventviewer.<br> So we have to go for a logging framework if we want to write messages into a file or a database.</p>
+<h2 id="Logging-Frameworks"><a href="#Logging-Frameworks" class="headerlink" title="Logging Frameworks"></a>Logging Frameworks</h2><p> We can use any of these framework for logging purpose, Log4net, NLog, ELMAH, Microsoft Enterprise Library, NSpring, ELMAH is a web logging framework, All the other frameworks can be used with any .NET type of application.<br> When we use NLog or Log4net for logging, it takes just few minutes to integrate it to the application, But performancewise its not the same. NLog is much faster than Log4net and as well as all the above mentioned logging frameworks.<br> NSpring also easy to setup, but it requires more coding to log a message. With a large scale enterprise application, It will be tedious to work with NSpring.<br> Microsoft Enterprise Library (EntLib) is much faster, But need heavy configurations and coding to work with it. ELMAH is a web logger, It’s going to log the messages into a xml file by default.</p>
+<p> If you application needs file logging and more performance, better to go with NLog or NSpring. We can use Log4net also, it’s not that much faster, but easy to setup and use it in the application</p>
+<h2 id="Install-NLog"><a href="#Install-NLog" class="headerlink" title="Install NLog"></a>Install NLog</h2><p> Latest stable version of NLog up to now is NLog 4.3.5. With Nuget Package manager, I installed NLog,</p>
+<p><img src="/images/NLogInstall.png" alt="NLog Installation in Package Manager"></p>
+<h2 id="NLog-Targets"><a href="#NLog-Targets" class="headerlink" title="NLog Targets"></a>NLog Targets</h2><p> NLog targets are used to show, store or pass the message into another destination.<br> Some commonly used NLog targets are shown below.<br> Console : writes message to a console window.<br> Event Log : writes message to event viewer.<br> Debugger : writes messagee to the attatched debugger.<br> File : writes log message to a file.<br> Database : store log message in database.<br> Memory : can write log message into a arraylist in memory.<br> Mail : send log message by email.<br> Method call : For log message, calls specific static method.<br> Network : send log message over a network.<br> Service : calls a web service for each log message.<br>And if these targets dont satisfy your requirements, you can create your own target, (custom target)</p>
+<h2 id="Target-Layout"><a href="#Target-Layout" class="headerlink" title="Target Layout"></a>Target Layout</h2><p> Target layout means how our log message is going to display, in which format, which order. We can create custom layout renders as well.<br> Commonly used layouts are as follows,<br> ${callsite} : Class name, method name or source information of the log message.<br> ${callsite-linenumber} : line no of call site source.<br> ${date} : date and time<br> ${exception} : exception details<br> ${level} : log level<br> ${logger} : logger name<br> ${longdate} : date and time in long format.<br> ${message} : log message.<br> ${stacktrace} : stack trace</p>
+<h2 id="NLog-rules"><a href="#NLog-rules" class="headerlink" title="NLog rules"></a>NLog rules</h2><p> NLog rules are called as a log routing table. It’s going to matches with a target and writes into a log with specified layout.<br> Some of the attributes in NLog rules,<br> name : logger name,<br> minlevel : minimum log level for a rule to match<br> maxlevel : maximum log level for a rule to match<br> level : single log level for a rule to match<br> levels : comma seperated list of logs for a rule to match<br> write to : comma seperated list of targets to be written when a rule matches<br> final : no further rules are processed when this rule matches<br> enabled : going to disable/enable rules</p>
+<h2 id="Nlog-levels"><a href="#Nlog-levels" class="headerlink" title="Nlog levels"></a>Nlog levels</h2><p> One thing to note, In these level attribute, log messages are ordered from type. Trace is the minlevel log type, then Debug, Info, Warn, Error and Fatal.<br> Trace level can be used when we need to notify the begining and end of a method, From Debug logs, we can identify whether session is expired, user is authenticated. Info logs are used for more generic scenarios like, Email sent.<br> Warn level can be used to notify warnings, Error logs are used for exceptions and when application crashes. Fatal logs are highest level, for most important cases.</p>
+<h2 id="Let’s-see-what’s-in-action"><a href="#Let’s-see-what’s-in-action" class="headerlink" title="Let’s see what’s in action"></a>Let’s see what’s in action</h2><p> In configuration file, I have configured log type and log level, I have used file logging, Trace as a minimum logging level.</p>
+<p> picccc</p>
+<p> In code, I have written like this, </p>
+<p> piccccccc</p>
+<p> Let’s check how it’s written in the log file</p>
+<p> piccccccccc</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/29/NLog-Configurations/" data-id="ciq2m70j50002u0gcyqnqa2ul" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-LINQ comes to rescue" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/04/04/LINQ comes to rescue/" class="article-date">
@@ -101,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciq141l7c0001gsgch6ef8tbb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciq2m70j50001u0gcmyagfthu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciq141l7f0002gsgcd7l0bxad" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciq2m70ip0000u0gc45n7z75i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciq141l7h0003gsgcbglw3zew" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciq2m70j50003u0gc3cujb6o0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -255,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciq141l7j0004gsgc888j9muu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciq2m70j50004u0gcxqbfkxim" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,7 +335,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
     </div>
   </div>
 
@@ -293,6 +346,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/06/29/NLog-Configurations/">NLog Configurations</a>
+          </li>
         
           <li>
             <a href="/2016/04/04/LINQ comes to rescue/">LINQ comes to rescue!</a>
