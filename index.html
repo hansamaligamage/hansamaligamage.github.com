@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,89 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Easy-steps-to-create-a-windows-service" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/" class="article-date">
+  <time datetime="2016-07-18T18:30:00.000Z" itemprop="datePublished">2016-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/19/Easy-steps-to-create-a-windows-service/">Schedule your tasks with a windows service</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>If you want to schedule something to run or your program takes long time to process, Sometimes we may have to create a seperate service application,<br>What i happened to write this post is, My client wanted me to write an application to send emails in specific time periods, So to achieve that I thought of writing a windows service application.<br>We can install this service in your server or local computer and configure it to run on intervals using a timer. Let’s start coding.</p>
+<h2 id="Create-a-Windows-service"><a href="#Create-a-Windows-service" class="headerlink" title="Create a Windows service"></a>Create a Windows service</h2><p>When we create a windows service from visual studio, It gives us a service class with constructor method, OnStart and OnStop methods as follows.</p>
+<p><img src="/images/defaultMethods.PNG" alt="default methods"></p>
+<h2 id="Scheduling-the-task-with-a-timer"><a href="#Scheduling-the-task-with-a-timer" class="headerlink" title="Scheduling the task with a timer"></a>Scheduling the task with a timer</h2><p>I need to periodically perform a task, for that i need a timer component, We can add a timer into our service design from toolbox</p>
+<p><img src="/images/timer.PNG" alt="Adding a timer"></p>
+<h2 id="Fill-up-OnStart-method"><a href="#Fill-up-OnStart-method" class="headerlink" title="Fill up OnStart method"></a>Fill up OnStart method</h2><p>we need to initialise timer component inside the OnStart method, then I set timer interval and added a elapsed event to track each interval.</p>
+<p><img src="/images/onStartMethod.PNG" alt="onStart method"></p>
+<h2 id="Actual-scheduling-done-in-here"><a href="#Actual-scheduling-done-in-here" class="headerlink" title="Actual scheduling done in here"></a>Actual scheduling done in here</h2><p>inside timer elapsed event, actual task is going to run. elapsed event is called for each 2 minutes according to this code sample</p>
+<p><img src="/images/timerElapsd.PNG" alt="timer Elapsed method"></p>
+<h2 id="How-to-stop-the-execution"><a href="#How-to-stop-the-execution" class="headerlink" title="How to stop the execution"></a>How to stop the execution</h2><p>to stop the execution, OnStop event is used.</p>
+<p><img src="/images/stopEvent.PNG" alt="stop event"></p>
+<h2 id="How-to-install-the-windows-service"><a href="#How-to-install-the-windows-service" class="headerlink" title="How to install the windows service"></a>How to install the windows service</h2><p>Before installing the service in your pc, we need to create a installer class,</p>
+<p><img src="/images/installer.PNG" alt="Installer class"></p>
+<p>Add installer class as shown above</p>
+<h2 id="Installer-Class"><a href="#Installer-Class" class="headerlink" title="Installer Class"></a>Installer Class</h2><p>in Installer class, we need to give a service name, so we can identify the service by its name. </p>
+<p><img src="/images/installerCode.PNG" alt="Installer class code"></p>
+<h2 id="Let’s-install-the-service"><a href="#Let’s-install-the-service" class="headerlink" title="Let’s install the service"></a>Let’s install the service</h2><p>service is getting created after we build the application. we can find the .exe file in the bin folder. But we can’t install the service by double clicking on it<br>we  have to install it to the local pc or server</p>
+<h2 id="InstallUtil"><a href="#InstallUtil" class="headerlink" title="InstallUtil"></a>InstallUtil</h2><p>InstallUtil.exe is used to install/uninstall services in local machine or server. We can run installUtil command from Developer command prompt, </p>
+<p><img src="/images/Installutil.PNG" alt="Installutil"></p>
+<p>But this doesn’t going to install the service, It throws an error.</p>
+<p><img src="/images/errorInstallUtil.PNG" alt="Installutil permission issue"></p>
+<p>It seems like we don’t have access to install the service, I had to spend few minutes to find the issue,<br>run Developer commad prompt as administrator, then this permission issue is getting resolved.</p>
+<p>We can install a service using cmd as well,</p>
+<p><img src="/images/cmd.PNG" alt="installutil in cmd"></p>
+<p>run cmd as administrator, then we can install the service using cmd as well.</p>
+<h2 id="View-services"><a href="#View-services" class="headerlink" title="View services"></a>View services</h2><p>We can check available services, by just typing services in your program list.</p>
+<p><img src="/images/services.PNG" alt="logic of the service"></p>
+<p>I gave service name as ‘test service’ in installer class.</p>
+<h2 id="Windows-service-on-Local-Computer-started-and-then-stopped"><a href="#Windows-service-on-Local-Computer-started-and-then-stopped" class="headerlink" title="Windows service on Local Computer started and then stopped"></a>Windows service on Local Computer started and then stopped</h2><p>I tried to start the service from the panel, But it didnt work,<br>I came across with this issue as well, spent lot of hours to find the issue, this issue comes normally when code has some kind of a error. It’s somewhat difficult to debug a windows service application to find out errors, </p>
+<h2 id="Debug-a-windows-service-application-easily"><a href="#Debug-a-windows-service-application-easily" class="headerlink" title="Debug a windows service application easily"></a>Debug a windows service application easily</h2><p>normally in a windows service, program.cs looks like this.</p>
+<p><img src="/images/programcs.PNG" alt="program.cs file"></p>
+<p>If we want to check whether our service implementation has any issue, we can use this trick</p>
+<p><img src="/images/manualstart.PNG" alt="manually start the service"></p>
+<p>manually start a method that has exact same code as the service implementation.<br>inside of start method implementation, we can check whether service logic works fine.</p>
+<p><img src="/images/manualStartLogic.PNG" alt="logic of the service"></p>
+<p>using this trick, we can identify our service logic is working fine.</p>
+<p>Another way of testing the program logic is, create another console application and call service logic method from console app and verify it works fine.</p>
+<h2 id="Debugger-Launch"><a href="#Debugger-Launch" class="headerlink" title="Debugger Launch"></a>Debugger Launch</h2><p>If we want to debug onStart method, we can launch the debugger in start method</p>
+<p><img src="/images/debuggerLaunch.PNG" alt="launch the debugger"></p>
+<p>we can launch the debugger like this,</p>
+<p><img src="/images/launchDebugger.PNG" alt="launch the debugger"></p>
+<p>we can debug the code like this.</p>
+<p><img src="/images/debugMode.PNG" alt="launch the debugger"></p>
+<p>But in here specific file we attatched into debugger is getting loaded. So other files are not loaded. Only we can debug the service file as this code sample shows.</p>
+<h2 id="Windows-service-can’t-connect-to-the-database"><a href="#Windows-service-can’t-connect-to-the-database" class="headerlink" title="Windows service can’t connect to the database"></a>Windows service can’t connect to the database</h2><p>In my service, i need to access to the database, But it gives me an error like this.</p>
+<p><strong> Login failed. Login failed for user ‘NT AUTHORITY\SYSTEM’ </strong></p>
+<p>windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database<br>To resolve this add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="ciqtbsucr0000psgc2cyj0s9q" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Simple-smtp-email-with-html-body" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -98,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="ciqt5t7630004hkgc4j391624" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="ciqtbsud60006psgca11qug4o" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -205,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqt5t75u0001hkgc5q8z99nk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqtbsucw0001psgc5pr9b918" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -252,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqt5t75l0000hkgcvmy59k0t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqtbsucz0002psgcoz5k245g" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -295,7 +378,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciqt5t75w0002hkgcstaqq8b8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciqtbsud30004psgcq6odqdmc" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -366,7 +449,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciqt5t7650005hkgcxit8yl6n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciqtbsud10003psgcdy0fu24p" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -406,7 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciqt5t75y0003hkgca6ewjrmr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciqtbsud40005psgc9oer70bs" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -431,9 +514,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
     </div>
   </div>
 
@@ -441,9 +524,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/">Schedule your tasks with a windows service</a>
+          </li>
         
           <li>
             <a href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
@@ -459,10 +546,6 @@
         
           <li>
             <a href="/2016/03/02/ODATA Reads with Parameters/">ODATA Reads with Parameters</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/19/ODATA Reads/">ODATA Reads</a>
           </li>
         
       </ul>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-19T10:33:11.624Z</updated>
+  <updated>2016-07-19T19:25:59.993Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Schedule your tasks with a windows service</title>
+    <link href="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/"/>
+    <id>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</id>
+    <published>2016-07-18T18:30:00.000Z</published>
+    <updated>2016-07-19T19:25:59.993Z</updated>
+    
+    <content type="html">&lt;p&gt;If you want to schedule something to run or your program takes long time to process, Sometimes we may have to create a seperate service application,&lt;br&gt;What i happened to write this post is, My client wanted me to write an application to send emails in specific time periods, So to achieve that I thought of writing a windows service application.&lt;br&gt;We can install this service in your server or local computer and configure it to run on intervals using a timer. Let’s start coding.&lt;/p&gt;
+&lt;h2 id=&quot;Create-a-Windows-service&quot;&gt;&lt;a href=&quot;#Create-a-Windows-service&quot; class=&quot;headerlink&quot; title=&quot;Create a Windows service&quot;&gt;&lt;/a&gt;Create a Windows service&lt;/h2&gt;&lt;p&gt;When we create a windows service from visual studio, It gives us a service class with constructor method, OnStart and OnStop methods as follows.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/defaultMethods.PNG&quot; alt=&quot;default methods&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Scheduling-the-task-with-a-timer&quot;&gt;&lt;a href=&quot;#Scheduling-the-task-with-a-timer&quot; class=&quot;headerlink&quot; title=&quot;Scheduling the task with a timer&quot;&gt;&lt;/a&gt;Scheduling the task with a timer&lt;/h2&gt;&lt;p&gt;I need to periodically perform a task, for that i need a timer component, We can add a timer into our service design from toolbox&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/timer.PNG&quot; alt=&quot;Adding a timer&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Fill-up-OnStart-method&quot;&gt;&lt;a href=&quot;#Fill-up-OnStart-method&quot; class=&quot;headerlink&quot; title=&quot;Fill up OnStart method&quot;&gt;&lt;/a&gt;Fill up OnStart method&lt;/h2&gt;&lt;p&gt;we need to initialise timer component inside the OnStart method, then I set timer interval and added a elapsed event to track each interval.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/onStartMethod.PNG&quot; alt=&quot;onStart method&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Actual-scheduling-done-in-here&quot;&gt;&lt;a href=&quot;#Actual-scheduling-done-in-here&quot; class=&quot;headerlink&quot; title=&quot;Actual scheduling done in here&quot;&gt;&lt;/a&gt;Actual scheduling done in here&lt;/h2&gt;&lt;p&gt;inside timer elapsed event, actual task is going to run. elapsed event is called for each 2 minutes according to this code sample&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/timerElapsd.PNG&quot; alt=&quot;timer Elapsed method&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;How-to-stop-the-execution&quot;&gt;&lt;a href=&quot;#How-to-stop-the-execution&quot; class=&quot;headerlink&quot; title=&quot;How to stop the execution&quot;&gt;&lt;/a&gt;How to stop the execution&lt;/h2&gt;&lt;p&gt;to stop the execution, OnStop event is used.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/stopEvent.PNG&quot; alt=&quot;stop event&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;How-to-install-the-windows-service&quot;&gt;&lt;a href=&quot;#How-to-install-the-windows-service&quot; class=&quot;headerlink&quot; title=&quot;How to install the windows service&quot;&gt;&lt;/a&gt;How to install the windows service&lt;/h2&gt;&lt;p&gt;Before installing the service in your pc, we need to create a installer class,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/installer.PNG&quot; alt=&quot;Installer class&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Add installer class as shown above&lt;/p&gt;
+&lt;h2 id=&quot;Installer-Class&quot;&gt;&lt;a href=&quot;#Installer-Class&quot; class=&quot;headerlink&quot; title=&quot;Installer Class&quot;&gt;&lt;/a&gt;Installer Class&lt;/h2&gt;&lt;p&gt;in Installer class, we need to give a service name, so we can identify the service by its name. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/installerCode.PNG&quot; alt=&quot;Installer class code&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Let’s-install-the-service&quot;&gt;&lt;a href=&quot;#Let’s-install-the-service&quot; class=&quot;headerlink&quot; title=&quot;Let’s install the service&quot;&gt;&lt;/a&gt;Let’s install the service&lt;/h2&gt;&lt;p&gt;service is getting created after we build the application. we can find the .exe file in the bin folder. But we can’t install the service by double clicking on it&lt;br&gt;we  have to install it to the local pc or server&lt;/p&gt;
+&lt;h2 id=&quot;InstallUtil&quot;&gt;&lt;a href=&quot;#InstallUtil&quot; class=&quot;headerlink&quot; title=&quot;InstallUtil&quot;&gt;&lt;/a&gt;InstallUtil&lt;/h2&gt;&lt;p&gt;InstallUtil.exe is used to install/uninstall services in local machine or server. We can run installUtil command from Developer command prompt, &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Installutil.PNG&quot; alt=&quot;Installutil&quot;&gt;&lt;/p&gt;
+&lt;p&gt;But this doesn’t going to install the service, It throws an error.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/errorInstallUtil.PNG&quot; alt=&quot;Installutil permission issue&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It seems like we don’t have access to install the service, I had to spend few minutes to find the issue,&lt;br&gt;run Developer commad prompt as administrator, then this permission issue is getting resolved.&lt;/p&gt;
+&lt;p&gt;We can install a service using cmd as well,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/cmd.PNG&quot; alt=&quot;installutil in cmd&quot;&gt;&lt;/p&gt;
+&lt;p&gt;run cmd as administrator, then we can install the service using cmd as well.&lt;/p&gt;
+&lt;h2 id=&quot;View-services&quot;&gt;&lt;a href=&quot;#View-services&quot; class=&quot;headerlink&quot; title=&quot;View services&quot;&gt;&lt;/a&gt;View services&lt;/h2&gt;&lt;p&gt;We can check available services, by just typing services in your program list.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/services.PNG&quot; alt=&quot;logic of the service&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I gave service name as ‘test service’ in installer class.&lt;/p&gt;
+&lt;h2 id=&quot;Windows-service-on-Local-Computer-started-and-then-stopped&quot;&gt;&lt;a href=&quot;#Windows-service-on-Local-Computer-started-and-then-stopped&quot; class=&quot;headerlink&quot; title=&quot;Windows service on Local Computer started and then stopped&quot;&gt;&lt;/a&gt;Windows service on Local Computer started and then stopped&lt;/h2&gt;&lt;p&gt;I tried to start the service from the panel, But it didnt work,&lt;br&gt;I came across with this issue as well, spent lot of hours to find the issue, this issue comes normally when code has some kind of a error. It’s somewhat difficult to debug a windows service application to find out errors, &lt;/p&gt;
+&lt;h2 id=&quot;Debug-a-windows-service-application-easily&quot;&gt;&lt;a href=&quot;#Debug-a-windows-service-application-easily&quot; class=&quot;headerlink&quot; title=&quot;Debug a windows service application easily&quot;&gt;&lt;/a&gt;Debug a windows service application easily&lt;/h2&gt;&lt;p&gt;normally in a windows service, program.cs looks like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/programcs.PNG&quot; alt=&quot;program.cs file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If we want to check whether our service implementation has any issue, we can use this trick&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/manualstart.PNG&quot; alt=&quot;manually start the service&quot;&gt;&lt;/p&gt;
+&lt;p&gt;manually start a method that has exact same code as the service implementation.&lt;br&gt;inside of start method implementation, we can check whether service logic works fine.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/manualStartLogic.PNG&quot; alt=&quot;logic of the service&quot;&gt;&lt;/p&gt;
+&lt;p&gt;using this trick, we can identify our service logic is working fine.&lt;/p&gt;
+&lt;p&gt;Another way of testing the program logic is, create another console application and call service logic method from console app and verify it works fine.&lt;/p&gt;
+&lt;h2 id=&quot;Debugger-Launch&quot;&gt;&lt;a href=&quot;#Debugger-Launch&quot; class=&quot;headerlink&quot; title=&quot;Debugger Launch&quot;&gt;&lt;/a&gt;Debugger Launch&lt;/h2&gt;&lt;p&gt;If we want to debug onStart method, we can launch the debugger in start method&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/debuggerLaunch.PNG&quot; alt=&quot;launch the debugger&quot;&gt;&lt;/p&gt;
+&lt;p&gt;we can launch the debugger like this,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/launchDebugger.PNG&quot; alt=&quot;launch the debugger&quot;&gt;&lt;/p&gt;
+&lt;p&gt;we can debug the code like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/debugMode.PNG&quot; alt=&quot;launch the debugger&quot;&gt;&lt;/p&gt;
+&lt;p&gt;But in here specific file we attatched into debugger is getting loaded. So other files are not loaded. Only we can debug the service file as this code sample shows.&lt;/p&gt;
+&lt;h2 id=&quot;Windows-service-can’t-connect-to-the-database&quot;&gt;&lt;a href=&quot;#Windows-service-can’t-connect-to-the-database&quot; class=&quot;headerlink&quot; title=&quot;Windows service can’t connect to the database&quot;&gt;&lt;/a&gt;Windows service can’t connect to the database&lt;/h2&gt;&lt;p&gt;In my service, i need to access to the database, But it gives me an error like this.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Login failed. Login failed for user ‘NT AUTHORITY\SYSTEM’ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database&lt;br&gt;To resolve this add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;If you want to schedule something to run or your program takes long time to process, Sometimes we may have to create a seperate service a
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Simple smtp email with html body</title>
