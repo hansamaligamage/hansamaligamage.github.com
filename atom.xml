@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-19T07:30:35.973Z</updated>
+  <updated>2016-07-19T07:35:25.930Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/05/29/NLog-Configurations/"/>
     <id>http://yoursite.com/2016/05/29/NLog-Configurations/</id>
     <published>2016-05-28T18:30:00.000Z</published>
-    <updated>2016-07-19T07:30:35.973Z</updated>
+    <updated>2016-07-19T07:35:25.930Z</updated>
     
     <content type="html">&lt;p&gt;Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.&lt;/p&gt;
 &lt;h2 id=&quot;NLog&quot;&gt;&lt;a href=&quot;#NLog&quot; class=&quot;headerlink&quot; title=&quot;NLog&quot;&gt;&lt;/a&gt;NLog&lt;/h2&gt;&lt;p&gt;NLog is a free logging framework to log various kind of messages into a specified place. We can use NLog in a .NET environment, as well as with Xamarin and Windows phone.&lt;/p&gt;
@@ -87,6 +87,12 @@
 &lt;p&gt;In configuration file, i added two targets, one is to log into a file, other target is to log into a console window&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/MultipleTargetsCode.PNG&quot; alt=&quot;configuration file&quot;&gt;&lt;/p&gt;
 &lt;p&gt; File logging output is same as previous output, console output is seems like this. In console logging, I used a different layout like this, ${date} ${callsite} ${level} ${message} and minimmum log level is added as Warning level, So output got changed like this.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Some resources i referred, &lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.loggly.com/blog/benchmarking-5-popular-net-logging-libraries/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.loggly.com/blog/benchmarking-5-popular-net-logging-libraries/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nlog/nlog/wiki/Layout-Renderers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/nlog/nlog/wiki/Layout-Renderers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/NLog/NLog/wiki/Log-levels&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/NLog/NLog/wiki/Log-levels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
