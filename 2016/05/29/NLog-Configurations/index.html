@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>NLog Configurations | Tech Spot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.
+NLogNLog is a free logging framework to log various kind of messages">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NLog Configurations">
+<meta property="og:url" content="http://yoursite.com/2016/05/29/NLog-Configurations/index.html">
+<meta property="og:site_name" content="Tech Spot">
+<meta property="og:description" content="Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.
+NLogNLog is a free logging framework to log various kind of messages">
+<meta property="og:image" content="http://yoursite.com/images/NLogInstallation.PNG">
+<meta property="og:image" content="http://yoursite.com/images/configFile.PNG">
+<meta property="og:image" content="http://yoursite.com/images/code.PNG">
+<meta property="og:image" content="http://yoursite.com/images/output.PNG">
+<meta property="og:image" content="http://yoursite.com/images/MultipleTargetsConfig.PNG">
+<meta property="og:image" content="http://yoursite.com/images/MultipleTargetsCode.PNG">
+<meta property="og:updated_time" content="2016-07-19T07:30:35.973Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NLog Configurations">
+<meta name="twitter:description" content="Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.
+NLogNLog is a free logging framework to log various kind of messages">
+<meta name="twitter:image" content="http://yoursite.com/images/NLogInstallation.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="Tech Spot" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tech Spot</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-NLog-Configurations" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/29/NLog-Configurations/" class="article-date">
+  <time datetime="2016-05-28T18:30:00.000Z" itemprop="datePublished">2016-05-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NLog Configurations
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.</p>
+<h2 id="NLog"><a href="#NLog" class="headerlink" title="NLog"></a>NLog</h2><p>NLog is a free logging framework to log various kind of messages into a specified place. We can use NLog in a .NET environment, as well as with Xamarin and Windows phone.</p>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>If we want to log a message from our application, We can use EventViewer without any libraries. But If we want to share the log file with someone else and analyse it in the future, we can’t do that with Eventviewer.<br> So we have to go for a logging framework if we want to write messages into a file or a database.</p>
+<h2 id="Logging-Frameworks"><a href="#Logging-Frameworks" class="headerlink" title="Logging Frameworks"></a>Logging Frameworks</h2><p> We can use any of these frameworks for logging purpose, <strong>Log4net</strong>, <strong>NLog</strong>, <strong>ELMAH</strong>, <strong>Microsoft Enterprise Library</strong>, <strong>NSpring</strong>. ELMAH is a web logging framework, All the other frameworks can be used with any .NET type of application.<br> When we use NLog or Log4net for logging, it takes just few minutes to integrate it to the application, But performancewise its not the same. NLog is much faster than Log4net and as well as all the above mentioned logging frameworks.<br> NSpring also easy to setup, but it requires more coding to log a message. With a large scale enterprise application, It will be tedious to work with NSpring.<br> Microsoft Enterprise Library (EntLib) is much faster, But need heavy configurations and coding to work with it. ELMAH is a web logger, It’s going to log the messages into a xml file by default.</p>
+<p> If you application needs file logging and more performance, better to go with NLog or NSpring. We can use Log4net also, it’s not that much faster, but easy to setup and use it in the application</p>
+<h2 id="Install-NLog"><a href="#Install-NLog" class="headerlink" title="Install NLog"></a>Install NLog</h2><p> Latest stable version of NLog is NLog 4.3.5.<br> With Nuget Package manager, I installed NLog,</p>
+<p>  <img src="/images/NLogInstallation.PNG" alt="NLog installation"></p>
+<h2 id="NLog-Targets"><a href="#NLog-Targets" class="headerlink" title="NLog Targets"></a>NLog Targets</h2><p> NLog targets are used to show, store or pass the message into another destination.  Some commonly used NLog targets are shown below,</p>
+<ul>
+<li>Console : writes message to a console window.</li>
+<li>Event Log : writes message to event viewer.</li>
+<li>Debugger : writes messagee to the attatched debugger.</li>
+<li>File : writes log message to a file.</li>
+<li>Database : store log message in database.</li>
+<li>Memory : can write log message into a arraylist in memory.</li>
+<li>Mail : send log message by email.</li>
+<li>Method call : For log message, calls specific static method.</li>
+<li>Network : send log message over a network.</li>
+<li>Service : calls a web service for each log message. </li>
+</ul>
+<p>And if these targets dont satisfy your requirements, you can create your own targets as well, (custom target)</p>
+<h2 id="Target-Layout"><a href="#Target-Layout" class="headerlink" title="Target Layout"></a>Target Layout</h2><p> Target layout means how our log message is going to display, in which format, which order. We can create custom layout renders as well. Commonly used layouts are as follows,</p>
+<ul>
+<li>${callsite} : Class name, method name or source information of the log message.</li>
+<li>${callsite-linenumber} : line no of call site source.</li>
+<li>${date} : date and time</li>
+<li>${exception} : exception details</li>
+<li>${level} : log level</li>
+<li>${logger} : logger name</li>
+<li>${longdate} : date and time in long format.</li>
+<li>${message} : log message.</li>
+<li>${stacktrace} : stack trace</li>
+</ul>
+<h2 id="NLog-rules"><a href="#NLog-rules" class="headerlink" title="NLog rules"></a>NLog rules</h2><p> NLog rules are called as a log routing table. It’s going to matches with a target and writes into a log with specified layout. Some of the attributes in NLog rules,</p>
+<ul>
+<li>name : logger name,</li>
+<li>minlevel : minimum log level for a rule to match</li>
+<li>maxlevel : maximum log level for a rule to match</li>
+<li>level : single log level for a rule to match</li>
+<li>levels : comma seperated list of logs for a rule to match</li>
+<li>write to : comma seperated list of targets to be written when a rule matches</li>
+<li>final : no further rules are processed when this rule matches</li>
+<li>enabled : going to disable/enable rules</li>
+</ul>
+<h2 id="Nlog-levels"><a href="#Nlog-levels" class="headerlink" title="Nlog levels"></a>Nlog levels</h2><p> One thing to note, In these level attribute, log messages are ordered from type. Trace is the minlevel log type, then Debug, Info, Warn, Error and Fatal.</p>
+<ul>
+<li>Trace level can be used when we need to notify the begining and end of a method </li>
+<li>Debug logs, we can identify whether session is expired, user is authenticated </li>
+<li>Info logs are used for more generic scenarios like, Email sent.</li>
+<li>Warn level can be used to notify warnings </li>
+<li>Error logs are used for exceptions and when application crashes. </li>
+<li>Fatal logs are highest level, used for most important cases.</li>
+</ul>
+<h2 id="Let’s-see-what’s-in-action"><a href="#Let’s-see-what’s-in-action" class="headerlink" title="Let’s see what’s in action"></a>Let’s see what’s in action</h2><p> In configuration file, I have configured log type and log level, I have used file logging, Trace as a minimum logging level.</p>
+<p><img src="/images/configFile.PNG" alt="configuration file"></p>
+<p> In code, I have written like this, </p>
+<p><img src="/images/code.PNG" alt="code i have written"></p>
+<p> Let’s check how it’s written in the log file</p>
+<p><img src="/images/output.PNG" alt="output seeems like this"></p>
+<p>In output, we can see the layout has been applied, ${longdate} ${callsite} ${callsite-linenumber} ${date} ${level} ${message}</p>
+<h2 id="How-to-use-multiple-targets"><a href="#How-to-use-multiple-targets" class="headerlink" title="How to use multiple targets"></a>How to use multiple targets</h2><p>Let’s see how to add multiple targets for logging</p>
+<p><img src="/images/MultipleTargetsConfig.PNG" alt="configuration file"></p>
+<p>In configuration file, i added two targets, one is to log into a file, other target is to log into a console window</p>
+<p><img src="/images/MultipleTargetsCode.PNG" alt="configuration file"></p>
+<p> File logging output is same as previous output, console output is seems like this. In console logging, I used a different layout like this, ${date} ${callsite} ${level} ${message} and minimmum log level is added as Warning level, So output got changed like this.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqt55raj0000iggco7talzxz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/04/LINQ comes to rescue/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">LINQ comes to rescue!</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/NLog-Configurations/">NLog Configurations</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/04/LINQ comes to rescue/">LINQ comes to rescue!</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/02/ODATA Reads with Parameters/">ODATA Reads with Parameters</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/19/ODATA Reads/">ODATA Reads</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/23/ODATAFeatures/">ODATA Features</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Hansamali Gamage<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
