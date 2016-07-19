@@ -64,6 +64,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Simple-smtp-email-with-html-body" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/30/Simple-smtp-email-with-html-body/" class="article-date">
+  <time datetime="2016-06-29T18:30:00.000Z" itemprop="datePublished">2016-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Smtp-Email"><a href="#Smtp-Email" class="headerlink" title="Smtp Email"></a>Smtp Email</h2><p>This post describes an easy way to send a email using a smtp server.</p>
+<h2 id="Smtp-Client"><a href="#Smtp-Client" class="headerlink" title="Smtp Client"></a>Smtp Client</h2><p>To create a smtp client, we need to specify a smtp host and port, port is an optional parameter.<br>for some Smtp clients, we need to provide credintials. we need a NetworkCredintial instance for that. We can use Secure Socket Layer (SSL) to encrypt the connection.</p>
+<p><img src="/images/smtpClient.PNG" alt="SMTP Client"></p>
+<p>This shows how to instantiate a smtp client, If you are using gmail, host is smtp.gmail.com or else some specific smtp server. If port is available, specify the port</p>
+<h2 id="Mail-Message"><a href="#Mail-Message" class="headerlink" title="Mail Message"></a>Mail Message</h2><p>After working with Smtp client, then we need is MailMessage object.</p>
+<p><img src="/images/mailMessage.PNG" alt="Mail Message"></p>
+<p>MailMessage from and to should be MailAddress instances.<br>In this example we used <em>IsBodyHtml</em> attribute, to notify mail body can be a html string.</p>
+<h2 id="Complete-code-is-shown-below"><a href="#Complete-code-is-shown-below" class="headerlink" title="Complete code is shown below"></a>Complete code is shown below</h2><p><img src="/images/completeCode.PNG" alt="Complete code to send an email"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="ciqt5t7630004hkgc4j391624" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-NLog-Configurations" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/05/29/NLog-Configurations/" class="article-date">
@@ -161,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqt5b78h0001i4gcrzl5hcdu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqt5t75u0001hkgc5q8z99nk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqt5b78b0000i4gcpthy6atu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqt5t75l0000hkgcvmy59k0t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciqt5b78j0002i4gcg7lu2vh0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciqt5t75w0002hkgcstaqq8b8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciqt5b78l0003i4gcj3ph6gwl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciqt5t7650005hkgcxit8yl6n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -362,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciqt5b78p0004i4gc6pzsn60u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciqt5t75y0003hkgca6ewjrmr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -389,7 +433,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
     </div>
   </div>
 
@@ -400,6 +444,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
+          </li>
         
           <li>
             <a href="/2016/05/29/NLog-Configurations/">NLog Configurations</a>
@@ -415,10 +463,6 @@
         
           <li>
             <a href="/2016/02/19/ODATA Reads/">ODATA Reads</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/23/ODATAFeatures/">ODATA Features</a>
           </li>
         
       </ul>

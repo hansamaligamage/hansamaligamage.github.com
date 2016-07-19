@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-19T07:35:25.930Z</updated>
+  <updated>2016-07-19T10:33:11.624Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Simple smtp email with html body</title>
+    <link href="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/"/>
+    <id>http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/</id>
+    <published>2016-06-29T18:30:00.000Z</published>
+    <updated>2016-07-19T10:33:11.624Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Smtp-Email&quot;&gt;&lt;a href=&quot;#Smtp-Email&quot; class=&quot;headerlink&quot; title=&quot;Smtp Email&quot;&gt;&lt;/a&gt;Smtp Email&lt;/h2&gt;&lt;p&gt;This post describes an easy way to send a email using a smtp server.&lt;/p&gt;
+&lt;h2 id=&quot;Smtp-Client&quot;&gt;&lt;a href=&quot;#Smtp-Client&quot; class=&quot;headerlink&quot; title=&quot;Smtp Client&quot;&gt;&lt;/a&gt;Smtp Client&lt;/h2&gt;&lt;p&gt;To create a smtp client, we need to specify a smtp host and port, port is an optional parameter.&lt;br&gt;for some Smtp clients, we need to provide credintials. we need a NetworkCredintial instance for that. We can use Secure Socket Layer (SSL) to encrypt the connection.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/smtpClient.PNG&quot; alt=&quot;SMTP Client&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This shows how to instantiate a smtp client, If you are using gmail, host is smtp.gmail.com or else some specific smtp server. If port is available, specify the port&lt;/p&gt;
+&lt;h2 id=&quot;Mail-Message&quot;&gt;&lt;a href=&quot;#Mail-Message&quot; class=&quot;headerlink&quot; title=&quot;Mail Message&quot;&gt;&lt;/a&gt;Mail Message&lt;/h2&gt;&lt;p&gt;After working with Smtp client, then we need is MailMessage object.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/mailMessage.PNG&quot; alt=&quot;Mail Message&quot;&gt;&lt;/p&gt;
+&lt;p&gt;MailMessage from and to should be MailAddress instances.&lt;br&gt;In this example we used &lt;em&gt;IsBodyHtml&lt;/em&gt; attribute, to notify mail body can be a html string.&lt;/p&gt;
+&lt;h2 id=&quot;Complete-code-is-shown-below&quot;&gt;&lt;a href=&quot;#Complete-code-is-shown-below&quot; class=&quot;headerlink&quot; title=&quot;Complete code is shown below&quot;&gt;&lt;/a&gt;Complete code is shown below&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/completeCode.PNG&quot; alt=&quot;Complete code to send an email&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Smtp-Email&quot;&gt;&lt;a href=&quot;#Smtp-Email&quot; class=&quot;headerlink&quot; title=&quot;Smtp Email&quot;&gt;&lt;/a&gt;Smtp Email&lt;/h2&gt;&lt;p&gt;This post describes an easy way to sen
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>NLog Configurations</title>

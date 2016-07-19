@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LINQ comes to rescue! | Tech Spot</title>
+  <title>Simple smtp email with html body | Tech Spot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that we miss this in many places :)
-Let’s first create a simple cla">
+  <meta name="description" content="Smtp EmailThis post describes an easy way to send a email using a smtp server.
+Smtp ClientTo create a smtp client, we need to specify a smtp host and port, port is an optional parameter.for some Smtp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LINQ comes to rescue!">
-<meta property="og:url" content="http://yoursite.com/2016/04/04/LINQ comes to rescue/index.html">
+<meta property="og:title" content="Simple smtp email with html body">
+<meta property="og:url" content="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/index.html">
 <meta property="og:site_name" content="Tech Spot">
-<meta property="og:description" content="Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that we miss this in many places :)
-Let’s first create a simple cla">
-<meta property="og:image" content="http://yoursite.com/images/carClass.png">
-<meta property="og:image" content="http://yoursite.com/images/listOfCars.png">
-<meta property="og:image" content="http://yoursite.com/images/linqQuery.png">
-<meta property="og:updated_time" content="2016-06-07T17:03:39.368Z">
+<meta property="og:description" content="Smtp EmailThis post describes an easy way to send a email using a smtp server.
+Smtp ClientTo create a smtp client, we need to specify a smtp host and port, port is an optional parameter.for some Smtp">
+<meta property="og:image" content="http://yoursite.com/images/smtpClient.PNG">
+<meta property="og:image" content="http://yoursite.com/images/mailMessage.PNG">
+<meta property="og:image" content="http://yoursite.com/images/completeCode.PNG">
+<meta property="og:updated_time" content="2016-07-19T10:33:11.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LINQ comes to rescue!">
-<meta name="twitter:description" content="Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that we miss this in many places :)
-Let’s first create a simple cla">
-<meta name="twitter:image" content="http://yoursite.com/images/carClass.png">
+<meta name="twitter:title" content="Simple smtp email with html body">
+<meta name="twitter:description" content="Smtp EmailThis post describes an easy way to send a email using a smtp server.
+Smtp ClientTo create a smtp client, we need to specify a smtp host and port, port is an optional parameter.for some Smtp">
+<meta name="twitter:image" content="http://yoursite.com/images/smtpClient.PNG">
   
     <link rel="alternate" href="/atom.xml" title="Tech Spot" type="application/atom+xml">
   
@@ -70,10 +70,10 @@ Let’s first create a simple cla">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-LINQ comes to rescue" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Simple-smtp-email-with-html-body" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/04/04/LINQ comes to rescue/" class="article-date">
-  <time datetime="2016-04-03T18:30:00.000Z" itemprop="datePublished">2016-04-04</time>
+    <a href="/2016/06/30/Simple-smtp-email-with-html-body/" class="article-date">
+  <time datetime="2016-06-29T18:30:00.000Z" itemprop="datePublished">2016-06-30</time>
 </a>
     
   </div>
@@ -84,7 +84,7 @@ Let’s first create a simple cla">
         
   
     <h1 class="article-title" itemprop="name">
-      LINQ comes to rescue!
+      Simple smtp email with html body
     </h1>
   
 
@@ -92,22 +92,19 @@ Let’s first create a simple cla">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Today, I’m going to explain a very small but tricky code part, day to day we use this, but never give it a second glance, because of that we miss this in many places :)</p>
-<p>Let’s first create a simple class</p>
-<p><img src="/images/carClass.png" alt="Car class"></p>
-<p>we have list of cars, like this.</p>
-<p><img src="/images/listOfCars.png" alt="List of cars"></p>
-<p>I want to set <em>Milege</em> property as  ‘100’ when year is ‘2015’<br>so, what’s the method comes into your mind ?<br>for loop, foreach or while loop, Iterations are not so good when it comes to the performance.</p>
-<p>With the help of LINQ, we can perform the filtering and modification both in just one line :)</p>
-<p>In LINQ world, we have many operations to filter, to projection, to modify and many more.</p>
-<p>Solution from LINQ,</p>
-<p><img src="/images/linqQuery.png" alt="LINQ query to filter and modify list values."></p>
-<p> Yes, It’s difficult to read the code though, But if you have performance concerns, and want to write the program with few lines of code, You can get use of this LINQ query.</p>
+        <h2 id="Smtp-Email"><a href="#Smtp-Email" class="headerlink" title="Smtp Email"></a>Smtp Email</h2><p>This post describes an easy way to send a email using a smtp server.</p>
+<h2 id="Smtp-Client"><a href="#Smtp-Client" class="headerlink" title="Smtp Client"></a>Smtp Client</h2><p>To create a smtp client, we need to specify a smtp host and port, port is an optional parameter.<br>for some Smtp clients, we need to provide credintials. we need a NetworkCredintial instance for that. We can use Secure Socket Layer (SSL) to encrypt the connection.</p>
+<p><img src="/images/smtpClient.PNG" alt="SMTP Client"></p>
+<p>This shows how to instantiate a smtp client, If you are using gmail, host is smtp.gmail.com or else some specific smtp server. If port is available, specify the port</p>
+<h2 id="Mail-Message"><a href="#Mail-Message" class="headerlink" title="Mail Message"></a>Mail Message</h2><p>After working with Smtp client, then we need is MailMessage object.</p>
+<p><img src="/images/mailMessage.PNG" alt="Mail Message"></p>
+<p>MailMessage from and to should be MailAddress instances.<br>In this example we used <em>IsBodyHtml</em> attribute, to notify mail body can be a html string.</p>
+<h2 id="Complete-code-is-shown-below"><a href="#Complete-code-is-shown-below" class="headerlink" title="Complete code is shown below"></a>Complete code is shown below</h2><p><img src="/images/completeCode.PNG" alt="Complete code to send an email"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqt5t75l0000hkgcvmy59k0t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="ciqt5t7630004hkgc4j391624" class="article-share-link">Share</a>
       
       
     </footer>
@@ -116,19 +113,10 @@ Let’s first create a simple cla">
     
 <nav id="article-nav">
   
-    <a href="/2016/05/29/NLog-Configurations/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          NLog Configurations
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/02/ODATA Reads with Parameters/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/29/NLog-Configurations/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">ODATA Reads with Parameters</div>
+      <div class="article-nav-title">NLog Configurations</div>
     </a>
   
 </nav>
