@@ -62,7 +62,7 @@
     <link href="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/"/>
     <id>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</id>
     <published>2016-07-18T18:30:00.000Z</published>
-    <updated>2016-07-21T17:14:43.642Z</updated>
+    <updated>2016-07-21T17:21:53.775Z</updated>
     
     <content type="html">&lt;p&gt;If you want to schedule something to run or your program takes long time to process, Sometimes we may have to create a seperate service application,&lt;br&gt;What i happened to write this post is, My client wanted me to write an application to send emails in specific time periods, So to achieve that I thought of writing a windows service application.&lt;br&gt;We can install this service in your server or local computer and configure it to run on intervals using a timer. Let’s start coding.&lt;/p&gt;
 &lt;h2 id=&quot;Create-a-Windows-service&quot;&gt;&lt;a href=&quot;#Create-a-Windows-service&quot; class=&quot;headerlink&quot; title=&quot;Create a Windows service&quot;&gt;&lt;/a&gt;Create a Windows service&lt;/h2&gt;&lt;p&gt;When we create a windows service from visual studio, It gives us a service class with constructor method, OnStart and OnStop methods as follows.&lt;/p&gt;
@@ -111,7 +111,7 @@
 &lt;h2 id=&quot;Windows-service-can’t-connect-to-the-database&quot;&gt;&lt;a href=&quot;#Windows-service-can’t-connect-to-the-database&quot; class=&quot;headerlink&quot; title=&quot;Windows service can’t connect to the database&quot;&gt;&lt;/a&gt;Windows service can’t connect to the database&lt;/h2&gt;&lt;p&gt;In my service, i need to access to the database, But it gives me an error like this.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; Login failed. Login failed for user ‘NT AUTHORITY\SYSTEM’ &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database&lt;br&gt;To resolve this, add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. &lt;/p&gt;
-&lt;p&gt;These are the guidelines to create a windows service, Enjoy the ride!&lt;/p&gt;
+&lt;p&gt;These are the guidelines to create a windows service, so it’s your time to try it.&lt;/p&gt;
 </content>
     
     <summary type="html">
