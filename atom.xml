@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-19T19:25:59.993Z</updated>
+  <updated>2016-07-20T18:51:25.074Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>I want to run a time consuming long process in a one web request</title>
+    <link href="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/"/>
+    <id>http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/</id>
+    <published>2016-07-20T18:30:00.000Z</published>
+    <updated>2016-07-20T18:51:25.074Z</updated>
+    
+    <content type="html">&lt;p&gt;In my application, I want to run a time consuming long process in a one web request. &lt;/p&gt;
+&lt;p&gt;At the begining, I used to call a web api method to run that process. But it didn’t work. Since the process takes long time to complete its action, request is getting hanged.&lt;/p&gt;
+&lt;p&gt;We can work on few options to resolve this,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We can create a windows service to run this process, It’s a seperate process from the web request. We can periodically check whether action is completed or not until action gets completed, We can install this service in our local pc or server&lt;/li&gt;
+&lt;li&gt;Windows service installed in Azure worker role, If we want to host the windows service in cloud environment, we can host the service in azure worker role.&lt;/li&gt;
+&lt;li&gt;We can use a seperate thread to process the log runing action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Seperate-Background-worker-thread&quot;&gt;&lt;a href=&quot;#Seperate-Background-worker-thread&quot; class=&quot;headerlink&quot; title=&quot;Seperate Background worker thread&quot;&gt;&lt;/a&gt;Seperate Background worker thread&lt;/h2&gt;&lt;p&gt;In my solution, I used to create a background worker process to handle the long running task.&lt;/p&gt;
+&lt;h2 id=&quot;How-my-code-looks-like&quot;&gt;&lt;a href=&quot;#How-my-code-looks-like&quot; class=&quot;headerlink&quot; title=&quot;How my code looks like&quot;&gt;&lt;/a&gt;How my code looks like&lt;/h2&gt;&lt;p&gt;If we have to use a seperate thread to run a time consuming action, We can use Web backgrounder third party package. It’s going to run a background process in specific intervals. When the task gets completed, it’s going to automatically kill the background process.&lt;br&gt;Let’s see the code in action!!!&lt;/p&gt;
+&lt;h2 id=&quot;Install-Web-background-worker&quot;&gt;&lt;a href=&quot;#Install-Web-background-worker&quot; class=&quot;headerlink&quot; title=&quot;Install Web background worker&quot;&gt;&lt;/a&gt;Install Web background worker&lt;/h2&gt;&lt;p&gt;First of all, install the web background worker third party library into the project.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/installBackgroundworker.PNG&quot; alt=&quot;Background worker installation&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Background-worker-implementation&quot;&gt;&lt;a href=&quot;#Background-worker-implementation&quot; class=&quot;headerlink&quot; title=&quot;Background worker implementation&quot;&gt;&lt;/a&gt;Background worker implementation&lt;/h2&gt;&lt;p&gt;This code snippet shows how to initialise a job and how to perform a action on it,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/backgroundworker.PNG&quot; alt=&quot;Background worker as in library&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I refered to the above code snippet and created a specific worker thread according to my requirements.&lt;br&gt;actual implementation of worker thread is shown below. Worker class should inherit from &lt;em&gt;IDisposable&lt;/em&gt; interface.&lt;br&gt;In the constructor of the worker class, specify the time interval and then call long running action in a seperate thread.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/actualWork.PNG&quot; alt=&quot;Background worker&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Dispose() method is getting called when process is completed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/disposeMethod.PNG&quot; alt=&quot;Dispose method&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Web-api-controller-implementation&quot;&gt;&lt;a href=&quot;#Web-api-controller-implementation&quot; class=&quot;headerlink&quot; title=&quot;Web api controller implementation&quot;&gt;&lt;/a&gt;Web api controller implementation&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/controller.PNG&quot; alt=&quot;default methods&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I call this worker process inside a web api controller. Create a private static variable and initialise it with worker class constructor.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;note : I added log messages to identify starting point and end point of the worker process, Here is a sample of that log.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/log.PNG&quot; alt=&quot;log file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Until the task is getting completed, worker thread runs. It’s going to complete the process in second interval. When the task is completed, it’s going to dispose the worker thread.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In my application, I want to run a time consuming long process in a one web request. &lt;/p&gt;
+&lt;p&gt;At the begining, I used to call a web api me
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Schedule your tasks with a windows service</title>
     <link href="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/"/>
     <id>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</id>
     <published>2016-07-18T18:30:00.000Z</published>
-    <updated>2016-07-19T19:25:59.993Z</updated>
+    <updated>2016-07-21T17:14:43.642Z</updated>
     
     <content type="html">&lt;p&gt;If you want to schedule something to run or your program takes long time to process, Sometimes we may have to create a seperate service application,&lt;br&gt;What i happened to write this post is, My client wanted me to write an application to send emails in specific time periods, So to achieve that I thought of writing a windows service application.&lt;br&gt;We can install this service in your server or local computer and configure it to run on intervals using a timer. Let’s start coding.&lt;/p&gt;
 &lt;h2 id=&quot;Create-a-Windows-service&quot;&gt;&lt;a href=&quot;#Create-a-Windows-service&quot; class=&quot;headerlink&quot; title=&quot;Create a Windows service&quot;&gt;&lt;/a&gt;Create a Windows service&lt;/h2&gt;&lt;p&gt;When we create a windows service from visual studio, It gives us a service class with constructor method, OnStart and OnStop methods as follows.&lt;/p&gt;
@@ -39,7 +81,7 @@
 &lt;h2 id=&quot;Installer-Class&quot;&gt;&lt;a href=&quot;#Installer-Class&quot; class=&quot;headerlink&quot; title=&quot;Installer Class&quot;&gt;&lt;/a&gt;Installer Class&lt;/h2&gt;&lt;p&gt;in Installer class, we need to give a service name, so we can identify the service by its name. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/installerCode.PNG&quot; alt=&quot;Installer class code&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Let’s-install-the-service&quot;&gt;&lt;a href=&quot;#Let’s-install-the-service&quot; class=&quot;headerlink&quot; title=&quot;Let’s install the service&quot;&gt;&lt;/a&gt;Let’s install the service&lt;/h2&gt;&lt;p&gt;service is getting created after we build the application. we can find the .exe file in the bin folder. But we can’t install the service by double clicking on it&lt;br&gt;we  have to install it to the local pc or server&lt;/p&gt;
-&lt;h2 id=&quot;InstallUtil&quot;&gt;&lt;a href=&quot;#InstallUtil&quot; class=&quot;headerlink&quot; title=&quot;InstallUtil&quot;&gt;&lt;/a&gt;InstallUtil&lt;/h2&gt;&lt;p&gt;InstallUtil.exe is used to install/uninstall services in local machine or server. We can run installUtil command from Developer command prompt, &lt;/p&gt;
+&lt;h2 id=&quot;InstallUtil&quot;&gt;&lt;a href=&quot;#InstallUtil&quot; class=&quot;headerlink&quot; title=&quot;InstallUtil&quot;&gt;&lt;/a&gt;InstallUtil&lt;/h2&gt;&lt;p&gt;InstallUtil.exe is used to install/uninstall services in local machine or server. We can run installUtil command from Developer command prompt,&lt;br&gt;type InstallUtil.exe with full path to the service exe file.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/Installutil.PNG&quot; alt=&quot;Installutil&quot;&gt;&lt;/p&gt;
 &lt;p&gt;But this doesn’t going to install the service, It throws an error.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/errorInstallUtil.PNG&quot; alt=&quot;Installutil permission issue&quot;&gt;&lt;/p&gt;
@@ -55,7 +97,7 @@
 &lt;p&gt;&lt;img src=&quot;/images/programcs.PNG&quot; alt=&quot;program.cs file&quot;&gt;&lt;/p&gt;
 &lt;p&gt;If we want to check whether our service implementation has any issue, we can use this trick&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/manualstart.PNG&quot; alt=&quot;manually start the service&quot;&gt;&lt;/p&gt;
-&lt;p&gt;manually start a method that has exact same code as the service implementation.&lt;br&gt;inside of start method implementation, we can check whether service logic works fine.&lt;/p&gt;
+&lt;p&gt;manually start a method that has exact same code as the service implementation.&lt;br&gt;inside of start method implementation, we can check whether service logic works properly.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/manualStartLogic.PNG&quot; alt=&quot;logic of the service&quot;&gt;&lt;/p&gt;
 &lt;p&gt;using this trick, we can identify our service logic is working fine.&lt;/p&gt;
 &lt;p&gt;Another way of testing the program logic is, create another console application and call service logic method from console app and verify it works fine.&lt;/p&gt;
@@ -68,7 +110,8 @@
 &lt;p&gt;But in here specific file we attatched into debugger is getting loaded. So other files are not loaded. Only we can debug the service file as this code sample shows.&lt;/p&gt;
 &lt;h2 id=&quot;Windows-service-can’t-connect-to-the-database&quot;&gt;&lt;a href=&quot;#Windows-service-can’t-connect-to-the-database&quot; class=&quot;headerlink&quot; title=&quot;Windows service can’t connect to the database&quot;&gt;&lt;/a&gt;Windows service can’t connect to the database&lt;/h2&gt;&lt;p&gt;In my service, i need to access to the database, But it gives me an error like this.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; Login failed. Login failed for user ‘NT AUTHORITY\SYSTEM’ &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database&lt;br&gt;To resolve this add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. &lt;/p&gt;
+&lt;p&gt;windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database&lt;br&gt;To resolve this, add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. &lt;/p&gt;
+&lt;p&gt;These are the guidelines to create a windows service, Enjoy the ride!&lt;/p&gt;
 </content>
     
     <summary type="html">

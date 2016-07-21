@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>I want to run a time consuming long process in a one web request | Tech Spot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="In my application, I want to run a time consuming long process in a one web request. 
+At the begining, I used to call a web api method to run that process. But it didn’t work. Since the process takes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="I want to run a time consuming long process in a one web request">
+<meta property="og:url" content="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/index.html">
+<meta property="og:site_name" content="Tech Spot">
+<meta property="og:description" content="In my application, I want to run a time consuming long process in a one web request. 
+At the begining, I used to call a web api method to run that process. But it didn’t work. Since the process takes">
+<meta property="og:image" content="http://yoursite.com/images/installBackgroundworker.PNG">
+<meta property="og:image" content="http://yoursite.com/images/backgroundworker.PNG">
+<meta property="og:image" content="http://yoursite.com/images/actualWork.PNG">
+<meta property="og:image" content="http://yoursite.com/images/disposeMethod.PNG">
+<meta property="og:image" content="http://yoursite.com/images/controller.PNG">
+<meta property="og:image" content="http://yoursite.com/images/log.PNG">
+<meta property="og:updated_time" content="2016-07-20T18:51:25.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="I want to run a time consuming long process in a one web request">
+<meta name="twitter:description" content="In my application, I want to run a time consuming long process in a one web request. 
+At the begining, I used to call a web api method to run that process. But it didn’t work. Since the process takes">
+<meta name="twitter:image" content="http://yoursite.com/images/installBackgroundworker.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="Tech Spot" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tech Spot</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-I-want-to-run-a-time-consuming-long-process-in-a-one-request" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" class="article-date">
+  <time datetime="2016-07-20T18:30:00.000Z" itemprop="datePublished">2016-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      I want to run a time consuming long process in a one web request
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In my application, I want to run a time consuming long process in a one web request. </p>
+<p>At the begining, I used to call a web api method to run that process. But it didn’t work. Since the process takes long time to complete its action, request is getting hanged.</p>
+<p>We can work on few options to resolve this,</p>
+<ul>
+<li>We can create a windows service to run this process, It’s a seperate process from the web request. We can periodically check whether action is completed or not until action gets completed, We can install this service in our local pc or server</li>
+<li>Windows service installed in Azure worker role, If we want to host the windows service in cloud environment, we can host the service in azure worker role.</li>
+<li>We can use a seperate thread to process the log runing action</li>
+</ul>
+<h2 id="Seperate-Background-worker-thread"><a href="#Seperate-Background-worker-thread" class="headerlink" title="Seperate Background worker thread"></a>Seperate Background worker thread</h2><p>In my solution, I used to create a background worker process to handle the long running task.</p>
+<h2 id="How-my-code-looks-like"><a href="#How-my-code-looks-like" class="headerlink" title="How my code looks like"></a>How my code looks like</h2><p>If we have to use a seperate thread to run a time consuming action, We can use Web backgrounder third party package. It’s going to run a background process in specific intervals. When the task gets completed, it’s going to automatically kill the background process.<br>Let’s see the code in action!!!</p>
+<h2 id="Install-Web-background-worker"><a href="#Install-Web-background-worker" class="headerlink" title="Install Web background worker"></a>Install Web background worker</h2><p>First of all, install the web background worker third party library into the project.</p>
+<p><img src="/images/installBackgroundworker.PNG" alt="Background worker installation"></p>
+<h2 id="Background-worker-implementation"><a href="#Background-worker-implementation" class="headerlink" title="Background worker implementation"></a>Background worker implementation</h2><p>This code snippet shows how to initialise a job and how to perform a action on it,</p>
+<p><img src="/images/backgroundworker.PNG" alt="Background worker as in library"></p>
+<p>I refered to the above code snippet and created a specific worker thread according to my requirements.<br>actual implementation of worker thread is shown below. Worker class should inherit from <em>IDisposable</em> interface.<br>In the constructor of the worker class, specify the time interval and then call long running action in a seperate thread.</p>
+<p><img src="/images/actualWork.PNG" alt="Background worker"></p>
+<p>Dispose() method is getting called when process is completed.</p>
+<p><img src="/images/disposeMethod.PNG" alt="Dispose method"></p>
+<h2 id="Web-api-controller-implementation"><a href="#Web-api-controller-implementation" class="headerlink" title="Web api controller implementation"></a>Web api controller implementation</h2><p><img src="/images/controller.PNG" alt="default methods"></p>
+<p>I call this worker process inside a web api controller. Create a private static variable and initialise it with worker class constructor.</p>
+<p><em>note : I added log messages to identify starting point and end point of the worker process, Here is a sample of that log.</em></p>
+<p><img src="/images/log.PNG" alt="log file"></p>
+<p>Until the task is getting completed, worker thread runs. It’s going to complete the process in second interval. When the task is completed, it’s going to dispose the worker thread.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="ciqv70g1j0000ccgcm7ge09d9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Schedule your tasks with a windows service</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/">I want to run a time consuming long process in a one web request</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/">Schedule your tasks with a windows service</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/29/NLog-Configurations/">NLog Configurations</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/04/LINQ comes to rescue/">LINQ comes to rescue!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Hansamali Gamage<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

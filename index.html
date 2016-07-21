@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,65 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-I-want-to-run-a-time-consuming-long-process-in-a-one-request" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" class="article-date">
+  <time datetime="2016-07-20T18:30:00.000Z" itemprop="datePublished">2016-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/">I want to run a time consuming long process in a one web request</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In my application, I want to run a time consuming long process in a one web request. </p>
+<p>At the begining, I used to call a web api method to run that process. But it didn’t work. Since the process takes long time to complete its action, request is getting hanged.</p>
+<p>We can work on few options to resolve this,</p>
+<ul>
+<li>We can create a windows service to run this process, It’s a seperate process from the web request. We can periodically check whether action is completed or not until action gets completed, We can install this service in our local pc or server</li>
+<li>Windows service installed in Azure worker role, If we want to host the windows service in cloud environment, we can host the service in azure worker role.</li>
+<li>We can use a seperate thread to process the log runing action</li>
+</ul>
+<h2 id="Seperate-Background-worker-thread"><a href="#Seperate-Background-worker-thread" class="headerlink" title="Seperate Background worker thread"></a>Seperate Background worker thread</h2><p>In my solution, I used to create a background worker process to handle the long running task.</p>
+<h2 id="How-my-code-looks-like"><a href="#How-my-code-looks-like" class="headerlink" title="How my code looks like"></a>How my code looks like</h2><p>If we have to use a seperate thread to run a time consuming action, We can use Web backgrounder third party package. It’s going to run a background process in specific intervals. When the task gets completed, it’s going to automatically kill the background process.<br>Let’s see the code in action!!!</p>
+<h2 id="Install-Web-background-worker"><a href="#Install-Web-background-worker" class="headerlink" title="Install Web background worker"></a>Install Web background worker</h2><p>First of all, install the web background worker third party library into the project.</p>
+<p><img src="/images/installBackgroundworker.PNG" alt="Background worker installation"></p>
+<h2 id="Background-worker-implementation"><a href="#Background-worker-implementation" class="headerlink" title="Background worker implementation"></a>Background worker implementation</h2><p>This code snippet shows how to initialise a job and how to perform a action on it,</p>
+<p><img src="/images/backgroundworker.PNG" alt="Background worker as in library"></p>
+<p>I refered to the above code snippet and created a specific worker thread according to my requirements.<br>actual implementation of worker thread is shown below. Worker class should inherit from <em>IDisposable</em> interface.<br>In the constructor of the worker class, specify the time interval and then call long running action in a seperate thread.</p>
+<p><img src="/images/actualWork.PNG" alt="Background worker"></p>
+<p>Dispose() method is getting called when process is completed.</p>
+<p><img src="/images/disposeMethod.PNG" alt="Dispose method"></p>
+<h2 id="Web-api-controller-implementation"><a href="#Web-api-controller-implementation" class="headerlink" title="Web api controller implementation"></a>Web api controller implementation</h2><p><img src="/images/controller.PNG" alt="default methods"></p>
+<p>I call this worker process inside a web api controller. Create a private static variable and initialise it with worker class constructor.</p>
+<p><em>note : I added log messages to identify starting point and end point of the worker process, Here is a sample of that log.</em></p>
+<p><img src="/images/log.PNG" alt="log file"></p>
+<p>Until the task is getting completed, worker thread runs. It’s going to complete the process in second interval. When the task is completed, it’s going to dispose the worker thread.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="ciqv70g1j0000ccgcm7ge09d9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Easy-steps-to-create-a-windows-service" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -103,7 +162,7 @@
 <h2 id="Installer-Class"><a href="#Installer-Class" class="headerlink" title="Installer Class"></a>Installer Class</h2><p>in Installer class, we need to give a service name, so we can identify the service by its name. </p>
 <p><img src="/images/installerCode.PNG" alt="Installer class code"></p>
 <h2 id="Let’s-install-the-service"><a href="#Let’s-install-the-service" class="headerlink" title="Let’s install the service"></a>Let’s install the service</h2><p>service is getting created after we build the application. we can find the .exe file in the bin folder. But we can’t install the service by double clicking on it<br>we  have to install it to the local pc or server</p>
-<h2 id="InstallUtil"><a href="#InstallUtil" class="headerlink" title="InstallUtil"></a>InstallUtil</h2><p>InstallUtil.exe is used to install/uninstall services in local machine or server. We can run installUtil command from Developer command prompt, </p>
+<h2 id="InstallUtil"><a href="#InstallUtil" class="headerlink" title="InstallUtil"></a>InstallUtil</h2><p>InstallUtil.exe is used to install/uninstall services in local machine or server. We can run installUtil command from Developer command prompt,<br>type InstallUtil.exe with full path to the service exe file.</p>
 <p><img src="/images/Installutil.PNG" alt="Installutil"></p>
 <p>But this doesn’t going to install the service, It throws an error.</p>
 <p><img src="/images/errorInstallUtil.PNG" alt="Installutil permission issue"></p>
@@ -119,7 +178,7 @@
 <p><img src="/images/programcs.PNG" alt="program.cs file"></p>
 <p>If we want to check whether our service implementation has any issue, we can use this trick</p>
 <p><img src="/images/manualstart.PNG" alt="manually start the service"></p>
-<p>manually start a method that has exact same code as the service implementation.<br>inside of start method implementation, we can check whether service logic works fine.</p>
+<p>manually start a method that has exact same code as the service implementation.<br>inside of start method implementation, we can check whether service logic works properly.</p>
 <p><img src="/images/manualStartLogic.PNG" alt="logic of the service"></p>
 <p>using this trick, we can identify our service logic is working fine.</p>
 <p>Another way of testing the program logic is, create another console application and call service logic method from console app and verify it works fine.</p>
@@ -132,12 +191,13 @@
 <p>But in here specific file we attatched into debugger is getting loaded. So other files are not loaded. Only we can debug the service file as this code sample shows.</p>
 <h2 id="Windows-service-can’t-connect-to-the-database"><a href="#Windows-service-can’t-connect-to-the-database" class="headerlink" title="Windows service can’t connect to the database"></a>Windows service can’t connect to the database</h2><p>In my service, i need to access to the database, But it gives me an error like this.</p>
 <p><strong> Login failed. Login failed for user ‘NT AUTHORITY\SYSTEM’ </strong></p>
-<p>windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database<br>To resolve this add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. </p>
+<p>windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database<br>To resolve this, add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. </p>
+<p>These are the guidelines to create a windows service, Enjoy the ride!</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="ciqtbsucr0000psgc2cyj0s9q" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="ciqv70g1r0002ccgc1316tpsa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="ciqtbsud60006psgca11qug4o" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="ciqv70g240008ccgcirknp12c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -288,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqtbsucw0001psgc5pr9b918" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="ciqv70g1u0004ccgcmsjrkfoj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +395,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqtbsucz0002psgcoz5k245g" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="ciqv70g1t0003ccgcojdannw2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -378,7 +438,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciqtbsud30004psgcq6odqdmc" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="ciqv70g1w0005ccgcrh6uqcle" class="article-share-link">Share</a>
       
       
     </footer>
@@ -449,7 +509,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciqtbsud10003psgcdy0fu24p" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="ciqv70g1y0006ccgcz0lhgvdu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -489,7 +549,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciqtbsud40005psgc9oer70bs" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="ciqv70g220007ccgc6gi3o0wi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -514,7 +574,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
     </div>
@@ -524,9 +584,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/">I want to run a time consuming long process in a one web request</a>
+          </li>
         
           <li>
             <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/">Schedule your tasks with a windows service</a>
@@ -542,10 +606,6 @@
         
           <li>
             <a href="/2016/04/04/LINQ comes to rescue/">LINQ comes to rescue!</a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/02/ODATA Reads with Parameters/">ODATA Reads with Parameters</a>
           </li>
         
       </ul>
