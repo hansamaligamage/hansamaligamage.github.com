@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -87,8 +87,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>When a web application develops, we need to protect user passwords from security attacks. When your application operates on a license key, we need to validate the license.<br>In todays world providing security to your system is bit crucial. We have to face malicious scripts, security threats and unwanted attacks in out there. Let’s see how we can prevent those kind of attacks.</p>
-<h1 id="Password-Hashing"><a href="#Password-Hashing" class="headerlink" title="Password Hashing"></a>Password Hashing</h1><p>In hashing, we are going to convert password string into a byte array. Hashing is a one way funtion, we can’t reverse it. We can see many hashing algorithms available. </p>
-<p>Let’s say we hashed the users password and stored in our database. When user second time logs in, we have to verify entered password is correct. What we can do is, we can hash the entered text into password field and compare it with the hashed value from the database.<br>Since Hashing is a one way function, we can’t decrypt and retrieve original text.</p>
+<h1 id="Password-Hashing"><a href="#Password-Hashing" class="headerlink" title="Password Hashing"></a>Password Hashing</h1><p>In hashing, we are going to convert password string into a byte array. Hashing is a one way funtion, we can’t reverse it. We can see many hashing algorithms available.<br>Let’s say we hashed the users password and stored in our database. When user second time logs in, we have to verify entered password is correct. What we can do is, we can hash the entered text into password field and compare it with the hashed value from the database. Since Hashing is a one way function, we can’t decrypt and retrieve original text.</p>
 <h1 id="Invalid-username-or-password"><a href="#Invalid-username-or-password" class="headerlink" title="Invalid username or password"></a>Invalid username or password</h1><p>When user enters wrong password, System should not let the user know it’s <em> Invalid password </em>, instead of it should tell <em> Invalid username or password </em>. Then if hacker tries to login into your system, he doesn’t know whether username or password got wrong.</p>
 <h1 id="Hash-Functions"><a href="#Hash-Functions" class="headerlink" title="Hash Functions"></a>Hash Functions</h1><p>SHA1, MD5 are popular hashing algorithms. SHA1 got inspired from MD algorithms and created SHA algorithms. From these two algorithms, better to use SHA1, Because it’s high secure than MD5.  MD5 is going to convert a string into 128 bits. But SHA1 convert a string into 160 bits. In MD5 less no of operations required to crack the message, when compared to SHA1. But MD is faster than SHA1. However it’s better to use SHA1 algorithm instead of MD5, since MD5 can be broken easily.</p>
 <h1 id="Hashes-can-be-cracked-easily"><a href="#Hashes-can-be-cracked-easily" class="headerlink" title="Hashes can be cracked easily"></a>Hashes can be cracked easily</h1><p>Hackers can guess passwords and simply hash them with a hashing algorithm and try it in your system. It takes few seconds to generate a hash. Within a limited amout of time, your passwords can be cracked easily. These type of guessing password and hashing is called as Dictionary attacks and Brute force attacks.<br>In dictionary attacks, it uses a file with some words. These words can be extracted from a database or else from set of paragraphs. Most hackers guess passwords from common terms like, hello, hellow, he11o3 etc. They take a string and try to replace letters in it, like hello, he33o, heiio, etc. Then these words are hashed and use against the password hash.<br>Brute Force attacks going to try out every possible of character combinations to a certain string length. It’s a very expensive computational process, But eventually it’s going to find out your password! That’s why we need lenghtier passwords, So it will take long time to crack your passwords.<br>By hashing your passwords, We can’t prevent Dictionary attacks or Brute force attacks, But we can minimize them.<br>While Dictionary attacks and Brute force attacks are time consuming, Hackers has another kid in their block, It’s Lookup Table. In Lookup table, It’s going to precompute the hashes of passwords and used to store them in a dictionary file.<br>So hundrends of guesses can be done in a second. It’s a very effective method to crack your passwords.<br>Rainbow Tables, Beware guys, it can crack any 8 characters lengthy MD5 password. Rainbow table is same as Lookup table. In here hash cracking speed is slower, compared to lookup table. But lookup table size is smaller, so more hashes can be stored in the same space. So Rainbow tables are more effective than Lookup tables.</p>
@@ -101,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cir6zvsef00027ogcjazrr97a" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cir6zx1pr0001b8gcuof3xmpy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +159,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cir6zvsei00037ogckr33jewp" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cir6zx1pt0002b8gcnqfgx11r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cir6zvsed00017ogc4bk8ao8t" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cir6zx1pm0000b8gchhqoxpwl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -288,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cir6zvsew00097ogcfdz4utcz" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cir6zx1q50008b8gcvmewo669" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cir6zvsel00057ogc9vamyw7k" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cir6zx1px0004b8gc4a7ph8x5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -442,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cir6zvsej00047ogcb1zkuuxi" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cir6zx1pv0003b8gc2uiugbuq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -485,7 +484,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cir6zvseo00067ogc9lztp1j3" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cir6zx1pz0005b8gc4giv8xjt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -556,7 +555,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="cir6zvses00077ogc25xsf8qt" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="cir6zx1q00006b8gcf3xj4s9k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -596,7 +595,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="cir6zvset00087ogcxmzg48ox" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="cir6zx1q40007b8gcnf8v98fy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -631,7 +630,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -668,7 +667,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
