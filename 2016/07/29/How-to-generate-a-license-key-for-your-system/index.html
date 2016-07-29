@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>How to generate a license key for your system | Tech Spot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="When a web application develops, we need to protect user passwords from security attacks. When your application operates on a subscriptions, we need to validate the license.In todays world providing s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to generate a license key for your system">
+<meta property="og:url" content="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/index.html">
+<meta property="og:site_name" content="Tech Spot">
+<meta property="og:description" content="When a web application develops, we need to protect user passwords from security attacks. When your application operates on a subscriptions, we need to validate the license.In todays world providing s">
+<meta property="og:image" content="http://yoursite.com/images/codesample.PNG">
+<meta property="og:image" content="http://yoursite.com/images/codesample1.PNG">
+<meta property="og:updated_time" content="2016-07-29T00:07:01.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to generate a license key for your system">
+<meta name="twitter:description" content="When a web application develops, we need to protect user passwords from security attacks. When your application operates on a subscriptions, we need to validate the license.In todays world providing s">
+<meta name="twitter:image" content="http://yoursite.com/images/codesample.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="Tech Spot" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tech Spot</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-How-to-generate-a-license-key-for-your-system" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/29/How-to-generate-a-license-key-for-your-system/" class="article-date">
+  <time datetime="2016-07-28T18:30:00.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to generate a license key for your system
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>When a web application develops, we need to protect user passwords from security attacks. When your application operates on a subscriptions, we need to validate the license.<br>In todays world providing security to your system is bit crucial. We have to face malicious scripts, security threats and unwanted attacks in out there. Let’s see how we can prevent those kind of attacks.</p>
+<h1 id="Password-Hashing"><a href="#Password-Hashing" class="headerlink" title="Password Hashing"></a>Password Hashing</h1><p>In hashing, we are going to convert password string into a byte array. Hashing is a one way funtion, we can’t reverse it. We can see many hashing algorithms available. </p>
+<p>Let’s say we hashed the users password and stored in our database. When user second time logs in, we have to verify entered password is correct. What we can do is, we can hash the entered text into password field and compare it with the hashed value from the database.<br>Since Hashing is a one way function, we can’t decrypt and retrieve original text. It’s better to create a 64 b</p>
+<h1 id="Invalid-username-or-password"><a href="#Invalid-username-or-password" class="headerlink" title="Invalid username or password"></a>Invalid username or password</h1><p>When user enters wrong password, System should not let the user know it’s <em> Invalid password </em>, instead of it should tell <em> Invalid username or password </em>. Then if hacker tries to login into your system, he doesn’t know whether username or password got wrong.</p>
+<h1 id="Hash-Functions"><a href="#Hash-Functions" class="headerlink" title="Hash Functions"></a>Hash Functions</h1><p>SHA1, MD5 are popular hashing algorithms. SHA1 got inspired from MD algorithms and created SHA algorithms. From these two algorithms, better to use SHA1, Because it’s high secure than MD5.  MD5 is going to convert a string into 128 bits. But SHA1 convert a string into 160 bits. In MD5 less no of operations required to crack the message, when compared to SHA1. But MD is faster than SHA1. However it’s better to use SHA1 algorithm instead of MD5, since MD5 can be broken easily.</p>
+<h1 id="Hashes-can-be-cracked-easily"><a href="#Hashes-can-be-cracked-easily" class="headerlink" title="Hashes can be cracked easily"></a>Hashes can be cracked easily</h1><p>Hackers can guess passwords and simply hash them with a hashing algorithm and try it in your system. It takes few seconds to generate a hash. Within a limited amout of time, your passwords can be cracked easily. These type of guessing password and hashing is called as Dictionary attacks and Brute force attacks.<br>In dictionary attacks, it uses a file with some words. These words can be extracted from a database or else from set of paragraphs. Most hackers guess passwords from common terms like, hello, hellow, he11o3 etc. They take a string and try to replace letters in it, like hello, he33o, heiio, etc. Then these words are hashed and use against the password hash.<br>Brute Force attacks going to try out every possible of character combinations to a certain string length. It’s a very expensive computational process, But eventually it’s going to find out your password! That’s why we need lenghtier passwords, So it will take long time to crack your passwords.<br>By hashing your passwords, We can’t prevent Dictionary attacks or Brute force attacks, But we can minimize them.<br>While Dictionary attacks and Brute force attacks are time consuming, Hackers has another kid in their block, It’s Lookup Table. In Lookup table, It’s going to precompute the hashes of passwords and used to store them in a dictionary file.<br>So hundrends of guesses can be done in a second. It’s a very effective method to crack your passwords.<br>Rainbow Tables, Beware guys, it can crack any 8 characters lengthy MD5 password. Rainbow table is same as Lookup table. In here hash cracking speed is slower, compared to lookup table. But lookup table size is smaller, so more hashes can be stored in the same space. So Rainbow tables are more effective than Lookup tables.</p>
+<h1 id="Salted-Password-Hashing"><a href="#Salted-Password-Hashing" class="headerlink" title="Salted Password Hashing"></a>Salted Password Hashing</h1><p>If we use a salt with password hashing, It’s impossible to crack your passwords through Rainbow tables and lookup tables. In lookup tables, hackers are going to hash same list of passwords and try out in your system. Let’s say two users are having same password in your system. When we hash these passwords, It’s same password hash. In Salting, we are adding a random number along with hashed password. So two users never get same salted password hash. And mind you don’t use same salt with different user passwords, don’t repeat the salting. If new user registers into your system or else change password, generate a new salt. Use a new salt for every user password. If hacker is smart enough, He may be able to crack a one or two user passwords, But not more than that. Eventhough many users have same password, Hacker will not be able to crack their passwords using a lookup table. Don’t use shorter salt, Then hacker can create a lookup table to generate every possible salt.</p>
+<h1 id="Let’s-see-how-we-can-generate-a-subscription-key"><a href="#Let’s-see-how-we-can-generate-a-subscription-key" class="headerlink" title="Let’s see how we can generate a subscription key"></a>Let’s see how we can generate a subscription key</h1><p><img src="/images/codesample.PNG" alt="Generate a subscription key"></p>
+<p>In this example, we are passing usernam and company code to generate a subscription key. Using <em> GenerateSalt </em> method, we can generate a random number. I used to create a 32 bytes lenth salt number using <em> RNGCryptoServiceProvider </em> class. Using <em> Rfc289DeriveVytes </em> class we can generate a salted hashing value. Along with the generated subscription key, we used to store salted number as well.</p>
+<h1 id="Let’s-see-how-we-can-validate-the-subscription-key"><a href="#Let’s-see-how-we-can-validate-the-subscription-key" class="headerlink" title="Let’s see how we can validate the subscription key."></a>Let’s see how we can validate the subscription key.</h1><p><img src="/images/codesample1.PNG" alt="Validate the subscription key"></p>
+<p>I used 64 byte array  as a subscription key and 32 byte array as a salted value. We can use <em> SequenceEqual </em> method to compare entered subscription key with stored subscription key as above.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cir6v3bll0002tggcezulh5eu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">I want to run a time consuming long process in a one web request</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/29/How-to-generate-a-license-key-for-your-system/">How to generate a license key for your system</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/">I want to run a time consuming long process in a one web request</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/">Schedule your tasks with a windows service</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/29/NLog-Configurations/">NLog Configurations</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Hansamali Gamage<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
