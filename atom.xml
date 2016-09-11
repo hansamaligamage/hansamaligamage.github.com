@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-11T17:17:08.684Z</updated>
+  <updated>2016-09-11T17:23:48.330Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2016/08/27/Install-NET-Core-in-Ubuntu/"/>
     <id>http://yoursite.com/2016/08/27/Install-NET-Core-in-Ubuntu/</id>
     <published>2016-08-27T05:20:23.000Z</published>
-    <updated>2016-09-11T17:17:08.684Z</updated>
+    <updated>2016-09-11T17:23:48.330Z</updated>
     
-    <content type="html">&lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. In end of june Microsoft released a new .NET framework called .NET Core for Windows, Linux and Mac. A great feature of .NET core is, a solution build on windows can be run and modify in a linux based environment. And also we can build an application on winows, and can host it in a Linux server, how cool is that.&lt;/p&gt;
+    <content type="html">&lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. Latest version of .NET framework is .NET 4.6.2,  In end of june Microsoft released a new .NET framework called .NET Core for Windows, Linux and Mac. A great feature of .NET core is, a solution build on windows can be run and modify in a linux based environment. And also we can build an application on winows, and can host it in a Linux server, how cool is that.&lt;/p&gt;
 &lt;h1 id=&quot;Ubuntu-run-in-a-VM&quot;&gt;&lt;a href=&quot;#Ubuntu-run-in-a-VM&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu run in a VM&quot;&gt;&lt;/a&gt;Ubuntu run in a VM&lt;/h1&gt;&lt;p&gt;Let’s see how we can run Ubuntu inside a virtual machine.&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;/images/create-a-vm.PNG&quot; alt=&quot;Create a virtual machine with Ubuntu&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Select &lt;em&gt; Create a new Virtual Machine &lt;/em&gt;, then &lt;em&gt; New Virtual Machine Wizard &lt;/em&gt; appears. in this example I selected a disc image of ubuntu (.iso file) or else you can install a operating system using a dvd. Click on &lt;em&gt; Next &lt;/em&gt;&lt;/p&gt;
@@ -57,7 +57,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. In end of ju
+      &lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. Latest versi
     
     </summary>
     
