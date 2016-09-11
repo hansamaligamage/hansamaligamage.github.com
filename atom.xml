@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-29T00:15:25.794Z</updated>
+  <updated>2016-09-11T17:17:08.684Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Install .NET Core in Ubuntu</title>
+    <link href="http://yoursite.com/2016/08/27/Install-NET-Core-in-Ubuntu/"/>
+    <id>http://yoursite.com/2016/08/27/Install-NET-Core-in-Ubuntu/</id>
+    <published>2016-08-27T05:20:23.000Z</published>
+    <updated>2016-09-11T17:17:08.684Z</updated>
+    
+    <content type="html">&lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. In end of june Microsoft released a new .NET framework called .NET Core for Windows, Linux and Mac. A great feature of .NET core is, a solution build on windows can be run and modify in a linux based environment. And also we can build an application on winows, and can host it in a Linux server, how cool is that.&lt;/p&gt;
+&lt;h1 id=&quot;Ubuntu-run-in-a-VM&quot;&gt;&lt;a href=&quot;#Ubuntu-run-in-a-VM&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu run in a VM&quot;&gt;&lt;/a&gt;Ubuntu run in a VM&lt;/h1&gt;&lt;p&gt;Let’s see how we can run Ubuntu inside a virtual machine.&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;/images/create-a-vm.PNG&quot; alt=&quot;Create a virtual machine with Ubuntu&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;em&gt; Create a new Virtual Machine &lt;/em&gt;, then &lt;em&gt; New Virtual Machine Wizard &lt;/em&gt; appears. in this example I selected a disc image of ubuntu (.iso file) or else you can install a operating system using a dvd. Click on &lt;em&gt; Next &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/personel-info-in-linux.PNG&quot; alt=&quot;Personnel information&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Enter your personnel information, a username and a password.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/name-virtual-machine.PNG&quot; alt=&quot;Name the virtual machine&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Give a name for the virtual machine and install location.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/specify-disk-capacity.PNG&quot; alt=&quot;Specify the disk capacity&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Specify the disk capacity and virtual hard disk information&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/customise-hardware.PNG&quot; alt=&quot;Customise hardware in the virtual machine&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Customise the hardware if you want, You can change name of the virtual machine, location, hard disk size, memory etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/installation-of-ubuntu.PNG&quot; alt=&quot;Installing Ubuntu in a vm&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Installation of Ubuntu will take few minutes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ubuntu-is-ready.PNG&quot; alt=&quot;Ubuntu is ready&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu in vm is ready, &lt;/p&gt;
+&lt;h1 id=&quot;Install-VMware-tools&quot;&gt;&lt;a href=&quot;#Install-VMware-tools&quot; class=&quot;headerlink&quot; title=&quot;Install VMware tools&quot;&gt;&lt;/a&gt;Install VMware tools&lt;/h1&gt;&lt;p&gt;We are going to install VMware tools. We can’t go full screen mode, If we haven’t install VMware tools.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/VMware-tools-installer.PNG&quot; alt=&quot;VMware tools installer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Download VMware tools, and Let’s try to install it.&lt;/p&gt;
+&lt;p&gt;I downloaded VMware tools - 10.0.6,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/extract-VMware-tools-installer.PNG&quot; alt=&quot;Extract VMware installer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Right click on VMware tools zip file and select &lt;em&gt; Extract To &lt;/em&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/select-extract-location-as-desktop.PNG&quot; alt=&quot;Select extract location as Desktop&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;em&gt; Desktop &lt;/em&gt; as extract location, and press on &lt;em&gt; Extract &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/go-inside-VMware-tools.PNG&quot; alt=&quot;cd into VMware installer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Go inside VMware installer using &lt;em&gt; cd &lt;/em&gt; command.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/run-VMware-installer.PNG&quot; alt=&quot;run VMware installer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Run VMware installer, using above command with &lt;em&gt; sudo &lt;/em&gt;, sudo command means, you run this installer as a super user. &lt;em&gt; superuser do &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Now you can go to full screen mode.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/check-ubuntu-version.PNG&quot; alt=&quot;Check Ubuntu version from terminal&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Open a terminal and check Ubuntu version, We have succesfully Installed Ubuntu in a virtual machine.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. In end of ju
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>How to generate a license key for your system</title>
