@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,88 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Hello-World-in-NETCore-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/12/Hello-World-in-NETCore-Ubuntu/" class="article-date">
+  <time datetime="2016-09-11T18:49:57.000Z" itemprop="datePublished">2016-09-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/12/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Let’s start our first application on .NETCore - Ubuntu</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/" data-id="cit2cfpzq00023sgckqdgd6tn" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Install-NETCore-on-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/11/Install-NETCore-on-Ubuntu/" class="article-date">
+  <time datetime="2016-09-11T17:59:23.000Z" itemprop="datePublished">2016-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/11/Install-NETCore-on-Ubuntu/">Install .NETCore on Ubuntu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. Latest version of .NET framework is .NET 4.6.2 up to now, In the end of june Microsoft released a new .NET framework called .NET Core for Windows, Linux and Mac. A great feature of .NET core is, a solution build on windows can be run and modify in a linux based environment. We can build an application on winows, and can host it in a Linux server, how cool is that.</p>
+<h1 id="Add-dotnet-apt-get-feed"><a href="#Add-dotnet-apt-get-feed" class="headerlink" title="Add dotnet apt-get feed"></a>Add dotnet apt-get feed</h1><p><img src="/images/add-dotnet-apt-get-feed.PNG" alt="apt-get Feed"></p>
+<p>First of all, setup the apt-get feed and update it.</p>
+<p>apt-get is a free package manager program. It works with Ubuntu’s APT (Advanced Packaging Tool). Using that command line program, We can Install new packages, remove or upgrade packages.</p>
+<p>for Ubuntu 16.04, run these commands,<br>    <strong> sudo sh -c ‘echo “deb [arch=amd64] <a href="https://apt-mo.trafficmanager.net/repos/dotnet-release/" target="_blank" rel="external">https://apt-mo.trafficmanager.net/repos/dotnet-release/</a> xenial main” &gt; /etc/apt/sources.list.d/dotnetdev.list’ </strong><br>    <strong> sudo apt-key adv –keyserver apt-mo.trafficmanager.net –recv-keys 417A0893 </strong><br>Then update apt-get feed Using following command, <strong> sudo apt-get update </strong></p>
+<h1 id="Install-NETCore-top-of-apt-get"><a href="#Install-NETCore-top-of-apt-get" class="headerlink" title="Install .NETCore top of apt-get"></a>Install .NETCore top of apt-get</h1><p><img src="/images/install-dotnet-core.PNG" alt="Install .NETCore"></p>
+<p>Install .NETCore using following command, <strong> sudo apt-get install dotnet-dev-1.0.0-preview2-003121 </strong></p>
+<p><img src="/images/check-dotnet-installation.PNG" alt="run dotnet command"></p>
+<p>Check whether .NETCore is properly installed using <strong> dotnet </strong> command. It shows .NETCore version as 1.0.1</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit2cfpzy00063sgcqzd4am0u" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Install-Ubuntu-in-VM" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -121,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cisyxb7ry000500gcbug39e9w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit2cfq0100073sgcpg53i99p" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -167,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cisyxb7ru000300gc0m03t80a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit2cfpzs00033sgc8nkmlo3g" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -226,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cisyxb7rx000400gcf6ryx4mf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit2cfpzu00043sgcq0ro2toc" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -310,7 +392,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cisyxb7rs000200gc31cw0fzb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit2cfpzo00013sgcz0beuo22" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -354,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cisyxb7sg000b00gcfrp61mcl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit2cfq0b000c3sgcioxv2azy" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -461,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cisyxb7s4000700gcx0fxzxh3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cit2cfq0200083sgcvzpk7jhy" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -508,7 +590,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cisyxb7s2000600gcyut4qnjh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cit2cfpzv00053sgcjp1p8cqw" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -551,118 +633,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cisyxb7s6000800gcgvm4kwor" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ODATA Reads" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/19/ODATA Reads/" class="article-date">
-  <time datetime="2016-02-19T13:15:36.000Z" itemprop="datePublished">2016-02-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/19/ODATA Reads/">ODATA Reads</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Data-READs"><a href="#Data-READs" class="headerlink" title="Data READs"></a>Data READs</h2><p>Let’s start with a newer version of ODATA to access data from a existing service, In this solution I have used <em> Web API 2.2 with ODATA v4 </em></p>
-<h2 id="ODATA-v4-package"><a href="#ODATA-v4-package" class="headerlink" title="ODATA v4 package"></a>ODATA v4 package</h2><p>Visual Studio has a built in package to create ODATA v4 services, Package contains all the libraries required to create a ODATA v4 endpoint.</p>
-<h2 id="Integrate-ODATA-v4-package-into-solution"><a href="#Integrate-ODATA-v4-package-into-solution" class="headerlink" title="Integrate ODATA v4 package into solution"></a>Integrate ODATA v4 package into solution</h2><p>We can add the necessary OData package into solution like this, Select <em> Microsoft ASP.NET Web API 2.2 for OData v4.0 </em></p>
-<p><img src="/images/nugetPackageManagementStore.png" alt="nuget package management store."></p>
-<h2 id="All-the-relevant-libraries-are-installing"><a href="#All-the-relevant-libraries-are-installing" class="headerlink" title="All the relevant libraries are installing"></a>All the relevant libraries are installing</h2><p><img src="/images/odataRelatedPackagesInstall.png" alt="All the ODATA related libraries are installing."></p>
-<h2 id="Register-OData-endpoint"><a href="#Register-OData-endpoint" class="headerlink" title="Register OData endpoint"></a>Register OData endpoint</h2><p>Register service endpoint in Register method of WebApiConfig file</p>
-<p><img src="/images/registerServiceEndpoints.png" alt="Register service endpoints."></p>
-<p>In line no 22, I have exposed the Student entity, Data read method is implemented in OData controller, <em> StudentController </em></p>
-<h2 id="Student-Controller-implements-OData-Controller"><a href="#Student-Controller-implements-OData-Controller" class="headerlink" title="Student Controller implements OData Controller"></a>Student Controller implements OData Controller</h2><p><img src="/images/studentController.png" alt="Student Controller"></p>
-<p><em>StudentController</em> inherits from OData Controller, So all the CRUD operations related to student can be implemented in this controller.</p>
-<h2 id="How-it-works-in-the-browser"><a href="#How-it-works-in-the-browser" class="headerlink" title="How it works in the browser"></a>How it works in the browser</h2><p>now ping to the OData endpoint,</p>
-<p><img src="/images/allAvailableEntities.png" alt="Available entities"></p>
-<p>We can see all the available entities in the endpoint with metadata.</p>
-<h2 id="Read-Students"><a href="#Read-Students" class="headerlink" title="Read Students"></a>Read Students</h2><p><img src="/images/readStudents.png" alt="Read Students"></p>
-<p>By appending entity, <em> Student </em> into url, we can read student data</p>
-<h2 id="Read-Data-types"><a href="#Read-Data-types" class="headerlink" title="Read Data types"></a>Read Data types</h2><p><img src="/images/readDatatypes.png" alt="Read data types"></p>
-<p>We can read data types of student using the <em> $metadata </em> tag</p>
-<h2 id="Excel-2016-with-OData-v4"><a href="#Excel-2016-with-OData-v4" class="headerlink" title="Excel 2016 with OData v4"></a>Excel 2016 with OData v4</h2><p>We already know office is not only for manipulating documents, We can perform many advanced queries with Excel. Excel supports to fetch data from different other sources, newer update is OData sources </p>
-<p><img src="/images/Excel2016odatav4.png" alt="Excel 2016 - ODATA v4"></p>
-<p>In excel 2016, We can connect to a OData source like this,</p>
-<p><img src="/images/dataConnectionWizard.png" alt="Data connection wizard"></p>
-<p>But we get an error!!!!!!</p>
-<p><img src="/images/errorDataConnectionWizard.png" alt="error from Data connection wizard - office 2016 odata v4"></p>
-<p>It clearly says Excel 2016 can be only integrated with Odata v3 or any earlier data feeds :) But for your information, with Excel 2016 as well as Excel 2013, we can integrate OData v3 </p>
-<h2 id="Excel-2013-amp-OData-v4"><a href="#Excel-2013-amp-OData-v4" class="headerlink" title="Excel 2013 &amp; OData v4 ?"></a>Excel 2013 &amp; OData v4 ?</h2><p>With Excel 2013, ODATA v4 is not compatible. But we can use a V3 format service with Excel 2013.</p>
-<p><img src="/images/errorExcel2013ODatav4.png" alt="error - office 2013 odata v4"></p>
-<h2 id="Excel-2016-with-OData-v4-Power-Query"><a href="#Excel-2016-with-OData-v4-Power-Query" class="headerlink" title="Excel 2016 with OData v4 - Power Query"></a>Excel 2016 with OData v4 - Power Query</h2><p>With ODATA v4, we can’t use ODATA source option, But we have Power Query option to analyse data.</p>
-<p><img src="/images/Excel2016ODatav4WithPowerQuery.png" alt="Excel 2016 - ODATA v4 with Power Query"></p>
-<p>In Data tab, we have many options to fetch data from different other sources, We can select <em>From OData Feed</em> option.</p>
-<p><img src="/images/powerQueryOdatafeed.png" alt="PowerQuery - Odata feed"></p>
-<p>We can use Office 2016 Power Query option with OData v4.</p>
-<h2 id="Power-Query-Editor"><a href="#Power-Query-Editor" class="headerlink" title="Power Query Editor"></a>Power Query Editor</h2><p><img src="/images/powerQueryEditor.png" alt="PowerQuery editor"></p>
-<p>This is the query editor, we can select/remove columns, can remove duplicates, group by a column, create a new column based on a mathematical function and much more advanced operations.</p>
-<p><img src="/images/queryEditorWindow.png" alt="Query editor window"></p>
-<p>In the next section, we’ll see how to read data by passing a value :)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/19/ODATA Reads/" data-id="cisyxb7sd000900gcp9ep3l1b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ODATAFeatures" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/23/ODATAFeatures/" class="article-date">
-  <time datetime="2016-01-23T13:15:36.000Z" itemprop="datePublished">2016-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/23/ODATAFeatures/">ODATA Features</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ODATA"><a href="#ODATA" class="headerlink" title="ODATA"></a>ODATA</h2><p>ODATA is a open data protocol to access data using REST architecture. ODATA is a Microsoft standard, but available with Android &amp; IOS platforms as well. ODATA supports for JSON and Atom formats. With the help of ODATA , we can access data in variety of sources like relational databases, Web sites, File systems and Content Management Systems.</p>
-<h2 id="ODATA-has-more-features-than-REST"><a href="#ODATA-has-more-features-than-REST" class="headerlink" title="ODATA has more features than REST!"></a>ODATA has more features than REST!</h2><p>REST is an architectural pattern to implement a service, But with ODATA it’s going to provide more features to more sources like File systems, Content Management Systems. ODATA services supports for query options like filter, select, expand, order by and many more. As per our requirement, we can filter the result set, order as we want. And we can skip some rows, Even we can select the top row as well.</p>
-<h2 id="It’s-2016"><a href="#It’s-2016" class="headerlink" title="It’s 2016!!!!"></a>It’s 2016!!!!</h2><p>Microsoft has introduced variety of features with Office 2016, If your old REST services are using ODATA protocol, We can implement a simple power BI solution just with Excel itself.</p>
-<h2 id="ODATA-Versions-so-far"><a href="#ODATA-Versions-so-far" class="headerlink" title="ODATA Versions so far"></a>ODATA Versions so far</h2><p>After ODATA V2 and ODATA V3, Now ODATA V4 has been released as a major release. If you want to build a open data service, we can use <strong> ODATA v4 with WebAPI 2.2 </strong> as a solution.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/23/ODATAFeatures/" data-id="cisyxb7se000a00gcb8ppnija" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cit2cfq0700093sgcdrnwfgbo" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -673,6 +644,10 @@
 
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -689,7 +664,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
     </div>
   </div>
 
@@ -697,9 +672,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/09/12/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/11/Install-NETCore-on-Ubuntu/">Install .NETCore on Ubuntu</a>
+          </li>
         
           <li>
             <a href="/2016/08/27/Install-Ubuntu-in-VM/">Install Ubuntu in a Virtual Machine</a>
@@ -711,14 +694,6 @@
         
           <li>
             <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/">I want to run a time consuming long process in a one web request</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/19/Easy-steps-to-create-a-windows-service/">Schedule your tasks with a windows service</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
           </li>
         
       </ul>
@@ -734,7 +709,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

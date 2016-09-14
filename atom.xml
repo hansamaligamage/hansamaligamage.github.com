@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-11T17:31:03.543Z</updated>
+  <updated>2016-09-11T18:54:18.669Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World in .NETCore Ubuntu</title>
+    <link href="http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/"/>
+    <id>http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/</id>
+    <published>2016-09-11T18:49:57.000Z</published>
+    <updated>2016-09-11T18:54:18.669Z</updated>
+    
+    <content type="html">&lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Install .NETCore on Ubuntu</title>
+    <link href="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/"/>
+    <id>http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/</id>
+    <published>2016-09-11T17:59:23.000Z</published>
+    <updated>2016-09-14T03:24:12.328Z</updated>
+    
+    <content type="html">&lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. Latest version of .NET framework is .NET 4.6.2 up to now, In the end of june Microsoft released a new .NET framework called .NET Core for Windows, Linux and Mac. A great feature of .NET core is, a solution build on windows can be run and modify in a linux based environment. We can build an application on winows, and can host it in a Linux server, how cool is that.&lt;/p&gt;
+&lt;h1 id=&quot;Add-dotnet-apt-get-feed&quot;&gt;&lt;a href=&quot;#Add-dotnet-apt-get-feed&quot; class=&quot;headerlink&quot; title=&quot;Add dotnet apt-get feed&quot;&gt;&lt;/a&gt;Add dotnet apt-get feed&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/add-dotnet-apt-get-feed.PNG&quot; alt=&quot;apt-get Feed&quot;&gt;&lt;/p&gt;
+&lt;p&gt;First of all, setup the apt-get feed and update it.&lt;/p&gt;
+&lt;p&gt;apt-get is a free package manager program. It works with Ubuntu’s APT (Advanced Packaging Tool). Using that command line program, We can Install new packages, remove or upgrade packages.&lt;/p&gt;
+&lt;p&gt;for Ubuntu 16.04, run these commands,&lt;br&gt;    &lt;strong&gt; sudo sh -c ‘echo “deb [arch=amd64] &lt;a href=&quot;https://apt-mo.trafficmanager.net/repos/dotnet-release/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://apt-mo.trafficmanager.net/repos/dotnet-release/&lt;/a&gt; xenial main” &amp;gt; /etc/apt/sources.list.d/dotnetdev.list’ &lt;/strong&gt;&lt;br&gt;    &lt;strong&gt; sudo apt-key adv –keyserver apt-mo.trafficmanager.net –recv-keys 417A0893 &lt;/strong&gt;&lt;br&gt;Then update apt-get feed Using following command, &lt;strong&gt; sudo apt-get update &lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Install-NETCore-top-of-apt-get&quot;&gt;&lt;a href=&quot;#Install-NETCore-top-of-apt-get&quot; class=&quot;headerlink&quot; title=&quot;Install .NETCore top of apt-get&quot;&gt;&lt;/a&gt;Install .NETCore top of apt-get&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/install-dotnet-core.PNG&quot; alt=&quot;Install .NETCore&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Install .NETCore using following command, &lt;strong&gt; sudo apt-get install dotnet-dev-1.0.0-preview2-003121 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/check-dotnet-installation.PNG&quot; alt=&quot;run dotnet command&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Check whether .NETCore is properly installed using &lt;strong&gt; dotnet &lt;/strong&gt; command. It shows .NETCore version as 1.0.1&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In .NET framework history, .NET have its full framework from .NET 1.0 to .NET 4.6.2, specially created for windows platform. Latest versi
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Install Ubuntu in a Virtual Machine</title>

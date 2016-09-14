@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/</loc>
+    
+    <lastmod>2016-09-14T03:24:12.328Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/</loc>
+    
+    <lastmod>2016-09-11T18:54:18.669Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/</loc>
     
     <lastmod>2016-09-11T17:31:03.543Z</lastmod>
