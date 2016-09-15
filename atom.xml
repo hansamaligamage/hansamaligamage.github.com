@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T15:28:33.560Z</updated>
+  <updated>2016-09-15T18:29:35.532Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Create a web application with Yeoman!</title>
+    <link href="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/"/>
+    <id>http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/</id>
+    <published>2016-09-15T18:30:59.000Z</published>
+    <updated>2016-09-15T18:29:35.532Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Run-Yo-command&quot;&gt;&lt;a href=&quot;#Run-Yo-command&quot; class=&quot;headerlink&quot; title=&quot;Run Yo command&quot;&gt;&lt;/a&gt;Run Yo command&lt;/h1&gt;&lt;p&gt;First of all create a new directory and cd into it. Then run &lt;em&gt; yo &lt;/em&gt; command.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/run-yo-command.PNG&quot; alt=&quot;Yo command&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Run &lt;em&gt; Yo &lt;/em&gt; command, and check what happens.&lt;br&gt;It points to &lt;em&gt; Install a generator &lt;/em&gt; by default. It doesn’t point to &lt;em&gt; Run a generator, &lt;/em&gt; until we install a generator.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/install-aspnet-generator.PNG&quot; alt=&quot;install a generator&quot;&gt;&lt;/p&gt;
+&lt;p&gt;search for aspnet generator in npm package management store.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/permission-issue-in-installing-generator.PNG&quot; alt=&quot;install a generator&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We get a permission issue when installing aspnet generator, Let’s try what yo says,  will run &lt;em&gt; npm install &lt;/em&gt; command and see what happens.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/npm-install-generattor.PNG&quot; alt=&quot;install a generator using npm install command&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We tried to install generator using &lt;em&gt; npm install &lt;/em&gt; command, But it shows the same error!!!!&lt;br&gt;Since this is a permission issue, will run the command with &lt;em&gt; sudo &lt;/em&gt; and check what happens.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/npm-install-generattor-as-administrator.PNG&quot; alt=&quot;install a generator as administrator&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When installing generator as an administrator, it installs without getting any errors.&lt;br&gt;Let’s run &lt;em&gt; Yo &lt;/em&gt; command and select a template.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/create-empty-web-application.PNG&quot; alt=&quot;create empty web application using Yo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;em&gt; aspnet &lt;/em&gt; as generator, and then select what type of application you want to create.&lt;br&gt;Select &lt;em&gt; Empty Web Application &lt;/em&gt; and give a name to it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/after-restoring-packages.PNG&quot; alt=&quot;How it looks like after restoring packages&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Go inside the project folder and open it in visual studio code.&lt;br&gt;In visual studio code add &lt;em&gt; .vscode &lt;/em&gt; folder and restore relevant packages. It shows solution like this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/program-cs-file.PNG&quot; alt=&quot;program.cs file &quot;&gt;&lt;/p&gt;
+&lt;p&gt;In program.cs file, It shows &lt;em&gt; WebHostBuilder &lt;/em&gt; class, with cross platform &lt;em&gt; Kestrel server&lt;/em&gt; and &lt;em&gt; IIS integration &lt;/em&gt; both.&lt;br&gt;It has defined a seperate &lt;em&gt; Startup &lt;/em&gt; class, to configure the http request pipeline. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/dotnet-build-and-run.PNG&quot; alt=&quot;dotnet build and run application &quot;&gt;&lt;br&gt; Build and run .NETCore application and check terminal window,&lt;br&gt; You can see &lt;em&gt; logging &lt;/em&gt; is enabled for browser navigations.&lt;/p&gt;
+&lt;p&gt; We can see complete project is created using Yeoman template generator. It includes &lt;em&gt; program.cs, &lt;/em&gt; &lt;em&gt; project.json &lt;/em&gt; and &lt;em&gt; web.config &lt;/em&gt; files.&lt;br&gt; It includes &lt;em&gt; Startup &lt;/em&gt; class to manage the http request pipeline. And also it has a &lt;em&gt; wwwroot &lt;/em&gt; folder to host our web application.&lt;br&gt; Since Yeoman is generating complete application, We don’t have to do anything manually. We can only focus on the application logic and start working on it.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Run-Yo-command&quot;&gt;&lt;a href=&quot;#Run-Yo-command&quot; class=&quot;headerlink&quot; title=&quot;Run Yo command&quot;&gt;&lt;/a&gt;Run Yo command&lt;/h1&gt;&lt;p&gt;First of all create a 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Install Yeoman in .NETCORE</title>

@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,61 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Create-a-web-application-with-Yeoman" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/16/Create-a-web-application-with-Yeoman/" class="article-date">
+  <time datetime="2016-09-15T18:30:59.000Z" itemprop="datePublished">2016-09-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/16/Create-a-web-application-with-Yeoman/">Create a web application with Yeoman!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Run-Yo-command"><a href="#Run-Yo-command" class="headerlink" title="Run Yo command"></a>Run Yo command</h1><p>First of all create a new directory and cd into it. Then run <em> yo </em> command.</p>
+<p><img src="/images/run-yo-command.PNG" alt="Yo command"></p>
+<p>Run <em> Yo </em> command, and check what happens.<br>It points to <em> Install a generator </em> by default. It doesn’t point to <em> Run a generator, </em> until we install a generator.</p>
+<p><img src="/images/install-aspnet-generator.PNG" alt="install a generator"></p>
+<p>search for aspnet generator in npm package management store.</p>
+<p><img src="/images/permission-issue-in-installing-generator.PNG" alt="install a generator"></p>
+<p>We get a permission issue when installing aspnet generator, Let’s try what yo says,  will run <em> npm install </em> command and see what happens.</p>
+<p><img src="/images/npm-install-generattor.PNG" alt="install a generator using npm install command"></p>
+<p>We tried to install generator using <em> npm install </em> command, But it shows the same error!!!!<br>Since this is a permission issue, will run the command with <em> sudo </em> and check what happens.</p>
+<p><img src="/images/npm-install-generattor-as-administrator.PNG" alt="install a generator as administrator"></p>
+<p>When installing generator as an administrator, it installs without getting any errors.<br>Let’s run <em> Yo </em> command and select a template.</p>
+<p><img src="/images/create-empty-web-application.PNG" alt="create empty web application using Yo"></p>
+<p>Select <em> aspnet </em> as generator, and then select what type of application you want to create.<br>Select <em> Empty Web Application </em> and give a name to it.</p>
+<p><img src="/images/after-restoring-packages.PNG" alt="How it looks like after restoring packages"></p>
+<p>Go inside the project folder and open it in visual studio code.<br>In visual studio code add <em> .vscode </em> folder and restore relevant packages. It shows solution like this.</p>
+<p><img src="/images/program-cs-file.PNG" alt="program.cs file "></p>
+<p>In program.cs file, It shows <em> WebHostBuilder </em> class, with cross platform <em> Kestrel server</em> and <em> IIS integration </em> both.<br>It has defined a seperate <em> Startup </em> class, to configure the http request pipeline. </p>
+<p><img src="/images/dotnet-build-and-run.PNG" alt="dotnet build and run application "><br> Build and run .NETCore application and check terminal window,<br> You can see <em> logging </em> is enabled for browser navigations.</p>
+<p> We can see complete project is created using Yeoman template generator. It includes <em> program.cs, </em> <em> project.json </em> and <em> web.config </em> files.<br> It includes <em> Startup </em> class to manage the http request pipeline. And also it has a <em> wwwroot </em> folder to host our web application.<br> Since Yeoman is generating complete application, We don’t have to do anything manually. We can only focus on the application logic and start working on it.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="cit4o7ydy0000hggcsd0f81dn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Yeoman-go-easy-with-NETCore" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -103,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="cit4hr55b000e7sgcippiy61e" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="cit4o7yew000ehggct0rdrcx9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -156,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="cit4hr54y000d7sgc522wvt0c" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="cit4o7yeu000chggchzobnu03" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit4hr54200017sgcdrnmh9cy" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit4o7yeb0003hggcgb9exfl9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -262,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit4hr54e00067sgcxyh9ce7z" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit4o7yev000dhggc5mmwsp3f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -329,7 +384,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit4hr54j00077sgco5pleztb" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit4o7yef0006hggcznmy6z2m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -375,7 +430,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit4hr54900037sgcptxgg1jd" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit4o7ye90002hggcylqgqu3p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -434,7 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit4hr54b00047sgciikapni4" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit4o7yed0004hggc79t8yxlq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -518,7 +573,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit4hr53w00007sgcvjd631lm" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit4o7ye50001hggc7caqq9eh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -562,114 +617,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit4hr54w000c7sgcfhan9b15" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-NLog-Configurations" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/29/NLog-Configurations/" class="article-date">
-  <time datetime="2016-05-28T18:30:00.000Z" itemprop="datePublished">2016-05-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/29/NLog-Configurations/">NLog Configurations</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.</p>
-<h2 id="NLog"><a href="#NLog" class="headerlink" title="NLog"></a>NLog</h2><p>NLog is a free logging framework to log various kind of messages into a specified place. We can use NLog in a .NET environment, as well as with Xamarin and Windows phone.</p>
-<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>If we want to log a message from our application, We can use EventViewer without any libraries. But If we want to share the log file with someone else and analyse it in the future, we can’t do that with Eventviewer.<br> So we have to go for a logging framework if we want to write messages into a file or a database.</p>
-<h2 id="Logging-Frameworks"><a href="#Logging-Frameworks" class="headerlink" title="Logging Frameworks"></a>Logging Frameworks</h2><p> We can use any of these frameworks for logging purpose, <strong>Log4net</strong>, <strong>NLog</strong>, <strong>ELMAH</strong>, <strong>Microsoft Enterprise Library</strong>, <strong>NSpring</strong>. ELMAH is a web logging framework, All the other frameworks can be used with any .NET type of application.<br> When we use NLog or Log4net for logging, it takes just few minutes to integrate it to the application, But performancewise its not the same. NLog is much faster than Log4net and as well as all the above mentioned logging frameworks.<br> NSpring also easy to setup, but it requires more coding to log a message. With a large scale enterprise application, It will be tedious to work with NSpring.<br> Microsoft Enterprise Library (EntLib) is much faster, But need heavy configurations and coding to work with it. ELMAH is a web logger, It’s going to log the messages into a xml file by default.</p>
-<p> If you application needs file logging and more performance, better to go with NLog or NSpring. We can use Log4net also, it’s not that much faster, but easy to setup and use it in the application</p>
-<h2 id="Install-NLog"><a href="#Install-NLog" class="headerlink" title="Install NLog"></a>Install NLog</h2><p> Latest stable version of NLog is NLog 4.3.5.<br> With Nuget Package manager, I installed NLog,</p>
-<p>  <img src="/images/NLogInstallation.PNG" alt="NLog installation"></p>
-<h2 id="NLog-Targets"><a href="#NLog-Targets" class="headerlink" title="NLog Targets"></a>NLog Targets</h2><p> NLog targets are used to show, store or pass the message into another destination.  Some commonly used NLog targets are shown below,</p>
-<ul>
-<li>Console : writes message to a console window.</li>
-<li>Event Log : writes message to event viewer.</li>
-<li>Debugger : writes messagee to the attatched debugger.</li>
-<li>File : writes log message to a file.</li>
-<li>Database : store log message in database.</li>
-<li>Memory : can write log message into a arraylist in memory.</li>
-<li>Mail : send log message by email.</li>
-<li>Method call : For log message, calls specific static method.</li>
-<li>Network : send log message over a network.</li>
-<li>Service : calls a web service for each log message. </li>
-</ul>
-<p>And if these targets dont satisfy your requirements, you can create your own targets as well, (custom target)</p>
-<h2 id="Target-Layout"><a href="#Target-Layout" class="headerlink" title="Target Layout"></a>Target Layout</h2><p> Target layout means how our log message is going to display, in which format, which order. We can create custom layout renders as well. Commonly used layouts are as follows,</p>
-<ul>
-<li>${callsite} : Class name, method name or source information of the log message.</li>
-<li>${callsite-linenumber} : line no of call site source.</li>
-<li>${date} : date and time</li>
-<li>${exception} : exception details</li>
-<li>${level} : log level</li>
-<li>${logger} : logger name</li>
-<li>${longdate} : date and time in long format.</li>
-<li>${message} : log message.</li>
-<li>${stacktrace} : stack trace</li>
-</ul>
-<h2 id="NLog-rules"><a href="#NLog-rules" class="headerlink" title="NLog rules"></a>NLog rules</h2><p> NLog rules are called as a log routing table. It’s going to matches with a target and writes into a log with specified layout. Some of the attributes in NLog rules,</p>
-<ul>
-<li>name : logger name,</li>
-<li>minlevel : minimum log level for a rule to match</li>
-<li>maxlevel : maximum log level for a rule to match</li>
-<li>level : single log level for a rule to match</li>
-<li>levels : comma seperated list of logs for a rule to match</li>
-<li>write to : comma seperated list of targets to be written when a rule matches</li>
-<li>final : no further rules are processed when this rule matches</li>
-<li>enabled : going to disable/enable rules</li>
-</ul>
-<h2 id="Nlog-levels"><a href="#Nlog-levels" class="headerlink" title="Nlog levels"></a>Nlog levels</h2><p> One thing to note, In these level attribute, log messages are ordered from type. Trace is the minlevel log type, then Debug, Info, Warn, Error and Fatal.</p>
-<ul>
-<li>Trace level can be used when we need to notify the begining and end of a method </li>
-<li>Debug logs, we can identify whether session is expired, user is authenticated </li>
-<li>Info logs are used for more generic scenarios like, Email sent.</li>
-<li>Warn level can be used to notify warnings </li>
-<li>Error logs are used for exceptions and when application crashes. </li>
-<li>Fatal logs are highest level, used for most important cases.</li>
-</ul>
-<h2 id="Let’s-see-what’s-in-action"><a href="#Let’s-see-what’s-in-action" class="headerlink" title="Let’s see what’s in action"></a>Let’s see what’s in action</h2><p> In configuration file, I have configured log type and log level, I have used file logging, Trace as a minimum logging level.</p>
-<p><img src="/images/configFile.PNG" alt="configuration file"></p>
-<p> In code, I have written like this, </p>
-<p><img src="/images/code.PNG" alt="code i have written"></p>
-<p> Let’s check how it’s written in the log file</p>
-<p><img src="/images/output.PNG" alt="output seeems like this"></p>
-<p>In output, we can see the layout has been applied, ${longdate} ${callsite} ${callsite-linenumber} ${date} ${level} ${message}</p>
-<h2 id="How-to-use-multiple-targets"><a href="#How-to-use-multiple-targets" class="headerlink" title="How to use multiple targets"></a>How to use multiple targets</h2><p>Let’s see how to add multiple targets for logging</p>
-<p><img src="/images/MultipleTargetsConfig.PNG" alt="configuration file"></p>
-<p>In configuration file, i added two targets, one is to log into a file, other target is to log into a console window</p>
-<p><img src="/images/MultipleTargetsCode.PNG" alt="configuration file"></p>
-<p> File logging output is same as previous output, console output is seems like this. In console logging, I used a different layout like this, ${date} ${callsite} ${level} ${message} and minimmum log level is added as Warning level, So output got changed like this.</p>
-<p><strong> Some resources i referred, </strong></p>
-<ul>
-<li><a href="https://www.loggly.com/blog/benchmarking-5-popular-net-logging-libraries/" target="_blank" rel="external">https://www.loggly.com/blog/benchmarking-5-popular-net-logging-libraries/</a></li>
-<li><a href="https://github.com/nlog/nlog/wiki/Layout-Renderers" target="_blank" rel="external">https://github.com/nlog/nlog/wiki/Layout-Renderers</a></li>
-<li><a href="https://github.com/NLog/NLog/wiki/Log-levels" target="_blank" rel="external">https://github.com/NLog/NLog/wiki/Log-levels</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cit4hr54c00057sgcqf8migwz" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit4o7yer000ahggca7j7fo7i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -698,7 +646,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
     </div>
@@ -708,9 +656,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/09/16/Create-a-web-application-with-Yeoman/">Create a web application with Yeoman!</a>
+          </li>
         
           <li>
             <a href="/2016/09/15/Yeoman-go-easy-with-NETCore/">Install Yeoman in .NETCORE</a>
@@ -726,10 +678,6 @@
         
           <li>
             <a href="/2016/09/11/Install-NETCore-on-Ubuntu/">Install .NETCore on Ubuntu</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/27/Install-Ubuntu-in-VM/">Install Ubuntu in a Virtual Machine</a>
           </li>
         
       </ul>
