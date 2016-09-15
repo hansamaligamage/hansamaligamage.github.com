@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T15:22:59.918Z</updated>
+  <updated>2016-09-15T15:26:01.544Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,17 +20,17 @@
     <link href="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/"/>
     <id>http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/</id>
     <published>2016-09-15T14:16:58.000Z</published>
-    <updated>2016-09-15T15:22:59.918Z</updated>
+    <updated>2016-09-15T15:26:01.544Z</updated>
     
     <content type="html">&lt;h1 id=&quot;What-is-Yeoman&quot;&gt;&lt;a href=&quot;#What-is-Yeoman&quot; class=&quot;headerlink&quot; title=&quot;What is Yeoman&quot;&gt;&lt;/a&gt;What is Yeoman&lt;/h1&gt;&lt;p&gt;Yeoman is a free open source tool. It’s more like visual studio project templates. It’s going to create a complete project with given set of tools. Yeoman has set of generators, It complies with industry best practices. Developers can easily start with their applications with specific tool set, without worrying about the setup or template of the application. Yeoman templates includes building, testing and minification in your application, So developer can focus on the logic of their application.&lt;/p&gt;
 &lt;h1 id=&quot;Install-node-js&quot;&gt;&lt;a href=&quot;#Install-node-js&quot; class=&quot;headerlink&quot; title=&quot;Install node js&quot;&gt;&lt;/a&gt;Install node js&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/install-node.PNG&quot; alt=&quot;install node&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Install node js, before installing Yeoman. Yeoman is going to run on a node server, After installing node js check the version of it.&lt;/p&gt;
 &lt;h1 id=&quot;Install-npm&quot;&gt;&lt;a href=&quot;#Install-npm&quot; class=&quot;headerlink&quot; title=&quot;Install npm&quot;&gt;&lt;/a&gt;Install npm&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/install-npm.PNG&quot; alt=&quot;install npm&quot;&gt;&lt;/p&gt;
 &lt;p&gt;When we install nodejs, npm is also comes along with it. If you start installing npm before installing node js, follow like this.&lt;br&gt;npm is a package manager for Yeoman, It’s going to download any dependencies in your application, You don’t want to manually download and install it.&lt;/p&gt;
-&lt;h1 id=&quot;Let’s-try-to-install-Yeoman&quot;&gt;&lt;a href=&quot;#Let’s-try-to-install-Yeoman&quot; class=&quot;headerlink&quot; title=&quot;Let’s try to install Yeoman!!&quot;&gt;&lt;/a&gt;Let’s try to install Yeoman!!&lt;/h1&gt;&lt;p&gt;Run Yo installer command,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/install-yo.PNG&quot; alt=&quot;install Yeoman&quot;&gt;&lt;/p&gt;
-&lt;p&gt;But it doesn’t seem work, We get an ugly permission issue, Let’s try to fix this.&lt;/p&gt;
+&lt;h1 id=&quot;Let’s-try-to-install-Yeoman&quot;&gt;&lt;a href=&quot;#Let’s-try-to-install-Yeoman&quot; class=&quot;headerlink&quot; title=&quot;Let’s try to install Yeoman!!&quot;&gt;&lt;/a&gt;Let’s try to install Yeoman!!&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/install-yo.PNG&quot; alt=&quot;install Yeoman&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Run Yo installer command,&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/yo-error.PNG&quot; alt=&quot;Yeoman permission issue when installing&quot;&gt;&lt;/p&gt;
+&lt;p&gt;But it doesn’t seem work, We get an ugly permission issue, Let’s try to fix this.&lt;/p&gt;
 &lt;p&gt;It says &lt;em&gt; permission denied &lt;/em&gt; for some paths. It suggests to run installer command as &lt;em&gt; root/Administrator, &lt;/em&gt; Let’s try out that. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/install-yo-as-administrator.PNG&quot; alt=&quot;Install Yeoman as administrator&quot;&gt;&lt;/p&gt;
 &lt;p&gt;It looks perfectly fine, when we use &lt;em&gt; sudo &lt;/em&gt; command with yo installer command.&lt;/p&gt;
