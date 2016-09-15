@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T03:35:11.239Z</updated>
+  <updated>2016-09-15T03:42:55.538Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Hello World in .NETCore Ubuntu</title>
     <link href="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/"/>
     <id>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</id>
-    <published>2016-09-15T03:49:57.000Z</published>
-    <updated>2016-09-15T03:35:11.239Z</updated>
+    <published>2016-09-15T03:31:57.000Z</published>
+    <updated>2016-09-15T03:42:55.538Z</updated>
     
     <content type="html">&lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
 &lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlink&quot; title=&quot;Create a new project&quot;&gt;&lt;/a&gt;Create a new project&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/create-a-new-project.PNG&quot; alt=&quot;Create a new project&quot;&gt;&lt;/p&gt;
