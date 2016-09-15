@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T03:42:55.538Z</updated>
+  <updated>2016-09-15T06:56:13.404Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Listen to me in http://localhost:5000/ with .NETCore on Ubuntu</title>
+    <link href="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/"/>
+    <id>http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/</id>
+    <published>2016-09-15T03:39:42.000Z</published>
+    <updated>2016-09-15T06:56:13.404Z</updated>
+    
+    <content type="html">&lt;p&gt;In my previous post, We saw how to write a console application in .NETCore. Let’s see how to write a web application in this post.&lt;/p&gt;
+&lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlink&quot; title=&quot;Create a new project&quot;&gt;&lt;/a&gt;Create a new project&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/web-create-a-new-project.PNG&quot; alt=&quot;Create a new project&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Create a new project and open it in Visual Studio Code.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/webhost-builder.PNG&quot; alt=&quot;Initiate a WebHost Builder object&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Create a &lt;em&gt; WebHostBuilder &lt;/em&gt; instance, since we need a server to run our web application, It’s little bit different to a Console application.&lt;br&gt;We get an error here, Some packages seem to be missing, ok!!! First of all let’s add a server to run our application.&lt;/p&gt;
+&lt;h1 id=&quot;Add-Kestrel-to-our-package-list&quot;&gt;&lt;a href=&quot;#Add-Kestrel-to-our-package-list&quot; class=&quot;headerlink&quot; title=&quot;Add Kestrel to our package list&quot;&gt;&lt;/a&gt;Add Kestrel to our package list&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;/images/add-kestrel-server.PNG&quot; alt=&quot;Add Kestrel to our package list &quot;&gt;&lt;/p&gt;
+&lt;p&gt;Add &lt;em&gt; Kestrel &lt;/em&gt; server into &lt;em&gt; project.json &lt;/em&gt; file and restore the package.&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;/images/add-relevant-using-statement-to-kestrel-server.PNG&quot; alt=&quot;Add relevant using statement for kestrel server&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In program.cs file, Add relevant using statement. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/run-web-host-builder.PNG&quot; alt=&quot;run WebHostBuilder&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When initiating a &lt;em&gt; WebHostBuilder, &lt;/em&gt; It turns your console application into a web application.&lt;/p&gt;
+&lt;p&gt;Now, Ask the host to build using &lt;em&gt; Build &lt;/em&gt; method, and run the webhost. When hit on &lt;em&gt; Run &lt;/em&gt; method, It’s going to give a signal to the host to listen on a port and start accepting http traffic.&lt;/p&gt;
+&lt;h1 id=&quot;Let’s-run-and-see-the-changes&quot;&gt;&lt;a href=&quot;#Let’s-run-and-see-the-changes&quot; class=&quot;headerlink&quot; title=&quot;Let’s run and see the changes&quot;&gt;&lt;/a&gt;Let’s run and see the changes&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;/images/run-web-application.PNG&quot; alt=&quot;run web application and see what has happened&quot;&gt;&lt;/p&gt;
+&lt;p&gt; When we run our application, It gives an error!!!!&lt;br&gt; It says we haven’t provided a service to startup the application. It means we haven’t mentioned we want to use Kestrel or not when starting our application. Let’s check how we can start our application with kestrel server,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/web-output.PNG&quot; alt=&quot;run web application and see what has happened&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In here we asked &lt;em&gt; Kestrel &lt;/em&gt; to accept a http request and turn it into a http context. In configure, we accept an &lt;em&gt; Application Builder &lt;/em&gt; instance, it’s going to perform some actions in our application.&lt;br&gt;When hit on &lt;em&gt; app.Run(), &lt;/em&gt; It’s going to add a terminal to the http request pipeline. Inside &lt;em&gt; app.Run() &lt;/em&gt; method, we pass an &lt;em&gt; http context &lt;/em&gt; object kestrel has created. &lt;/p&gt;
+&lt;p&gt;In the terminal window, It shows &lt;em&gt; Hello World - web &lt;/em&gt;.&lt;br&gt;Then it shows &lt;em&gt; Hosting Environment &lt;/em&gt; as &lt;em&gt; production.&lt;/em&gt;, default hosting environment for a .NETCore application.&lt;br&gt;Then it shows &lt;em&gt; Content root path &lt;/em&gt; of our application,&lt;br&gt;Our web project listen into &lt;em&gt; &lt;a href=&quot;http://localhost:5000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:5000/&lt;/a&gt; &lt;/em&gt; which is default url and the default port of our application.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In my previous post, We saw how to write a console application in .NETCore. Let’s see how to write a web application in this post.&lt;/p&gt;
+&lt;h
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World in .NETCore Ubuntu</title>

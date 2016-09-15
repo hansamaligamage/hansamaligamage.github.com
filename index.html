@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,59 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Web-Application-in-NETCore-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/15/Web-Application-in-NETCore-Ubuntu/" class="article-date">
+  <time datetime="2016-09-15T03:39:42.000Z" itemprop="datePublished">2016-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/15/Web-Application-in-NETCore-Ubuntu/">Listen to me in http://localhost:5000/ with .NETCore on Ubuntu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In my previous post, We saw how to write a console application in .NETCore. Let’s see how to write a web application in this post.</p>
+<h1 id="Create-a-new-project"><a href="#Create-a-new-project" class="headerlink" title="Create a new project"></a>Create a new project</h1><p><img src="/images/web-create-a-new-project.PNG" alt="Create a new project"></p>
+<p>Create a new project and open it in Visual Studio Code.</p>
+<p><img src="/images/webhost-builder.PNG" alt="Initiate a WebHost Builder object"></p>
+<p>Create a <em> WebHostBuilder </em> instance, since we need a server to run our web application, It’s little bit different to a Console application.<br>We get an error here, Some packages seem to be missing, ok!!! First of all let’s add a server to run our application.</p>
+<h1 id="Add-Kestrel-to-our-package-list"><a href="#Add-Kestrel-to-our-package-list" class="headerlink" title="Add Kestrel to our package list"></a>Add Kestrel to our package list</h1><p> <img src="/images/add-kestrel-server.PNG" alt="Add Kestrel to our package list "></p>
+<p>Add <em> Kestrel </em> server into <em> project.json </em> file and restore the package.</p>
+<p> <img src="/images/add-relevant-using-statement-to-kestrel-server.PNG" alt="Add relevant using statement for kestrel server"></p>
+<p>In program.cs file, Add relevant using statement. </p>
+<p><img src="/images/run-web-host-builder.PNG" alt="run WebHostBuilder"></p>
+<p>When initiating a <em> WebHostBuilder, </em> It turns your console application into a web application.</p>
+<p>Now, Ask the host to build using <em> Build </em> method, and run the webhost. When hit on <em> Run </em> method, It’s going to give a signal to the host to listen on a port and start accepting http traffic.</p>
+<h1 id="Let’s-run-and-see-the-changes"><a href="#Let’s-run-and-see-the-changes" class="headerlink" title="Let’s run and see the changes"></a>Let’s run and see the changes</h1><p> <img src="/images/run-web-application.PNG" alt="run web application and see what has happened"></p>
+<p> When we run our application, It gives an error!!!!<br> It says we haven’t provided a service to startup the application. It means we haven’t mentioned we want to use Kestrel or not when starting our application. Let’s check how we can start our application with kestrel server,</p>
+<p><img src="/images/web-output.PNG" alt="run web application and see what has happened"></p>
+<p>In here we asked <em> Kestrel </em> to accept a http request and turn it into a http context. In configure, we accept an <em> Application Builder </em> instance, it’s going to perform some actions in our application.<br>When hit on <em> app.Run(), </em> It’s going to add a terminal to the http request pipeline. Inside <em> app.Run() </em> method, we pass an <em> http context </em> object kestrel has created. </p>
+<p>In the terminal window, It shows <em> Hello World - web </em>.<br>Then it shows <em> Hosting Environment </em> as <em> production.</em>, default hosting environment for a .NETCore application.<br>Then it shows <em> Content root path </em> of our application,<br>Our web project listen into <em> <a href="http://localhost:5000/" target="_blank" rel="external">http://localhost:5000/</a> </em> which is default url and the default port of our application.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="cit3zglqs000dhggcpk2qeri7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Hello-World-in-NETCore-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -115,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit3sfvuz0002acgc8ptqqvgz" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit3zglpz0002hggcom1s7dwu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +213,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit3sfvvc0006acgcusfu3vl9" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit3zglq90005hggcgsfhr2wt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -227,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit3sfvve0007acgctof3vvs6" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit3zglqc0006hggch9xmbf40" class="article-share-link">Share</a>
       
       
     </footer>
@@ -273,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit3sfvv30003acgc20sl7dsw" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit3zglq20003hggclxb7ob2v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +385,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit3sfvv50004acgc8ba53p98" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit3zglq50004hggc9hefy73i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -416,7 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit3sfvuw0001acgc8qrrivw7" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit3zglpw0001hggcx06bzekq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -460,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit3sfvvt000cacgc5my529rf" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit3zglqr000chggcmu5fpsya" class="article-share-link">Share</a>
       
       
     </footer>
@@ -567,7 +620,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cit3sfvvg0008acgcgcxno05b" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cit3zglqi0008hggclaitu031" class="article-share-link">Share</a>
       
       
     </footer>
@@ -614,50 +667,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cit3sfvv80005acgck24osuz5" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ODATA Reads with Parameters" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/02/ODATA Reads with Parameters/" class="article-date">
-  <time datetime="2016-03-01T18:30:00.000Z" itemprop="datePublished">2016-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/ODATA Reads with Parameters/">ODATA Reads with Parameters</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Data-READs-with-Parameters"><a href="#Data-READs-with-Parameters" class="headerlink" title="Data READs with Parameters"></a>Data READs with Parameters</h2><p>In this post, We’ll focus on how to read a OData service with a parameter.</p>
-<h2 id="Service-method-with-a-parameter"><a href="#Service-method-with-a-parameter" class="headerlink" title="Service method with a parameter"></a>Service method with a parameter</h2><p><img src="/images/GetMethodWithParameter.png" alt="Get Method With a Parameter."></p>
-<p>Now, we’ll see how to retrieve data with a parameter,</p>
-<h2 id="Url-in-the-browser"><a href="#Url-in-the-browser" class="headerlink" title="Url in the browser"></a>Url in the browser</h2><p><img src="/images/GetMethodUrl.png" alt="Get Method Url With a Parameter."></p>
-<p>In browser, we can see only filtered students. in url, append the parameter with values.</p>
-<h2 id="Power-Query-Window"><a href="#Power-Query-Window" class="headerlink" title="Power Query Window"></a>Power Query Window</h2><p><img src="/images/PowerQueryWindow.png" alt="Power Query editor."></p>
-<p>From the Power Query window, we can see dataset like this.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cit3sfvvl0009acgc7uhm0znz" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cit3zglqg0007hggc79o33ltf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -696,9 +706,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/09/15/Web-Application-in-NETCore-Ubuntu/">Listen to me in http://localhost:5000/ with .NETCore on Ubuntu</a>
+          </li>
         
           <li>
             <a href="/2016/09/15/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
@@ -716,10 +730,6 @@
             <a href="/2016/07/29/How-to-generate-a-license-key-for-your-system/">How to generate a license key for your system</a>
           </li>
         
-          <li>
-            <a href="/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/">I want to run a time consuming long process in a one web request</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -733,7 +743,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
