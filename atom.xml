@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-11T18:54:18.669Z</updated>
+  <updated>2016-09-15T03:35:11.239Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,18 +17,42 @@
   
   <entry>
     <title>Hello World in .NETCore Ubuntu</title>
-    <link href="http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/"/>
-    <id>http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/</id>
-    <published>2016-09-11T18:49:57.000Z</published>
-    <updated>2016-09-11T18:54:18.669Z</updated>
+    <link href="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/"/>
+    <id>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</id>
+    <published>2016-09-15T03:49:57.000Z</published>
+    <updated>2016-09-15T03:35:11.239Z</updated>
     
     <content type="html">&lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
+&lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlink&quot; title=&quot;Create a new project&quot;&gt;&lt;/a&gt;Create a new project&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/create-a-new-project.PNG&quot; alt=&quot;Create a new project&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Create a folder in your desktop, &lt;em&gt; myprojects &lt;/em&gt;, go inside of it and create a new project using &lt;em&gt; dotnet new &lt;/em&gt; command.&lt;br&gt;You can see &lt;em&gt; Program.cs &lt;/em&gt; and &lt;em&gt; project.json &lt;/em&gt; file is created. To build our first project in .NETCore, Let’s install &lt;em&gt; Visual Studio Code &lt;/em&gt; editor.&lt;/p&gt;
+&lt;h1 id=&quot;Install-Visual-Studio-Code&quot;&gt;&lt;a href=&quot;#Install-Visual-Studio-Code&quot; class=&quot;headerlink&quot; title=&quot;Install Visual Studio Code&quot;&gt;&lt;/a&gt;Install Visual Studio Code&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/download-visual-studio-code.PNG&quot; alt=&quot;Install Visual Studio Code&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Download correct version of Visual Studio Code relevant to Ubuntu and install it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/open-project-in-visual-studio-code.PNG&quot; alt=&quot;Open a project in Visual Studio Code&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Go to your project location and open your project in visual studio code. It shows a message to install a extension. Extensions allow you to add languages, debuggers and tools to your development environment, Click on &lt;em&gt; Show Recommendations &lt;/em&gt; to view recommended extensions.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/visual-studio-code-extensions.PNG&quot; alt=&quot;Visual Studio Code Extensions&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;em&gt; C# powered by Omnisharp &lt;/em&gt;, since We are using C# code in .NETCore. It provides intellicense for .NET. Omnisharp provides a set of tooling and libraries to IDEs like Visual Studio Code, Sublime, Atom, Emacs, Vim and Brackets. After installing C# extension, enable it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/program-cs.PNG&quot; alt=&quot;program.cs file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;program.cs file shows entry point to the application as usual.&lt;/p&gt;
+&lt;h1 id=&quot;project-json-File&quot;&gt;&lt;a href=&quot;#project-json-File&quot; class=&quot;headerlink&quot; title=&quot;project.json File&quot;&gt;&lt;/a&gt;project.json File&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/project-json.PNG&quot; alt=&quot;project.json file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;project.json file shows nuget dependencies required to build the application.&lt;/p&gt;
+&lt;p&gt;Let’s see what is the meaning of these attributes in &lt;em&gt; project.json &lt;/em&gt; file&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; version”: “1.0.0-* &lt;/strong&gt; specifies version of the .NETCore, It says version should starts with 1.0.0&lt;br&gt;&lt;strong&gt; buildOptions &lt;/strong&gt; defines how the project should be built.&lt;br&gt;&lt;strong&gt; dependencies &lt;/strong&gt; lists all the dependencies in your application.&lt;br&gt;&lt;strong&gt; frameworks &lt;/strong&gt; defines target framework that will be used with specifies dependencies.&lt;br&gt;&lt;strong&gt; imports &lt;/strong&gt; defines where our application runs, When we add &lt;strong&gt; dnxcore50 &lt;/strong&gt;, it says we are running in Core CLR on the dnx.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/build-debug-assets.PNG&quot; alt=&quot;build and debug assets&quot;&gt;&lt;/p&gt;
+&lt;p&gt;You can see a message to install build and debug assets, install them. And another message to restore the packages in project.json, restore them as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/after-restoring-packages-and-build-debug-folder.PNG&quot; alt=&quot;After adding assets folder and restoring packages&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After adding assets folder, you can see .vscode folder with &lt;em&gt; launch.json &lt;/em&gt; and &lt;em&gt; tasks.json &lt;/em&gt; files. All the build errors are gone. Check the output window, It shows packages restoring is completed.&lt;/p&gt;
+&lt;h1 id=&quot;launch-json-File&quot;&gt;&lt;a href=&quot;#launch-json-File&quot; class=&quot;headerlink&quot; title=&quot;launch.json File&quot;&gt;&lt;/a&gt;launch.json File&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;/images/launch-json.PNG&quot; alt=&quot;launch.json file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This file is going to confgure debugging and running in the application. In this example, It’s going to launch .NETCore console or even we can attatch to .NETCore console.&lt;/p&gt;
+&lt;h1 id=&quot;tasks-json-File&quot;&gt;&lt;a href=&quot;#tasks-json-File&quot; class=&quot;headerlink&quot; title=&quot;tasks.json File&quot;&gt;&lt;/a&gt;tasks.json File&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/tasks-json.PNG&quot; alt=&quot;tasks.json file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This file is used to automate tasks like building, packaging, testing and deploying softwares. In this example, It has define a &lt;em&gt; build &lt;/em&gt; task, and specified to run as a build command.&lt;/p&gt;
+&lt;h1 id=&quot;Hello-World-on-the-terminal&quot;&gt;&lt;a href=&quot;#Hello-World-on-the-terminal&quot; class=&quot;headerlink&quot; title=&quot;Hello World on the terminal&quot;&gt;&lt;/a&gt;Hello World on the terminal&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;/images/output-of-the-project.PNG&quot; alt=&quot;Hello World on the terminal&quot;&gt;&lt;/p&gt;
+&lt;p&gt;That’s all we want to know about a .NETCore application, Let’s see the output of our first application, When we run &lt;em&gt; dotnet run &lt;/em&gt; command, It shows the output of the application.&lt;/p&gt;
 </content>
     
     <summary type="html">
     
       &lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
-
+&lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlin
     
     </summary>
     

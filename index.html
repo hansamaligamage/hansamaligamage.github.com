@@ -66,8 +66,8 @@
   
     <article id="post-Hello-World-in-NETCore-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/09/12/Hello-World-in-NETCore-Ubuntu/" class="article-date">
-  <time datetime="2016-09-11T18:49:57.000Z" itemprop="datePublished">2016-09-12</time>
+    <a href="/2016/09/15/Hello-World-in-NETCore-Ubuntu/" class="article-date">
+  <time datetime="2016-09-15T03:49:57.000Z" itemprop="datePublished">2016-09-15</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/12/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
+      <a class="article-title" href="/2016/09/15/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
     </h1>
   
 
@@ -87,11 +87,35 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Let’s start our first application on .NETCore - Ubuntu</p>
+<h1 id="Create-a-new-project"><a href="#Create-a-new-project" class="headerlink" title="Create a new project"></a>Create a new project</h1><p><img src="/images/create-a-new-project.PNG" alt="Create a new project"></p>
+<p>Create a folder in your desktop, <em> myprojects </em>, go inside of it and create a new project using <em> dotnet new </em> command.<br>You can see <em> Program.cs </em> and <em> project.json </em> file is created. To build our first project in .NETCore, Let’s install <em> Visual Studio Code </em> editor.</p>
+<h1 id="Install-Visual-Studio-Code"><a href="#Install-Visual-Studio-Code" class="headerlink" title="Install Visual Studio Code"></a>Install Visual Studio Code</h1><p><img src="/images/download-visual-studio-code.PNG" alt="Install Visual Studio Code"></p>
+<p>Download correct version of Visual Studio Code relevant to Ubuntu and install it.</p>
+<p><img src="/images/open-project-in-visual-studio-code.PNG" alt="Open a project in Visual Studio Code"></p>
+<p>Go to your project location and open your project in visual studio code. It shows a message to install a extension. Extensions allow you to add languages, debuggers and tools to your development environment, Click on <em> Show Recommendations </em> to view recommended extensions.</p>
+<p><img src="/images/visual-studio-code-extensions.PNG" alt="Visual Studio Code Extensions"></p>
+<p>Select <em> C# powered by Omnisharp </em>, since We are using C# code in .NETCore. It provides intellicense for .NET. Omnisharp provides a set of tooling and libraries to IDEs like Visual Studio Code, Sublime, Atom, Emacs, Vim and Brackets. After installing C# extension, enable it.</p>
+<p><img src="/images/program-cs.PNG" alt="program.cs file"></p>
+<p>program.cs file shows entry point to the application as usual.</p>
+<h1 id="project-json-File"><a href="#project-json-File" class="headerlink" title="project.json File"></a>project.json File</h1><p><img src="/images/project-json.PNG" alt="project.json file"></p>
+<p>project.json file shows nuget dependencies required to build the application.</p>
+<p>Let’s see what is the meaning of these attributes in <em> project.json </em> file</p>
+<p><strong> version”: “1.0.0-* </strong> specifies version of the .NETCore, It says version should starts with 1.0.0<br><strong> buildOptions </strong> defines how the project should be built.<br><strong> dependencies </strong> lists all the dependencies in your application.<br><strong> frameworks </strong> defines target framework that will be used with specifies dependencies.<br><strong> imports </strong> defines where our application runs, When we add <strong> dnxcore50 </strong>, it says we are running in Core CLR on the dnx.</p>
+<p><img src="/images/build-debug-assets.PNG" alt="build and debug assets"></p>
+<p>You can see a message to install build and debug assets, install them. And another message to restore the packages in project.json, restore them as well.</p>
+<p><img src="/images/after-restoring-packages-and-build-debug-folder.PNG" alt="After adding assets folder and restoring packages"></p>
+<p>After adding assets folder, you can see .vscode folder with <em> launch.json </em> and <em> tasks.json </em> files. All the build errors are gone. Check the output window, It shows packages restoring is completed.</p>
+<h1 id="launch-json-File"><a href="#launch-json-File" class="headerlink" title="launch.json File"></a>launch.json File</h1><p> <img src="/images/launch-json.PNG" alt="launch.json file"></p>
+<p>This file is going to confgure debugging and running in the application. In this example, It’s going to launch .NETCore console or even we can attatch to .NETCore console.</p>
+<h1 id="tasks-json-File"><a href="#tasks-json-File" class="headerlink" title="tasks.json File"></a>tasks.json File</h1><p><img src="/images/tasks-json.PNG" alt="tasks.json file"></p>
+<p>This file is used to automate tasks like building, packaging, testing and deploying softwares. In this example, It has define a <em> build </em> task, and specified to run as a build command.</p>
+<h1 id="Hello-World-on-the-terminal"><a href="#Hello-World-on-the-terminal" class="headerlink" title="Hello World on the terminal"></a>Hello World on the terminal</h1><p> <img src="/images/output-of-the-project.PNG" alt="Hello World on the terminal"></p>
+<p>That’s all we want to know about a .NETCore application, Let’s see the output of our first application, When we run <em> dotnet run </em> command, It shows the output of the application.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/12/Hello-World-in-NETCore-Ubuntu/" data-id="cit2cfpzq00023sgckqdgd6tn" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit2cte4r00022wgcllp39x6q" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -136,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit2cfpzy00063sgcqzd4am0u" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cit2cte4z00052wgcgjm2ob2n" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -203,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit2cfq0100073sgcpg53i99p" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cit2cte5400062wgc9z0vpntk" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -249,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit2cfpzs00033sgc8nkmlo3g" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cit2cte4v00032wgcmhapqiug" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -308,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit2cfpzu00043sgcq0ro2toc" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cit2cte4x00042wgcb7nw1d03" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -392,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit2cfpzo00013sgcz0beuo22" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cit2cte4n00012wgcfukabnud" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -436,7 +460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit2cfq0b000c3sgcioxv2azy" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="cit2cte5q000c2wgcszipge80" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -543,7 +567,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cit2cfq0200083sgcvzpk7jhy" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/29/NLog-Configurations/" data-id="cit2cte5e00082wgchfrrdzal" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -590,7 +614,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cit2cfpzv00053sgcjp1p8cqw" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/04/04/LINQ comes to rescue/" data-id="cit2cte5900072wgc2xfwmzf4" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -633,7 +657,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cit2cfq0700093sgcdrnwfgbo" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/03/02/ODATA Reads with Parameters/" data-id="cit2cte5k00092wgc56fjx4kn" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -677,7 +701,7 @@
       <ul>
         
           <li>
-            <a href="/2016/09/12/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
+            <a href="/2016/09/15/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
           </li>
         
           <li>
