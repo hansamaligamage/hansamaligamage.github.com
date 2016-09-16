@@ -23,10 +23,11 @@ Create a folder in your desktop,  myprojects , go inside of it and create a new 
 <meta property="og:image" content="http://yoursite.com/images/project-json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/build-debug-assets.PNG">
 <meta property="og:image" content="http://yoursite.com/images/after-restoring-packages-and-build-debug-folder.PNG">
+<meta property="og:image" content="http://yoursite.com/images/project-lock-json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/launch-json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/tasks-json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/output-of-the-project.PNG">
-<meta property="og:updated_time" content="2016-09-15T03:42:55.538Z">
+<meta property="og:updated_time" content="2016-09-16T07:01:44.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World in .NETCore Ubuntu">
 <meta name="twitter:description" content="Let’s start our first application on .NETCore - Ubuntu
@@ -122,6 +123,8 @@ Create a folder in your desktop,  myprojects , go inside of it and create a new 
 <p>You can see a message to install build and debug assets, install them. And another message to restore the packages in project.json, restore them as well.</p>
 <p><img src="/images/after-restoring-packages-and-build-debug-folder.PNG" alt="After adding assets folder and restoring packages"></p>
 <p>After adding assets folder, you can see .vscode folder with <em> launch.json </em> and <em> tasks.json </em> files. All the build errors are gone. Check the output window, It shows packages restoring is completed.</p>
+<h1 id="project-lock-json-File"><a href="#project-lock-json-File" class="headerlink" title="project.lock.json File"></a>project.lock.json File</h1><p><img src="/images/project-lock-json.PNG" alt="project-lock.json file"></p>
+<p>After packages restoring is completed, <em> project-lock.json </em> file has been added into the solution.<br>It’s going to capture entire dependency graph that your application depends on. In <em> project.json </em> file, you define the top level dependencies, more detailed level description is available in <em> project-lock.json </em> file.</p>
 <h1 id="launch-json-File"><a href="#launch-json-File" class="headerlink" title="launch.json File"></a>launch.json File</h1><p> <img src="/images/launch-json.PNG" alt="launch.json file"></p>
 <p>This file is going to confgure debugging and running in the application. In this example, It’s going to launch .NETCore console or even we can attatch to .NETCore console.</p>
 <h1 id="tasks-json-File"><a href="#tasks-json-File" class="headerlink" title="tasks.json File"></a>tasks.json File</h1><p><img src="/images/tasks-json.PNG" alt="tasks.json file"></p>
@@ -132,7 +135,7 @@ Create a folder in your desktop,  myprojects , go inside of it and create a new 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit4o7yeb0003hggcgb9exfl9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cit56ikct0002qogcrltq083a" class="article-share-link">Share</a>
       
       
     </footer>

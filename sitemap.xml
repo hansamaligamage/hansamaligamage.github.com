@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</loc>
+    
+    <lastmod>2016-09-16T07:01:44.783Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/</loc>
     
     <lastmod>2016-09-15T18:29:35.532Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/</loc>
     
     <lastmod>2016-09-15T06:56:13.404Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</loc>
-    
-    <lastmod>2016-09-15T03:42:55.538Z</lastmod>
     
   </url>
   

@@ -124,7 +124,7 @@
     <link href="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/"/>
     <id>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</id>
     <published>2016-09-15T03:31:57.000Z</published>
-    <updated>2016-09-15T03:42:55.538Z</updated>
+    <updated>2016-09-16T07:01:44.783Z</updated>
     
     <content type="html">&lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
 &lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlink&quot; title=&quot;Create a new project&quot;&gt;&lt;/a&gt;Create a new project&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/create-a-new-project.PNG&quot; alt=&quot;Create a new project&quot;&gt;&lt;/p&gt;
@@ -145,6 +145,8 @@
 &lt;p&gt;You can see a message to install build and debug assets, install them. And another message to restore the packages in project.json, restore them as well.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/after-restoring-packages-and-build-debug-folder.PNG&quot; alt=&quot;After adding assets folder and restoring packages&quot;&gt;&lt;/p&gt;
 &lt;p&gt;After adding assets folder, you can see .vscode folder with &lt;em&gt; launch.json &lt;/em&gt; and &lt;em&gt; tasks.json &lt;/em&gt; files. All the build errors are gone. Check the output window, It shows packages restoring is completed.&lt;/p&gt;
+&lt;h1 id=&quot;project-lock-json-File&quot;&gt;&lt;a href=&quot;#project-lock-json-File&quot; class=&quot;headerlink&quot; title=&quot;project.lock.json File&quot;&gt;&lt;/a&gt;project.lock.json File&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/project-lock-json.PNG&quot; alt=&quot;project-lock.json file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After packages restoring is completed, &lt;em&gt; project-lock.json &lt;/em&gt; file has been added into the solution.&lt;br&gt;It’s going to capture entire dependency graph that your application depends on. In &lt;em&gt; project.json &lt;/em&gt; file, you define the top level dependencies, more detailed level description is available in &lt;em&gt; project-lock.json &lt;/em&gt; file.&lt;/p&gt;
 &lt;h1 id=&quot;launch-json-File&quot;&gt;&lt;a href=&quot;#launch-json-File&quot; class=&quot;headerlink&quot; title=&quot;launch.json File&quot;&gt;&lt;/a&gt;launch.json File&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;/images/launch-json.PNG&quot; alt=&quot;launch.json file&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This file is going to confgure debugging and running in the application. In this example, It’s going to launch .NETCore console or even we can attatch to .NETCore console.&lt;/p&gt;
 &lt;h1 id=&quot;tasks-json-File&quot;&gt;&lt;a href=&quot;#tasks-json-File&quot; class=&quot;headerlink&quot; title=&quot;tasks.json File&quot;&gt;&lt;/a&gt;tasks.json File&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/tasks-json.PNG&quot; alt=&quot;tasks.json file&quot;&gt;&lt;/p&gt;
