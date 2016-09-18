@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T18:29:35.532Z</updated>
+  <updated>2016-09-18T19:27:08.433Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/"/>
     <id>http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/</id>
     <published>2016-09-15T18:30:59.000Z</published>
-    <updated>2016-09-15T18:29:35.532Z</updated>
+    <updated>2016-09-18T19:27:08.433Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Run-Yo-command&quot;&gt;&lt;a href=&quot;#Run-Yo-command&quot; class=&quot;headerlink&quot; title=&quot;Run Yo command&quot;&gt;&lt;/a&gt;Run Yo command&lt;/h1&gt;&lt;p&gt;First of all create a new directory and cd into it. Then run &lt;em&gt; yo &lt;/em&gt; command.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/run-yo-command.PNG&quot; alt=&quot;Yo command&quot;&gt;&lt;/p&gt;
@@ -41,6 +41,7 @@
 &lt;p&gt;In program.cs file, It shows &lt;em&gt; WebHostBuilder &lt;/em&gt; class, with cross platform &lt;em&gt; Kestrel server&lt;/em&gt; and &lt;em&gt; IIS integration &lt;/em&gt; both.&lt;br&gt;It has defined a seperate &lt;em&gt; Startup &lt;/em&gt; class, to configure the http request pipeline. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/dotnet-build-and-run.PNG&quot; alt=&quot;dotnet build and run application &quot;&gt;&lt;br&gt; Build and run .NETCore application and check terminal window,&lt;br&gt; You can see &lt;em&gt; logging &lt;/em&gt; is enabled for browser navigations.&lt;/p&gt;
 &lt;p&gt; We can see complete project is created using Yeoman template generator. It includes &lt;em&gt; program.cs, &lt;/em&gt; &lt;em&gt; project.json &lt;/em&gt; and &lt;em&gt; web.config &lt;/em&gt; files.&lt;br&gt; It includes &lt;em&gt; Startup &lt;/em&gt; class to manage the http request pipeline. And also it has a &lt;em&gt; wwwroot &lt;/em&gt; folder to host our web application.&lt;br&gt; Since Yeoman is generating complete application, We don’t have to do anything manually. We can only focus on the application logic and start working on it.&lt;/p&gt;
+&lt;p&gt; You can check sample code from here, &lt;a href=&quot;https://github.com/hansamaligamage/WebAppWithYeoman&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/WebAppWithYeoman&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -88,7 +89,7 @@
     <link href="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/"/>
     <id>http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/</id>
     <published>2016-09-15T03:39:42.000Z</published>
-    <updated>2016-09-15T06:56:13.404Z</updated>
+    <updated>2016-09-18T19:18:55.456Z</updated>
     
     <content type="html">&lt;p&gt;In my previous post, We saw how to write a console application in .NETCore. Let’s see how to write a web application in this post.&lt;/p&gt;
 &lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlink&quot; title=&quot;Create a new project&quot;&gt;&lt;/a&gt;Create a new project&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/web-create-a-new-project.PNG&quot; alt=&quot;Create a new project&quot;&gt;&lt;/p&gt;
@@ -107,6 +108,7 @@
 &lt;p&gt;&lt;img src=&quot;/images/web-output.PNG&quot; alt=&quot;run web application and see what has happened&quot;&gt;&lt;/p&gt;
 &lt;p&gt;In here we asked &lt;em&gt; Kestrel &lt;/em&gt; to accept a http request and turn it into a http context. In configure, we accept an &lt;em&gt; Application Builder &lt;/em&gt; instance, it’s going to perform some actions in our application.&lt;br&gt;When hit on &lt;em&gt; app.Run(), &lt;/em&gt; It’s going to add a terminal to the http request pipeline. Inside &lt;em&gt; app.Run() &lt;/em&gt; method, we pass an &lt;em&gt; http context &lt;/em&gt; object kestrel has created. &lt;/p&gt;
 &lt;p&gt;In the terminal window, It shows &lt;em&gt; Hello World - web &lt;/em&gt;.&lt;br&gt;Then it shows &lt;em&gt; Hosting Environment &lt;/em&gt; as &lt;em&gt; production.&lt;/em&gt;, default hosting environment for a .NETCore application.&lt;br&gt;Then it shows &lt;em&gt; Content root path &lt;/em&gt; of our application,&lt;br&gt;Our web project listen into &lt;em&gt; &lt;a href=&quot;http://localhost:5000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:5000/&lt;/a&gt; &lt;/em&gt; which is default url and the default port of our application.&lt;/p&gt;
+&lt;p&gt;You can download code sample from here, &lt;a href=&quot;https://github.com/hansamaligamage/WebAppin.NETCore&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/WebAppin.NETCore&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -124,7 +126,7 @@
     <link href="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/"/>
     <id>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</id>
     <published>2016-09-15T03:31:57.000Z</published>
-    <updated>2016-09-16T07:01:44.783Z</updated>
+    <updated>2016-09-18T19:10:44.395Z</updated>
     
     <content type="html">&lt;p&gt;Let’s start our first application on .NETCore - Ubuntu&lt;/p&gt;
 &lt;h1 id=&quot;Create-a-new-project&quot;&gt;&lt;a href=&quot;#Create-a-new-project&quot; class=&quot;headerlink&quot; title=&quot;Create a new project&quot;&gt;&lt;/a&gt;Create a new project&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/create-a-new-project.PNG&quot; alt=&quot;Create a new project&quot;&gt;&lt;/p&gt;
@@ -153,6 +155,7 @@
 &lt;p&gt;This file is used to automate tasks like building, packaging, testing and deploying softwares. In this example, It has define a &lt;em&gt; build &lt;/em&gt; task, and specified to run as a build command.&lt;/p&gt;
 &lt;h1 id=&quot;Hello-World-on-the-terminal&quot;&gt;&lt;a href=&quot;#Hello-World-on-the-terminal&quot; class=&quot;headerlink&quot; title=&quot;Hello World on the terminal&quot;&gt;&lt;/a&gt;Hello World on the terminal&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;/images/output-of-the-project.PNG&quot; alt=&quot;Hello World on the terminal&quot;&gt;&lt;/p&gt;
 &lt;p&gt;That’s all we want to know about a .NETCore application, Let’s see the output of our first application, When we run &lt;em&gt; dotnet run &lt;/em&gt; command, It shows the output of the application.&lt;/p&gt;
+&lt;p&gt;I created a github repository, You can check it from here, &lt;a href=&quot;https://github.com/hansamaligamage/HelloWorld&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/HelloWorld&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">

@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/</loc>
+    
+    <lastmod>2016-09-18T19:27:08.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/</loc>
+    
+    <lastmod>2016-09-18T19:18:55.456Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</loc>
+    
+    <lastmod>2016-09-18T19:10:44.395Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</loc>
     
     <lastmod>2016-09-18T18:24:47.132Z</lastmod>
@@ -44,30 +65,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</loc>
-    
-    <lastmod>2016-09-16T07:01:44.783Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/</loc>
-    
-    <lastmod>2016-09-15T18:29:35.532Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/</loc>
     
     <lastmod>2016-09-15T15:28:33.560Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/</loc>
-    
-    <lastmod>2016-09-15T06:56:13.404Z</lastmod>
     
   </url>
   
