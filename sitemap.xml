@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</loc>
+    
+    <lastmod>2016-09-18T18:24:47.132Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/</loc>
+    
+    <lastmod>2016-09-18T18:21:56.342Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/</loc>
+    
+    <lastmod>2016-09-18T18:19:49.579Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/05/29/NLog-Configurations/</loc>
+    
+    <lastmod>2016-09-18T16:34:45.744Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/02/ODATA%20Reads%20with%20Parameters/</loc>
+    
+    <lastmod>2016-09-18T16:19:10.132Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/19/ODATA%20Reads/</loc>
+    
+    <lastmod>2016-09-18T16:18:12.318Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/</loc>
     
     <lastmod>2016-09-16T07:01:44.783Z</lastmod>
@@ -44,20 +86,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/</loc>
-    
-    <lastmod>2016-07-29T00:15:25.794Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</loc>
-    
-    <lastmod>2016-07-21T17:21:53.775Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/</loc>
     
     <lastmod>2016-07-20T18:51:25.074Z</lastmod>
@@ -65,37 +93,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/</loc>
-    
-    <lastmod>2016-07-19T10:33:11.624Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/05/29/NLog-Configurations/</loc>
-    
-    <lastmod>2016-07-19T07:35:25.930Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/04/04/LINQ%20comes%20to%20rescue/</loc>
     
     <lastmod>2016-06-07T17:03:39.368Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/03/02/ODATA%20Reads%20with%20Parameters/</loc>
-    
-    <lastmod>2016-06-05T17:17:11.961Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/02/19/ODATA%20Reads/</loc>
-    
-    <lastmod>2016-06-03T13:02:01.127Z</lastmod>
     
   </url>
   

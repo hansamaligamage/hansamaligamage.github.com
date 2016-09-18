@@ -247,7 +247,7 @@
     <link href="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/"/>
     <id>http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/</id>
     <published>2016-07-28T18:30:00.000Z</published>
-    <updated>2016-07-29T00:15:25.794Z</updated>
+    <updated>2016-09-18T18:21:56.342Z</updated>
     
     <content type="html">&lt;p&gt;When a web application develops, we need to protect user passwords from security attacks. When your application operates on a license key, we need to validate the license.&lt;br&gt;In todays world providing security to your system is bit crucial. We have to face malicious scripts, security threats and unwanted attacks in out there. Let’s see how we can prevent those kind of attacks.&lt;/p&gt;
 &lt;h1 id=&quot;Password-Hashing&quot;&gt;&lt;a href=&quot;#Password-Hashing&quot; class=&quot;headerlink&quot; title=&quot;Password Hashing&quot;&gt;&lt;/a&gt;Password Hashing&lt;/h1&gt;&lt;p&gt;In hashing, we are going to convert password string into a byte array. Hashing is a one way funtion, we can’t reverse it. We can see many hashing algorithms available.&lt;br&gt;Let’s say we hashed the users password and stored in our database. When user second time logs in, we have to verify entered password is correct. What we can do is, we can hash the entered text into password field and compare it with the hashed value from the database. Since Hashing is a one way function, we can’t decrypt and retrieve original text.&lt;/p&gt;
@@ -259,6 +259,7 @@
 &lt;p&gt;In this example, we are passing usernam and company code to generate a license key. Using &lt;em&gt; GenerateSalt &lt;/em&gt; method, we can generate a random number. I used to create a 32 bytes lenth salt number using &lt;em&gt; RNGCryptoServiceProvider &lt;/em&gt; class. Using &lt;em&gt; Rfc289DeriveVytes &lt;/em&gt; class we can generate a salted hashing value. Along with the generated license key, we used to store salted number as well.&lt;/p&gt;
 &lt;h1 id=&quot;Let’s-see-how-we-can-validate-the-license-key&quot;&gt;&lt;a href=&quot;#Let’s-see-how-we-can-validate-the-license-key&quot; class=&quot;headerlink&quot; title=&quot;Let’s see how we can validate the license key.&quot;&gt;&lt;/a&gt;Let’s see how we can validate the license key.&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/codesample1.PNG&quot; alt=&quot;Validate the license key&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I used 64 byte array  as a license key and 32 byte array as a salted value. We can use &lt;em&gt; SequenceEqual &lt;/em&gt; method to compare entered license key with stored license key as above.&lt;/p&gt;
+&lt;p&gt;You can find a sample application from here, &lt;a href=&quot;https://github.com/hansamaligamage/LicenseKey&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/LicenseKey&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -317,7 +318,7 @@
     <link href="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/"/>
     <id>http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/</id>
     <published>2016-07-18T18:30:00.000Z</published>
-    <updated>2016-07-21T17:21:53.775Z</updated>
+    <updated>2016-09-18T18:24:47.132Z</updated>
     
     <content type="html">&lt;p&gt;If you want to schedule something to run or your program takes long time to process, Sometimes we may have to create a seperate service application,&lt;br&gt;What i happened to write this post is, My client wanted me to write an application to send emails in specific time periods, So to achieve that I thought of writing a windows service application.&lt;br&gt;We can install this service in your server or local computer and configure it to run on intervals using a timer. Let’s start coding.&lt;/p&gt;
 &lt;h2 id=&quot;Create-a-Windows-service&quot;&gt;&lt;a href=&quot;#Create-a-Windows-service&quot; class=&quot;headerlink&quot; title=&quot;Create a Windows service&quot;&gt;&lt;/a&gt;Create a Windows service&lt;/h2&gt;&lt;p&gt;When we create a windows service from visual studio, It gives us a service class with constructor method, OnStart and OnStop methods as follows.&lt;/p&gt;
@@ -367,6 +368,7 @@
 &lt;p&gt;&lt;strong&gt; Login failed. Login failed for user ‘NT AUTHORITY\SYSTEM’ &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;windows service is running on ‘NT AUTHORITY\SYSTEM’ login. this login doesn’t seem to have access to the database&lt;br&gt;To resolve this, add this in your connectionstring, Integrated Security=SSPI or else create a user account for ‘NT AUTHORITY\SYSTEM’ in your database server and give necessary permissions. &lt;/p&gt;
 &lt;p&gt;These are the guidelines to create a windows service, so it’s your time to try it.&lt;/p&gt;
+&lt;p&gt;You can find a sample windows service application from here, &lt;a href=&quot;https://github.com/hansamaligamage/Scheduler&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/Scheduler&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -383,7 +385,7 @@
     <link href="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/"/>
     <id>http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/</id>
     <published>2016-06-29T18:30:00.000Z</published>
-    <updated>2016-07-19T10:33:11.624Z</updated>
+    <updated>2016-09-18T18:19:49.579Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Smtp-Email&quot;&gt;&lt;a href=&quot;#Smtp-Email&quot; class=&quot;headerlink&quot; title=&quot;Smtp Email&quot;&gt;&lt;/a&gt;Smtp Email&lt;/h2&gt;&lt;p&gt;This post describes an easy way to send a email using a smtp server.&lt;/p&gt;
 &lt;h2 id=&quot;Smtp-Client&quot;&gt;&lt;a href=&quot;#Smtp-Client&quot; class=&quot;headerlink&quot; title=&quot;Smtp Client&quot;&gt;&lt;/a&gt;Smtp Client&lt;/h2&gt;&lt;p&gt;To create a smtp client, we need to specify a smtp host and port, port is an optional parameter.&lt;br&gt;for some Smtp clients, we need to provide credintials. we need a NetworkCredintial instance for that. We can use Secure Socket Layer (SSL) to encrypt the connection.&lt;/p&gt;
@@ -393,6 +395,7 @@
 &lt;p&gt;&lt;img src=&quot;/images/mailMessage.PNG&quot; alt=&quot;Mail Message&quot;&gt;&lt;/p&gt;
 &lt;p&gt;MailMessage from and to should be MailAddress instances.&lt;br&gt;In this example we used &lt;em&gt;IsBodyHtml&lt;/em&gt; attribute, to notify mail body can be a html string.&lt;/p&gt;
 &lt;h2 id=&quot;Complete-code-is-shown-below&quot;&gt;&lt;a href=&quot;#Complete-code-is-shown-below&quot; class=&quot;headerlink&quot; title=&quot;Complete code is shown below&quot;&gt;&lt;/a&gt;Complete code is shown below&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/completeCode.PNG&quot; alt=&quot;Complete code to send an email&quot;&gt;&lt;/p&gt;
+&lt;p&gt;You can clone sample code from this github repository and play with it, &lt;a href=&quot;https://github.com/hansamaligamage/Scheduler&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/Scheduler&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -409,7 +412,7 @@
     <link href="http://yoursite.com/2016/05/29/NLog-Configurations/"/>
     <id>http://yoursite.com/2016/05/29/NLog-Configurations/</id>
     <published>2016-05-28T18:30:00.000Z</published>
-    <updated>2016-07-19T07:35:25.930Z</updated>
+    <updated>2016-09-18T16:34:45.744Z</updated>
     
     <content type="html">&lt;p&gt;Many of the systems, we develop today needs some kind of a logging/tracing mechanism to identify issues or any kind of information.&lt;/p&gt;
 &lt;h2 id=&quot;NLog&quot;&gt;&lt;a href=&quot;#NLog&quot; class=&quot;headerlink&quot; title=&quot;NLog&quot;&gt;&lt;/a&gt;NLog&lt;/h2&gt;&lt;p&gt;NLog is a free logging framework to log various kind of messages into a specified place. We can use NLog in a .NET environment, as well as with Xamarin and Windows phone.&lt;/p&gt;
@@ -482,6 +485,7 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/nlog/nlog/wiki/Layout-Renderers&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/nlog/nlog/wiki/Layout-Renderers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/NLog/NLog/wiki/Log-levels&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/NLog/NLog/wiki/Log-levels&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;I creted a github repo to these code samples, Please have a look, &lt;a href=&quot;https://github.com/hansamaligamage/Logger&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/Logger&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -528,7 +532,7 @@
     <link href="http://yoursite.com/2016/03/02/ODATA%20Reads%20with%20Parameters/"/>
     <id>http://yoursite.com/2016/03/02/ODATA Reads with Parameters/</id>
     <published>2016-03-01T18:30:00.000Z</published>
-    <updated>2016-06-05T17:17:11.961Z</updated>
+    <updated>2016-09-18T16:19:10.132Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Data-READs-with-Parameters&quot;&gt;&lt;a href=&quot;#Data-READs-with-Parameters&quot; class=&quot;headerlink&quot; title=&quot;Data READs with Parameters&quot;&gt;&lt;/a&gt;Data READs with Parameters&lt;/h2&gt;&lt;p&gt;In this post, We’ll focus on how to read a OData service with a parameter.&lt;/p&gt;
 &lt;h2 id=&quot;Service-method-with-a-parameter&quot;&gt;&lt;a href=&quot;#Service-method-with-a-parameter&quot; class=&quot;headerlink&quot; title=&quot;Service method with a parameter&quot;&gt;&lt;/a&gt;Service method with a parameter&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/GetMethodWithParameter.png&quot; alt=&quot;Get Method With a Parameter.&quot;&gt;&lt;/p&gt;
@@ -537,6 +541,7 @@
 &lt;p&gt;In browser, we can see only filtered students. in url, append the parameter with values.&lt;/p&gt;
 &lt;h2 id=&quot;Power-Query-Window&quot;&gt;&lt;a href=&quot;#Power-Query-Window&quot; class=&quot;headerlink&quot; title=&quot;Power Query Window&quot;&gt;&lt;/a&gt;Power Query Window&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/PowerQueryWindow.png&quot; alt=&quot;Power Query editor.&quot;&gt;&lt;/p&gt;
 &lt;p&gt;From the Power Query window, we can see dataset like this.&lt;/p&gt;
+&lt;p&gt;I could create a github repo for this code sample, Please feel free to check it, &lt;a href=&quot;https://github.com/hansamaligamage/ODATAExample&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/ODATAExample&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -553,7 +558,7 @@
     <link href="http://yoursite.com/2016/02/19/ODATA%20Reads/"/>
     <id>http://yoursite.com/2016/02/19/ODATA Reads/</id>
     <published>2016-02-19T13:15:36.000Z</published>
-    <updated>2016-06-03T13:02:01.127Z</updated>
+    <updated>2016-09-18T16:18:12.318Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Data-READs&quot;&gt;&lt;a href=&quot;#Data-READs&quot; class=&quot;headerlink&quot; title=&quot;Data READs&quot;&gt;&lt;/a&gt;Data READs&lt;/h2&gt;&lt;p&gt;Let’s start with a newer version of ODATA to access data from a existing service, In this solution I have used &lt;em&gt; Web API 2.2 with ODATA v4 &lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;ODATA-v4-package&quot;&gt;&lt;a href=&quot;#ODATA-v4-package&quot; class=&quot;headerlink&quot; title=&quot;ODATA v4 package&quot;&gt;&lt;/a&gt;ODATA v4 package&lt;/h2&gt;&lt;p&gt;Visual Studio has a built in package to create ODATA v4 services, Package contains all the libraries required to create a ODATA v4 endpoint.&lt;/p&gt;
@@ -590,6 +595,7 @@
 &lt;p&gt;This is the query editor, we can select/remove columns, can remove duplicates, group by a column, create a new column based on a mathematical function and much more advanced operations.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/queryEditorWindow.png&quot; alt=&quot;Query editor window&quot;&gt;&lt;/p&gt;
 &lt;p&gt;In the next section, we’ll see how to read data by passing a value :)&lt;/p&gt;
+&lt;p&gt;I could create a github repo for this code sample, Please feel free to check it, &lt;a href=&quot;https://github.com/hansamaligamage/ODATAExample&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/hansamaligamage/ODATAExample&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
