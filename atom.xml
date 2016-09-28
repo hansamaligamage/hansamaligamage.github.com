@@ -54,11 +54,11 @@
   </entry>
   
   <entry>
-    <title>Install Yeoman in .NETCORE</title>
+    <title>Install Yeoman in Ubuntu</title>
     <link href="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/"/>
     <id>http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/</id>
     <published>2016-09-15T14:16:58.000Z</published>
-    <updated>2016-09-15T15:28:33.560Z</updated>
+    <updated>2016-09-28T12:45:28.171Z</updated>
     
     <content type="html">&lt;h1 id=&quot;What-is-Yeoman&quot;&gt;&lt;a href=&quot;#What-is-Yeoman&quot; class=&quot;headerlink&quot; title=&quot;What is Yeoman&quot;&gt;&lt;/a&gt;What is Yeoman&lt;/h1&gt;&lt;p&gt;Yeoman is a free open source tool. It’s more like visual studio project templates. It’s going to create a complete project with given set of tools. Yeoman has set of generators, It complies with industry best practices. Developers can easily start with their applications with specific tool set, without worrying about the setup or template of the application. Yeoman templates includes building, testing and minification in your application, So developer can focus on the logic of their application.&lt;/p&gt;
 &lt;h1 id=&quot;Install-node-js&quot;&gt;&lt;a href=&quot;#Install-node-js&quot; class=&quot;headerlink&quot; title=&quot;Install node js&quot;&gt;&lt;/a&gt;Install node js&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/install-node.PNG&quot; alt=&quot;install node&quot;&gt;&lt;/p&gt;
