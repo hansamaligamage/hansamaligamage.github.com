@@ -64,6 +64,144 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Create-a-Web-API-application-in-NETCore" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/26/Create-a-Web-API-application-in-NETCore/" class="article-date">
+  <time datetime="2016-09-26T17:55:14.000Z" itemprop="datePublished">2016-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/26/Create-a-Web-API-application-in-NETCore/">Create a Web API application in .NETCore</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.</p>
+<p><img src="/images/create-new-project.PNG" alt="Create a new project using dotnet new command."></p>
+<p>Type <strong> dotnet new </strong> command and create a project in your selected directory.</p>
+<p><img src="/images/service-open-project-in-visual-studio-code.PNG" alt="Open your project using visual studio code"></p>
+<p>Type <strong> code . </strong> to open your project in visual studio code. It asks to restore dependencies in <em> project.json </em> file, and ask to add  <em> required assets to build and debug your project. </em> Add both of them.</p>
+<p><img src="/images/packages-are-restored-and-vscode-folder-has-been-added.PNG" alt="All the packages are restored and .vscode folder is added into the project"></p>
+<p>All the defined packages in <em> project.json </em> has been restored. <em> launch.json </em> and <em> tasks.json </em> is added into the <em> .vscode </em> folder.</p>
+<p><img src="/images/console-application-output.PNG" alt="Hello World"></p>
+<p>When you build (ctrl + shift + b) and run your project (ctrl + F5), It shows the output of your project in <em> Debug Console </em> window as above.</p>
+<p><img src="/images/add-kestrel-server-into-your-project.PNG" alt="Add kestrel server package as a dependency"></p>
+<p> Add <strong> Microsoft.AspNetCore.Server.Kestrel </strong> package into <em> project.json </em> and turn your application to a web application.</p>
+<p><img src="/images/call-webhostbuilder-run-method.PNG" alt="Call Run method in Webhostbuilder"></p>
+<p>Create a Webhostbuilder instance and call Run method of it. </p>
+<p> <strong> var host = new WebHostBuilder().Build();<br> host.Run(); </strong></p>
+<p>Try to run your application and it gives an error. <em> No service for type ‘Microsoft.AspNetCore.Hosting.IStartup’ has been registered. </em> It says we haven’t defined a hosting service to start the application. Let’s try to fix this.</p>
+<p><img src="/images/run-web-application-on-kestrel.PNG" alt="Run your web application on Kestrel server."></p>
+<p>Run your web application on kestrel server, using <em> UseKestrel() </em> method.</p>
+<p><strong> var host = new WebHostBuilder().UseKestrel()<br>                        .Configure(app =&gt; { app.Run(context =&gt; context.Response.WriteAsync(“Hello from Kestrel Server”));<br>                                          }).Build();<br>   host.Run(); </strong></p>
+<p> build your project and see changes. It’s going to listen to web requests in <em> <a href="http://localhost:5000/" target="_blank" rel="external">http://localhost:5000/</a> </em></p>
+<p>Let’s try to create a .NETCore application from <em> Visual Studio 2015 </em></p>
+<p><img src="/images/create-dotnet-core-web-application.PNG" alt="Create .NETCore web application from Visual Studio"></p>
+<p>Create a new project from Visual Studio 2015, In <em> .NETCore </em> tab, select <em> ASP.NET Core Web Application (.NET Core) </em>. Give it a name and click on OK.  </p>
+<p><img src="/images/select-web-api-template.PNG" alt="Select Web API from ASP.NET Core templates"></p>
+<p>Select <em> Web API </em> from ASP.NET Core templates and click on OK.</p>
+<p><img src="/images/build-the-project.PNG" alt="build the project and see changes"></p>
+<p>Check folder structure of the application, It includes a <em> Program.cs </em> and <em> Startup </em> file. It includes a <em> project.json </em> file to define all required packages for your application. <em> appsettings.json </em> file maintains application settings same as <em> web.config </em> file in a ASP.NET Web application. <em> Controllers </em> folder has all Web API Controllers. wwwroot</p>
+<h1 id="Open-service-application-from-Visual-Studio-Code"><a href="#Open-service-application-from-Visual-Studio-Code" class="headerlink" title="Open service application from Visual Studio Code."></a>Open service application from Visual Studio Code.</h1><p><img src="/images/open-application-in-visual-studio-code.PNG" alt="Open your application in Visual Studio Code"></p>
+<p>cd into the application directory and open <em> Visual Studio Code </em> using <em> code . </em> command. You can see folder structure of your application as above. Add assets to build and debug your application as the info dialog box shows.</p>
+<p><img src="/images/vscode-folder-is-added.PNG" alt="vscode folder is added"></p>
+<p>vscode folder is added into the solution with launch.json and tasks.json file.</p>
+<h1 id="Dependencies-in-project-json-file"><a href="#Dependencies-in-project-json-file" class="headerlink" title="Dependencies in project.json file"></a>Dependencies in project.json file</h1><p>Let’s see what are the dependencies required for a mvc application.</p>
+<p><img src="/images/aspnetcore-mvc-package.PNG" alt="basic packages required for a mvc application"></p>
+<p>Since We create a Web API application, in <em> project.json </em> file, It shows <strong> Microsoft.AspNetCore.Mvc </strong> package dependency.</p>
+<h1 id="Run-ValuesController-and-check-service-calls"><a href="#Run-ValuesController-and-check-service-calls" class="headerlink" title="Run ValuesController and check service calls."></a>Run ValuesController and check service calls.</h1><p>Let’s run Web API application and check available services.</p>
+<p><img src="/images/get-method-in-values-controller.PNG" alt="Read service in ValuesController"></p>
+<p>Build (Ctrl + Shift + b) and run (Ctrl + F5) your application and ping to the Read service as above. Its shows return values in the browser.</p>
+<h1 id="Let’s-build-the-movie-service"><a href="#Let’s-build-the-movie-service" class="headerlink" title="Let’s build the movie service"></a>Let’s build the movie service</h1><h2 id="Create-Movie-model"><a href="#Create-Movie-model" class="headerlink" title="Create Movie model."></a>Create Movie model.</h2><p><img src="/images/add-movie-model.PNG" alt="Add Movie model"></p>
+<p>Create a <em> Model </em> folder to define entities in your application. Then create <em> Movie </em> class and add properties into it. We follow <em> Code First approach </em> in this example. So when we create the database <em> Movie </em> table will be created.</p>
+<h2 id="Create-Context-class-to-build-the-database"><a href="#Create-Context-class-to-build-the-database" class="headerlink" title="Create Context class to build the database."></a>Create Context class to build the database.</h2><p><img src="/images/create-context-class.PNG" alt="Create db context class"></p>
+<p> From <em> context </em> class, our database will be generated. <em>Context </em> class should be inherited from <em> DbContext </em> class. In order to do that, we have to add references from <em> Entityframework core.</em></p>
+<h2 id="Install-Entityframework-Core-EF-Core"><a href="#Install-Entityframework-Core-EF-Core" class="headerlink" title="Install Entityframework Core (EF Core)"></a>Install Entityframework Core (EF Core)</h2><p><img src="/images/add-entityframeworkcore-into-project-json.PNG" alt="Add entityframeworkcore references into project.json file"></p>
+<p>Add <em> entityframeworkcore </em> reference as a dependency into project.json file,  <em> “Microsoft.EntityFrameworkCore”: “1.0.0” </em> and resolve reference error in <em> MovieDbContext </em> class by adding <em> using Microsoft.EntityFrameworkCore </em> statement. </p>
+<h2 id="Define-the-connectionstring"><a href="#Define-the-connectionstring" class="headerlink" title="Define the connectionstring"></a>Define the connectionstring</h2><p><img src="/images/define-connectionstring-in-appsetings-json.PNG" alt="Define the connectionstring in appsetings.json file"></p>
+<p>Define the connectionstring in appsettings.json file to connect to the Sql server.</p>
+<h2 id="Add-entities-in-moviecontext-class"><a href="#Add-entities-in-moviecontext-class" class="headerlink" title="Add entities in moviecontext class"></a>Add entities in moviecontext class</h2><p><img src="/images/run-ef-migrations.PNG" alt="run EFCore migrations"></p>
+<p>Try to run migrations for <em> MovieDbContext </em> class, It gives an error. <em> No executable found matching command “dotnet-ef” </em>, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.</p>
+<h2 id="Add-EFCore-tools"><a href="#Add-EFCore-tools" class="headerlink" title="Add EFCore tools"></a>Add EFCore tools</h2><p><img src="/images/add-entityframeworkcore-tools.PNG" alt="Add EFCore tools and run migrations"></p>
+<p>Add <em> “Microsoft.EntityframeworkCore.Tools” : “1.0.0-preview2-final” </em> in tools section of <em> project.json. </em> Try to run migration and it gives an error again!!, <em> Could not invoke this command with the startup project ‘demo’. Check that ‘Microsoft.EntityFrameworkCore.Design’ has been added to “dependencies” in the startup project and that the version of ‘Microsoft.EntityFrameworkCore.Tools’ in “tools” and ‘Microsoft.EntityFrameworkCore.Design’ are the same. See <a href="http://go.microsoft.com/fwlink/?LinkId=798221" target="_blank" rel="external">http://go.microsoft.com/fwlink/?LinkId=798221</a> for more details, </em> What’s we are missing,</p>
+<p>We haven’t added <em> ‘Microsoft.EntityFrameworkCore.Design’ </em> as a reference, We have to add EFCore Design references to run migrations scripts. Let’s add it and check. And also it mentions <em> ‘Microsoft.EntityFrameworkCore.Design’ </em> and <em> ‘Microsoft.EntityFrameworkCore.Tools’ </em> version should be same.</p>
+<h2 id="Add-EFCore-Design-reference"><a href="#Add-EFCore-Design-reference" class="headerlink" title="Add EFCore Design reference."></a>Add EFCore Design reference.</h2><p><img src="/images/add-entityframeworkcore-design-reference.PNG" alt="Add entityframeworkcore design reference"></p>
+<p>Add <em> “Microsoft.EntityFrameworkCore.Design”: “1.0.0-preview2-final” </em> reference into project.json file. Note that, <em> ‘Microsoft.EntityFrameworkCore.Design’ </em> and <em> ‘Microsoft.EntityFrameworkCore.Tools’ </em> version are same.</p>
+<p>Then try to run migrations command again and it gives another error, <em> No parameterless constructor was found on ‘MovieDbContext’. Either add a parameterless constructor to ‘MovieDbContext’ or add an implementation of ‘IDbContextFactory<moviedbcontext>‘ in the same assembly as ‘MovieDbContext’. </moviedbcontext></em></p>
+<h2 id="Check-MovieDbContext-class"><a href="#Check-MovieDbContext-class" class="headerlink" title="Check MovieDbContext class"></a>Check MovieDbContext class</h2><p><img src="/images/moviecontext-class.PNG" alt="MovieDbContext class with constructor"></p>
+<p> In MovieDbContext class, define constructor with context options and call base class method.</p>
+<h2 id="Define-connectionstring-in-appsettings-file"><a href="#Define-connectionstring-in-appsettings-file" class="headerlink" title="Define connectionstring in appsettings file"></a>Define connectionstring in appsettings file</h2><p><img src="/images/connectionstring_in_appsettings_json.PNG" alt="Add connectionstring in appsettings.json file"></p>
+<p>Add connectionstring in appsetings file like this, <em> “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” </em>  </p>
+<h2 id="Startup-class-implementation"><a href="#Startup-class-implementation" class="headerlink" title="Startup class implementation"></a>Startup class implementation</h2><p><img src="/images/startup-class-configure-services-method.PNG" alt="Configure services in startup class"></p>
+<p>In <em> Configure services </em> method, add the database context and define the connectionstring of your database, in configure service method, it’s missing some references, since we havent add any EntityframeworkCore sqlserver references.</p>
+<h2 id="Add-EFCore-Sqlserver-references"><a href="#Add-EFCore-Sqlserver-references" class="headerlink" title="Add EFCore Sqlserver references"></a>Add EFCore Sqlserver references</h2><p><img src="/images/EFCore_sqlserver-references.PNG" alt="Add EntityFrameworkCore sqlserver reference"></p>
+<p>Add <em> “Microsoft.EntityFrameworkCore.SqlServer”: “1.0.0” </em> reference in project.json file and restore them.</p>
+<p><img src="/images/pass-sqlserver-connectionstring.PNG" alt="Add EFCore sqlserver references"></p>
+<p>Now sqlserver reference is added. <em> Configure service </em> method looks fine.</p>
+<h2 id="Run-Migrations"><a href="#Run-Migrations" class="headerlink" title="Run Migrations"></a>Run Migrations</h2><p><img src="/images/migrations-has-been-added.PNG" alt="run migrations and check what happens"></p>
+<p>Run Sqlserver migrations, It doesn’t give any errors in .NET cli, Migrations folder is created with migrations scripts. In <em> Initial Migration </em> class, it defines <em> Up </em> and <em> Down </em> methods to create and drop movie table respectively.</p>
+<h2 id="Update-the-database"><a href="#Update-the-database" class="headerlink" title="Update the database"></a>Update the database</h2><p><img src="/images/movie-db-is-created.PNG" alt="movie database is created"></p>
+<p>run <em> dotnet ef database update </em> command to update the database. In sqlserver <em> movieDB </em> got created.</p>
+<h2 id="Add-Movie-controller"><a href="#Add-Movie-controller" class="headerlink" title="Add Movie controller"></a>Add Movie controller</h2><p>In Visual studio code, We can’t use scaffolding. So i created a <em> Movie Controller </em> with all the CRUD operations of <em> Movie </em> entity in visual studio. Let’s add it.</p>
+<p><img src="/images/movie-controller.PNG" alt="Movie controller with all the CRUD operations"></p>
+<p>In Movie Controller, it shows it works with <em> application/json </em> type data, and the route is <em> api/Movies. </em> Note that in .NET Core Api controllers inherit from <em> Controller </em> class, not from <em> API Controller </em> class.</p>
+<p><img src="/images/api_movies_method.PNG" alt="ping to api/movies method"></p>
+<p>Go to <em> api/movies </em> method and check <em> Network </em> tab in developer tools. method returns <em> 200 - OK. </em> as a response. We don’t have data in movie database, Let’s try to add some data.</p>
+<h2 id="Add-data-using-Postman"><a href="#Add-data-using-Postman" class="headerlink" title="Add data using Postman"></a>Add data using Postman</h2><p><img src="/images/post-a-movie.PNG" alt="ping to api/post a movie"></p>
+<p>Postman is a tool to test your service apis. Although we can test <em> GET </em> requests through browser, to test <em> POST </em> requests, we need to use <em> Postman. </em> Add a movie using Postman and retrive it using web browser.</p>
+<p>We have created a service API using .NETCore and Sql Server. Let’s try to run this same application on Ubuntu with <em> MySQL. </em></p>
+<h2 id="Clone-your-application-in-Ubuntu"><a href="#Clone-your-application-in-Ubuntu" class="headerlink" title="Clone your application in Ubuntu"></a>Clone your application in Ubuntu</h2><p><img src="/images/git-clone.PNG" alt="Clone your application in Ubuntu"></p>
+<p> Type <em> git clone …</em> with repository url, Your project will be downloaded. Then cd into application directory and open it in visual studio code.</p>
+<h2 id="Restore-packages-and-build-your-application"><a href="#Restore-packages-and-build-your-application" class="headerlink" title="Restore packages and build your application"></a>Restore packages and build your application</h2><p><img src="/images/dotnet-restore-in-ubuntu.PNG" alt="Restore packages and build application"></p>
+<p>Restore packages defined in project.json file and Build your application. It all works fine. </p>
+<h2 id="Let’s-try-to-run-our-application"><a href="#Let’s-try-to-run-our-application" class="headerlink" title="Let’s try to run our application"></a>Let’s try to run our application</h2><p><img src="/images/dotnet-run-in-ubuntu.PNG" alt="Run your application"></p>
+<p>Let’s try to run our application without any modifications, It seems working fine. Let’s navigate to <em> api/values </em>, It calls READ service of <em> Values </em> service. It returns 200 - OK as response. </p>
+<p><img src="/images/read-service-in-movie-service.PNG" alt="Read service in movie controller"></p>
+<p>Ping to <em> api/movies, </em> it returns an empty array, since we don’t have a database. Check the terminal and try to find any erros, It shows a <em> fail </em> error in red. It says <em> Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory[1]<br> An exception occurred in the database while iterating the results of a query. System.NotSupportedException: The keyword ‘integrated security’ is not supported on this platform. at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString) … </em><br> It says an error as <em> The keyword ‘integrated security’ is not supported on this platform. </em> If you remember, where we have used <em> integrated security </em>, that’s in sql server connectionString. We can’t operate with Sql server on Ubuntu. We have to install My SQL server to store data in your application. Let’s do that.</p>
+<h2 id="Add-MySQL-connectionString"><a href="#Add-MySQL-connectionString" class="headerlink" title="Add MySQL connectionString"></a>Add MySQL connectionString</h2><p><img src="/images/define-mysql-connectionstring.PNG" alt="Define mysql connectionString"></p>
+<p>Add mysql connectionString in appsetings.json file, <em> movieDB </em> will get created in mysql server.</p>
+<h2 id="Add-MySQL-service-in-your-application"><a href="#Add-MySQL-service-in-your-application" class="headerlink" title="Add MySQL service in your application"></a>Add MySQL service in your application</h2><p><img src="/images/configure-my-sql-service.PNG" alt="Add mysql service into your application"></p>
+<p>If you remember, we added Sql service into the application when we run in winodows. In Ubuntu also same thing we have to do. Add MySQL service into your application with dbContext class. But it seems we are missing something in here.<br> Note that, <em> Microsoft.EntityframeworkCore </em> has been highlighted. Your application doesn’t use that reference anymore. It’s a reference from Sql server. We have to add a reference from MySQL to proceed with this. Let’s try to add it.</p>
+<h2 id="Add-MySQL-EFCore-reference-in-project-json-file"><a href="#Add-MySQL-EFCore-reference-in-project-json-file" class="headerlink" title="Add MySQL EFCore reference in project.json file"></a>Add MySQL EFCore reference in project.json file</h2><p><img src="/images/add-mysql-EFCore-reference.PNG" alt="Add mysql EFCore reference"></p>
+<p>Add <em> “MySql.Data.EntityFrameworkCore” : “7.0.4-ir-191” </em> reference in project.json file and restore them.</p>
+<p><img src="/images/add-mysql-reference-in-startup-class.PNG" alt="Add mysql reference in Startup class"></p>
+<p>Add <em> using MySQL.Data.EntityFrameworkCore.Extensions; </em> statement in startup class, It seems works fine now.</p>
+<p>In windows with Sql server, We run migration scripts and ensure database is created. But with Ubuntu, we can’t do that. Somehow we have to ensure our database is created. Let’s give it a try.</p>
+<h2 id="Ensure-MySQL-database-got-created"><a href="#Ensure-MySQL-database-got-created" class="headerlink" title="Ensure MySQL database got created"></a>Ensure MySQL database got created</h2><p><img src="/images/ensure-mysql-database-got-created.PNG" alt="Ensure mysql database is created"></p>
+<p>Add this lines of code to ensure MySQL database got created.</p>
+<p>var optionsBuilder = new DbContextOptionsBuilder<moviedbcontext>();<br>optionsBuilder.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”));</moviedbcontext></p>
+<p>var context = new MovieDbContext(optionsBuilder.Options);<br>context.Database.EnsureCreated();</p>
+<h2 id="Run-your-application"><a href="#Run-your-application" class="headerlink" title="Run your application"></a>Run your application</h2><p><img src="/images/try-to-run-your-application.PNG" alt="run your application"></p>
+<p>Then build and run the application, navigate to movies read service and verify it works fine. read service returns empty array. Let’s check database is created in MySQL server.</p>
+<h2 id="View-MySQL-databases"><a href="#View-MySQL-databases" class="headerlink" title="View MySQL databases"></a>View MySQL databases</h2><p><img src="/images/verify-database-is-created.PNG" alt="Check whether your database is created"></p>
+<p>run <em> mysql -u root -p </em> command to access mysql shell, then type <em> show databases; </em> to view all the available databases. <em> movieDB. </em> is successfuly created.</p>
+<h2 id="Let’s-add-some-data-into-Movie-database-in-MySQL"><a href="#Let’s-add-some-data-into-Movie-database-in-MySQL" class="headerlink" title="Let’s add some data into Movie database in MySQL"></a>Let’s add some data into Movie database in MySQL</h2><p><img src="/images/post-a-movie-mysql.PNG" alt="Add a movie into database"></p>
+<p>Call POST service in movie controller and add a movie into the mysql database. Refresh read movie service, it shows available movies in your mysql database.<br>Connect to the mysql shell and try to view data in <em> Movies </em> table.</p>
+<p>In this blog post, I described how to run a web api application in windows with Sqlserver. And then we tried to configure same service application on Ubuntu with MySql server. With less amount of coding we could achieve that, really cool style in .NETCore</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/26/Create-a-Web-API-application-in-NETCore/" data-id="citr8qh0n0001rogcw4grgs2s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Create-a-web-application-with-Yeoman" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/09/16/Create-a-web-application-with-Yeoman/" class="article-date">
@@ -110,7 +248,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citmwocpy00032kgci7599bsu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citr8qh0h0000rogc8vekidj1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -159,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citmwocqe000a2kgcgegeehk5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citr8qh1h000erogcfy2azva1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +351,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citmwocqi000e2kgcb2k3qzy5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citr8qh1j000frogcagb3nczi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -277,7 +415,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citmwocpz00042kgcojg085f4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citr8qh0t0003rogclnqg0vvy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,7 +460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citmwocpv00022kgcsvu8ymt6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citr8qh100006rogclqzwdnct" class="article-share-link">Share</a>
       
       
     </footer>
@@ -389,7 +527,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citmwocpr00012kgc1i4e0u3u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citr8qh110007rogcc51jurtp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -436,7 +574,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citmwocq300062kgckh7k4ns8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citr8qh0y0005rogcyw494uxk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -495,7 +633,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citmwocq100052kgcs2x7ikfl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citr8qh0w0004rogcqsqivrmj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -580,52 +718,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citmwocqj000f2kgcwohlh3tw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Simple-smtp-email-with-html-body" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/30/Simple-smtp-email-with-html-body/" class="article-date">
-  <time datetime="2016-06-29T18:30:00.000Z" itemprop="datePublished">2016-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/30/Simple-smtp-email-with-html-body/">Simple smtp email with html body</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Smtp-Email"><a href="#Smtp-Email" class="headerlink" title="Smtp Email"></a>Smtp Email</h2><p>This post describes an easy way to send a email using a smtp server.</p>
-<h2 id="Smtp-Client"><a href="#Smtp-Client" class="headerlink" title="Smtp Client"></a>Smtp Client</h2><p>To create a smtp client, we need to specify a smtp host and port, port is an optional parameter.<br>for some Smtp clients, we need to provide credintials. we need a NetworkCredintial instance for that. We can use Secure Socket Layer (SSL) to encrypt the connection.</p>
-<p><img src="/images/smtpClient.PNG" alt="SMTP Client"></p>
-<p>This shows how to instantiate a smtp client, If you are using gmail, host is smtp.gmail.com or else some specific smtp server. If port is available, specify the port</p>
-<h2 id="Mail-Message"><a href="#Mail-Message" class="headerlink" title="Mail Message"></a>Mail Message</h2><p>After working with Smtp client, then we need is MailMessage object.</p>
-<p><img src="/images/mailMessage.PNG" alt="Mail Message"></p>
-<p>MailMessage from and to should be MailAddress instances.<br>In this example we used <em>IsBodyHtml</em> attribute, to notify mail body can be a html string.</p>
-<h2 id="Complete-code-is-shown-below"><a href="#Complete-code-is-shown-below" class="headerlink" title="Complete code is shown below"></a>Complete code is shown below</h2><p><img src="/images/completeCode.PNG" alt="Complete code to send an email"></p>
-<p>You can clone sample code from this github repository and play with it, <a href="https://github.com/hansamaligamage/Scheduler" target="_blank" rel="external">https://github.com/hansamaligamage/Scheduler</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/30/Simple-smtp-email-with-html-body/" data-id="citmwocqf000b2kgct973yvr9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citr8qh0q0002rogcsruhy48k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -669,6 +762,10 @@
       <ul>
         
           <li>
+            <a href="/2016/09/26/Create-a-Web-API-application-in-NETCore/">Create a Web API application in .NETCore</a>
+          </li>
+        
+          <li>
             <a href="/2016/09/16/Create-a-web-application-with-Yeoman/">Create a web application with Yeoman!</a>
           </li>
         
@@ -682,10 +779,6 @@
         
           <li>
             <a href="/2016/09/15/Hello-World-in-NETCore-Ubuntu/">Hello World in .NETCore Ubuntu</a>
-          </li>
-        
-          <li>
-            <a href="/2016/09/11/Install-NETCore-on-Ubuntu/">Install .NETCore on Ubuntu</a>
           </li>
         
       </ul>
