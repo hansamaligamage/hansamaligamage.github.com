@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T17:15:43.551Z</updated>
+  <updated>2016-10-02T17:18:19.109Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T17:15:43.551Z</updated>
+    <updated>2016-10-02T17:18:19.109Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -75,7 +75,7 @@
 &lt;p&gt;run &lt;strong&gt; dotnet ef database update &lt;/strong&gt; command to update the database. In sqlserver &lt;em&gt; movieDB &lt;/em&gt; got created.&lt;/p&gt;
 &lt;h2 id=&quot;Add-Movie-controller&quot;&gt;&lt;a href=&quot;#Add-Movie-controller&quot; class=&quot;headerlink&quot; title=&quot;Add Movie controller&quot;&gt;&lt;/a&gt;Add Movie controller&lt;/h2&gt;&lt;p&gt;In Visual studio code, We can’t use scaffolding. So i created a &lt;em&gt; Movie Controller &lt;/em&gt; with all the CRUD operations of &lt;em&gt; Movie &lt;/em&gt; entity in visual studio. Let’s add it.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/movie-controller.PNG&quot; alt=&quot;Movie controller with all the CRUD operations&quot;&gt;&lt;/p&gt;
-&lt;p&gt;In Movie Controller, it shows it works with &lt;em&gt; application/json &lt;/em&gt; type data, and the route is &lt;em&gt; api/Movies. &lt;/em&gt; Note that in .NET Core Api controllers inherit from &lt;em&gt; Controller &lt;/em&gt; class, not from &lt;em&gt; API Controller &lt;/em&gt; class.&lt;/p&gt;
+&lt;p&gt;In Movie Controller, it works with &lt;em&gt; application/json &lt;/em&gt; type data, and the route is &lt;em&gt; api/Movies. &lt;/em&gt; Note that in .NET Core Api controllers inherit from &lt;em&gt; Controller &lt;/em&gt; class, not from &lt;em&gt; API Controller &lt;/em&gt; class.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/api_movies_method.PNG&quot; alt=&quot;ping to api/movies method&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Go to &lt;em&gt; api/movies &lt;/em&gt; method and check &lt;em&gt; Network &lt;/em&gt; tab in developer tools. method returns &lt;em&gt; 200 - OK. &lt;/em&gt; as a response. We don’t have data in movie database, Let’s try to add some data.&lt;/p&gt;
 &lt;h2 id=&quot;Add-data-using-Postman&quot;&gt;&lt;a href=&quot;#Add-data-using-Postman&quot; class=&quot;headerlink&quot; title=&quot;Add data using Postman&quot;&gt;&lt;/a&gt;Add data using Postman&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/post-a-movie.PNG&quot; alt=&quot;ping to api/post a movie&quot;&gt;&lt;/p&gt;
