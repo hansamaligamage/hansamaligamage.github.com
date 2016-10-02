@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T06:31:27.571Z</updated>
+  <updated>2016-10-02T06:32:28.370Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T06:31:27.571Z</updated>
+    <updated>2016-10-02T06:32:28.370Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -100,7 +100,7 @@
 &lt;p&gt;In windows with Sql server, We run migration scripts and ensure database is created. But with Ubuntu, we can’t do that. Somehow we have to ensure our database is created. Let’s give it a try.&lt;/p&gt;
 &lt;h2 id=&quot;Ensure-MySQL-database-got-created&quot;&gt;&lt;a href=&quot;#Ensure-MySQL-database-got-created&quot; class=&quot;headerlink&quot; title=&quot;Ensure MySQL database got created&quot;&gt;&lt;/a&gt;Ensure MySQL database got created&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/ensure-mysql-database-got-created.PNG&quot; alt=&quot;Ensure mysql database is created&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add this lines of code to ensure MySQL database got created.&lt;/p&gt;
-&lt;p&gt;** var optionsBuilder = new DbContextOptionsBuilder&lt;moviedbcontext&gt;();&lt;br&gt;    optionsBuilder.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”));&lt;/moviedbcontext&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; var optionsBuilder = new DbContextOptionsBuilder&lt;moviedbcontext&gt;();&lt;br&gt;    optionsBuilder.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”)); &lt;/moviedbcontext&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;var context = new MovieDbContext(optionsBuilder.Options);&lt;br&gt;  context.Database.EnsureCreated(); **&lt;/p&gt;
 &lt;h2 id=&quot;Run-your-application&quot;&gt;&lt;a href=&quot;#Run-your-application&quot; class=&quot;headerlink&quot; title=&quot;Run your application&quot;&gt;&lt;/a&gt;Run your application&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/try-to-run-your-application.PNG&quot; alt=&quot;run your application&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Then build and run the application, navigate to movies read service and verify it works fine. read service returns empty array. Let’s check database is created in MySQL server.&lt;/p&gt;
