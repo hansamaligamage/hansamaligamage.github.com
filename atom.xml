@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T05:43:24.168Z</updated>
+  <updated>2016-10-02T05:44:45.663Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T05:43:24.168Z</updated>
+    <updated>2016-10-02T05:44:45.663Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -42,7 +42,7 @@
 &lt;h1 id=&quot;Let’s-build-the-movie-service&quot;&gt;&lt;a href=&quot;#Let’s-build-the-movie-service&quot; class=&quot;headerlink&quot; title=&quot;Let’s build the movie service&quot;&gt;&lt;/a&gt;Let’s build the movie service&lt;/h1&gt;&lt;h2 id=&quot;Create-Movie-model&quot;&gt;&lt;a href=&quot;#Create-Movie-model&quot; class=&quot;headerlink&quot; title=&quot;Create Movie model.&quot;&gt;&lt;/a&gt;Create Movie model.&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-movie-model.PNG&quot; alt=&quot;Add Movie model&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Create a &lt;em&gt; Model &lt;/em&gt; folder to define entities in your application. Then create &lt;em&gt; Movie &lt;/em&gt; class and add properties into it. We follow &lt;em&gt; Code First approach &lt;/em&gt; in this example. So when we create the database &lt;em&gt; Movie &lt;/em&gt; table will be created.&lt;/p&gt;
 &lt;h2 id=&quot;Create-Context-class-to-build-the-database&quot;&gt;&lt;a href=&quot;#Create-Context-class-to-build-the-database&quot; class=&quot;headerlink&quot; title=&quot;Create Context class to build the database.&quot;&gt;&lt;/a&gt;Create Context class to build the database.&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/create-context-class.PNG&quot; alt=&quot;Create db context class&quot;&gt;&lt;/p&gt;
-&lt;p&gt;public class MovieDbContext : DbContext&lt;br&gt;    {&lt;br&gt;    }&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; public class MovieDbContext : DbContext&lt;br&gt;    {&lt;br&gt;    } &lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt; From &lt;em&gt; context &lt;/em&gt; class, our database will be generated. &lt;em&gt;Context &lt;/em&gt; class should be inherited from &lt;em&gt; DbContext &lt;/em&gt; class. In order to do that, we have to add references from &lt;em&gt; Entityframework core.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Install-Entityframework-Core-EF-Core&quot;&gt;&lt;a href=&quot;#Install-Entityframework-Core-EF-Core&quot; class=&quot;headerlink&quot; title=&quot;Install Entityframework Core (EF Core)&quot;&gt;&lt;/a&gt;Install Entityframework Core (EF Core)&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-entityframeworkcore-into-project-json.PNG&quot; alt=&quot;Add entityframeworkcore references into project.json file&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add &lt;em&gt; entityframeworkcore &lt;/em&gt; reference as a dependency into project.json file,  &lt;em&gt; “Microsoft.EntityFrameworkCore”: “1.0.0” &lt;/em&gt; and resolve reference error in &lt;em&gt; MovieDbContext &lt;/em&gt; class by adding &lt;em&gt; using Microsoft.EntityFrameworkCore &lt;/em&gt; statement. &lt;/p&gt;
