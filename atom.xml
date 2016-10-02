@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T06:44:15.208Z</updated>
+  <updated>2016-10-02T17:07:08.518Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T06:44:15.208Z</updated>
+    <updated>2016-10-02T17:07:08.518Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -49,7 +49,7 @@
 &lt;h2 id=&quot;Define-the-connectionstring&quot;&gt;&lt;a href=&quot;#Define-the-connectionstring&quot; class=&quot;headerlink&quot; title=&quot;Define the connectionstring&quot;&gt;&lt;/a&gt;Define the connectionstring&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/define-connectionstring-in-appsetings-json.PNG&quot; alt=&quot;Define the connectionstring in appsetings.json file&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Define the connectionstring in appsettings.json file to connect to the Sql server, &lt;strong&gt;  “DefaultConnection”: “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” &lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Add-entities-in-moviecontext-class&quot;&gt;&lt;a href=&quot;#Add-entities-in-moviecontext-class&quot; class=&quot;headerlink&quot; title=&quot;Add entities in moviecontext class&quot;&gt;&lt;/a&gt;Add entities in moviecontext class&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/run-ef-migrations.PNG&quot; alt=&quot;run EFCore migrations&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Try to run migrations for &lt;em&gt; MovieDbContext &lt;/em&gt; class, It gives an error. &lt;em&gt; No executable found matching command “dotnet-ef” &lt;/em&gt;, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.&lt;/p&gt;
+&lt;p&gt;Try to run migrations for &lt;em&gt; MovieDbContext &lt;/em&gt; class, &lt;strong&gt; dotnet ef migrations add InitialMigration &lt;/strong&gt; It gives an error. &lt;em&gt; No executable found matching command “dotnet-ef” &lt;/em&gt;, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.&lt;/p&gt;
 &lt;h2 id=&quot;Add-EFCore-tools&quot;&gt;&lt;a href=&quot;#Add-EFCore-tools&quot; class=&quot;headerlink&quot; title=&quot;Add EFCore tools&quot;&gt;&lt;/a&gt;Add EFCore tools&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-entityframeworkcore-tools.PNG&quot; alt=&quot;Add EFCore tools and run migrations&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add &lt;strong&gt; “Microsoft.EntityframeworkCore.Tools” : “1.0.0-preview2-final” &lt;/strong&gt; in tools section of &lt;em&gt; project.json. &lt;/em&gt; Try to run migration and it gives an error again!!, &lt;em&gt; Could not invoke this command with the startup project ‘demo’. Check that ‘Microsoft.EntityFrameworkCore.Design’ has been added to “dependencies” in the startup project and that the version of ‘Microsoft.EntityFrameworkCore.Tools’ in “tools” and ‘Microsoft.EntityFrameworkCore.Design’ are the same. See &lt;a href=&quot;http://go.microsoft.com/fwlink/?LinkId=798221&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://go.microsoft.com/fwlink/?LinkId=798221&lt;/a&gt; for more details, &lt;/em&gt; What’s we are missing,&lt;/p&gt;
 &lt;p&gt;We haven’t added &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; as a reference, We have to add EFCore Design references to run migrations scripts. Let’s add it and check. And also it mentions &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; and &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Tools’ &lt;/em&gt; version should be same.&lt;/p&gt;

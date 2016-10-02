@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -113,7 +113,7 @@
 <h2 id="Define-the-connectionstring"><a href="#Define-the-connectionstring" class="headerlink" title="Define the connectionstring"></a>Define the connectionstring</h2><p><img src="/images/define-connectionstring-in-appsetings-json.PNG" alt="Define the connectionstring in appsetings.json file"></p>
 <p>Define the connectionstring in appsettings.json file to connect to the Sql server, <strong>  “DefaultConnection”: “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” </strong></p>
 <h2 id="Add-entities-in-moviecontext-class"><a href="#Add-entities-in-moviecontext-class" class="headerlink" title="Add entities in moviecontext class"></a>Add entities in moviecontext class</h2><p><img src="/images/run-ef-migrations.PNG" alt="run EFCore migrations"></p>
-<p>Try to run migrations for <em> MovieDbContext </em> class, It gives an error. <em> No executable found matching command “dotnet-ef” </em>, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.</p>
+<p>Try to run migrations for <em> MovieDbContext </em> class, <strong> dotnet ef migrations add InitialMigration </strong> It gives an error. <em> No executable found matching command “dotnet-ef” </em>, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.</p>
 <h2 id="Add-EFCore-tools"><a href="#Add-EFCore-tools" class="headerlink" title="Add EFCore tools"></a>Add EFCore tools</h2><p><img src="/images/add-entityframeworkcore-tools.PNG" alt="Add EFCore tools and run migrations"></p>
 <p>Add <strong> “Microsoft.EntityframeworkCore.Tools” : “1.0.0-preview2-final” </strong> in tools section of <em> project.json. </em> Try to run migration and it gives an error again!!, <em> Could not invoke this command with the startup project ‘demo’. Check that ‘Microsoft.EntityFrameworkCore.Design’ has been added to “dependencies” in the startup project and that the version of ‘Microsoft.EntityFrameworkCore.Tools’ in “tools” and ‘Microsoft.EntityFrameworkCore.Design’ are the same. See <a href="http://go.microsoft.com/fwlink/?LinkId=798221" target="_blank" rel="external">http://go.microsoft.com/fwlink/?LinkId=798221</a> for more details, </em> What’s we are missing,</p>
 <p>We haven’t added <em> ‘Microsoft.EntityFrameworkCore.Design’ </em> as a reference, We have to add EFCore Design references to run migrations scripts. Let’s add it and check. And also it mentions <em> ‘Microsoft.EntityFrameworkCore.Design’ </em> and <em> ‘Microsoft.EntityFrameworkCore.Tools’ </em> version should be same.</p>
@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits9idfh000298gcfsev0s9u" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citsvrhob0000dwgcxajjxke0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="cits9idf9000098gcaqxv6x5p" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citsvrhog0001dwgctdyt9c22" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="cits9idg6000f98gcel6rza4h" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citsvrhp9000ddwgca1liw7hg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="cits9idg3000d98gcbnprnr64" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citsvrhpa000edwgcm3eocxyb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,7 +401,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cits9idfe000198gcd56wpjii" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citsvrhoo0004dwgczp4umzkt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cits9idfn000698gctii26wai" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citsvrhos0006dwgcg9yjzpah" class="article-share-link">Share</a>
       
       
     </footer>
@@ -513,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cits9idfq000798gcspzfb45e" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citsvrhop0005dwgc15v7lond" class="article-share-link">Share</a>
       
       
     </footer>
@@ -560,7 +560,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cits9idfk000498gcuvq3bqsq" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citsvrhom0003dwgcr6ft0raq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -619,7 +619,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cits9idfl000598gcs0w3kxvf" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citsvrhox0008dwgc0cstk6eq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -704,7 +704,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cits9idfj000398gcd98i1z7q" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citsvrhok0002dwgcw87kvbyt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -743,7 +743,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -780,7 +780,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
