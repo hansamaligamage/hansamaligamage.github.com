@@ -51,7 +51,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <meta property="og:image" content="http://yoursite.com/images/try-to-run-your-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/verify-database-is-created.PNG">
 <meta property="og:image" content="http://yoursite.com/images/post-a-movie-mysql.PNG">
-<meta property="og:updated_time" content="2016-10-02T06:30:28.216Z">
+<meta property="og:updated_time" content="2016-10-02T06:31:27.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create a Web API application in .NETCore">
 <meta name="twitter:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
@@ -206,8 +206,8 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <p>In windows with Sql server, We run migration scripts and ensure database is created. But with Ubuntu, we can’t do that. Somehow we have to ensure our database is created. Let’s give it a try.</p>
 <h2 id="Ensure-MySQL-database-got-created"><a href="#Ensure-MySQL-database-got-created" class="headerlink" title="Ensure MySQL database got created"></a>Ensure MySQL database got created</h2><p><img src="/images/ensure-mysql-database-got-created.PNG" alt="Ensure mysql database is created"></p>
 <p>Add this lines of code to ensure MySQL database got created.</p>
-<p>** var optionsBuilder = new DbContextOptionsBuilder<moviedbcontext>();<br>optionsBuilder.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”));</moviedbcontext></p>
-<p>var context = new MovieDbContext(optionsBuilder.Options);<br>context.Database.EnsureCreated(); **</p>
+<p>** var optionsBuilder = new DbContextOptionsBuilder<moviedbcontext>();<br>    optionsBuilder.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”));</moviedbcontext></p>
+<p>var context = new MovieDbContext(optionsBuilder.Options);<br>  context.Database.EnsureCreated(); **</p>
 <h2 id="Run-your-application"><a href="#Run-your-application" class="headerlink" title="Run your application"></a>Run your application</h2><p><img src="/images/try-to-run-your-application.PNG" alt="run your application"></p>
 <p>Then build and run the application, navigate to movies read service and verify it works fine. read service returns empty array. Let’s check database is created in MySQL server.</p>
 <h2 id="View-MySQL-databases"><a href="#View-MySQL-databases" class="headerlink" title="View MySQL databases"></a>View MySQL databases</h2><p><img src="/images/verify-database-is-created.PNG" alt="Check whether your database is created"></p>
@@ -219,7 +219,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits90i7v0001wcgcvpe6pvzq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits91ud30000hogc3gtiat0b" class="article-share-link">Share</a>
       
       
     </footer>
