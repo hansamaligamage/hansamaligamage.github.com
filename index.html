@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -106,6 +106,7 @@
 <h1 id="Let’s-build-the-movie-service"><a href="#Let’s-build-the-movie-service" class="headerlink" title="Let’s build the movie service"></a>Let’s build the movie service</h1><h2 id="Create-Movie-model"><a href="#Create-Movie-model" class="headerlink" title="Create Movie model."></a>Create Movie model.</h2><p><img src="/images/add-movie-model.PNG" alt="Add Movie model"></p>
 <p>Create a <em> Model </em> folder to define entities in your application. Then create <em> Movie </em> class and add properties into it. We follow <em> Code First approach </em> in this example. So when we create the database <em> Movie </em> table will be created.</p>
 <h2 id="Create-Context-class-to-build-the-database"><a href="#Create-Context-class-to-build-the-database" class="headerlink" title="Create Context class to build the database."></a>Create Context class to build the database.</h2><p><img src="/images/create-context-class.PNG" alt="Create db context class"></p>
+<p>public class MovieDbContext : DbContext<br>    {<br>    }</p>
 <p> From <em> context </em> class, our database will be generated. <em>Context </em> class should be inherited from <em> DbContext </em> class. In order to do that, we have to add references from <em> Entityframework core.</em></p>
 <h2 id="Install-Entityframework-Core-EF-Core"><a href="#Install-Entityframework-Core-EF-Core" class="headerlink" title="Install Entityframework Core (EF Core)"></a>Install Entityframework Core (EF Core)</h2><p><img src="/images/add-entityframeworkcore-into-project-json.PNG" alt="Add entityframeworkcore references into project.json file"></p>
 <p>Add <em> entityframeworkcore </em> reference as a dependency into project.json file,  <em> “Microsoft.EntityFrameworkCore”: “1.0.0” </em> and resolve reference error in <em> MovieDbContext </em> class by adding <em> using Microsoft.EntityFrameworkCore </em> statement. </p>
@@ -173,7 +174,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits79bxn0000v4gc2zrl7b56" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits7ciio00025ggc09y3yn25" class="article-share-link">Share</a>
       
       
     </footer>
@@ -229,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="cits79bxt0001v4gcsrg1gnma" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="cits7ciif00005ggc4g9ebvua" class="article-share-link">Share</a>
       
       
     </footer>
@@ -278,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="cits79byi000fv4gc62ajtpzr" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="cits7cij9000f5ggc64omvxcb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="cits79bye000cv4gctaodo0fa" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="cits7cij7000d5ggcl9uqmcpe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -396,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cits79bxy0003v4gcub2zwqi3" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="cits7ciir00035ggcuyzupc71" class="article-share-link">Share</a>
       
       
     </footer>
@@ -441,7 +442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cits79by20006v4gc30lbhx8t" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="cits7ciiv00065ggc9607uo9w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -508,7 +509,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cits79by60007v4gcnkpltcut" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="cits7ciiz00085ggc0klj2ddb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -555,7 +556,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cits79by00005v4gcui9lhsxu" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="cits7ciis00045ggcywrztggi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -614,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cits79bxz0004v4gcpjqwr4i5" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="cits7ciit00055ggcinta537o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -699,7 +700,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cits79bxv0002v4gck4l45spc" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="cits7ciim00015ggckkbqqscj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -738,7 +739,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -775,7 +776,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
