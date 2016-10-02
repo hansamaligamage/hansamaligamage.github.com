@@ -51,7 +51,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <meta property="og:image" content="http://yoursite.com/images/try-to-run-your-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/verify-database-is-created.PNG">
 <meta property="og:image" content="http://yoursite.com/images/post-a-movie-mysql.PNG">
-<meta property="og:updated_time" content="2016-10-02T05:31:05.150Z">
+<meta property="og:updated_time" content="2016-10-02T05:36:23.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create a Web API application in .NETCore">
 <meta name="twitter:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
@@ -147,6 +147,14 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <p>Build (Ctrl + Shift + b) and run (Ctrl + F5) your application and ping to the Read service as above. Its shows return values in the browser.</p>
 <h1 id="Let’s-build-the-movie-service"><a href="#Let’s-build-the-movie-service" class="headerlink" title="Let’s build the movie service"></a>Let’s build the movie service</h1><h2 id="Create-Movie-model"><a href="#Create-Movie-model" class="headerlink" title="Create Movie model."></a>Create Movie model.</h2><p><img src="/images/add-movie-model.PNG" alt="Add Movie model"></p>
 <p>Create a <em> Model </em> folder to define entities in your application. Then create <em> Movie </em> class and add properties into it. We follow <em> Code First approach </em> in this example. So when we create the database <em> Movie </em> table will be created.</p>
+<p>**<br>namespace movieStore.Models<br>{<br>    public class Movie<br>    {</p>
+<pre><code>    public int ID { get; set; }
+    public string Title { get; set; }
+    public string Genre { get; set; }
+    public decimal Price { get; set; }
+
+}
+</code></pre><p>}<br>**</p>
 <h2 id="Create-Context-class-to-build-the-database"><a href="#Create-Context-class-to-build-the-database" class="headerlink" title="Create Context class to build the database."></a>Create Context class to build the database.</h2><p><img src="/images/create-context-class.PNG" alt="Create db context class"></p>
 <p> From <em> context </em> class, our database will be generated. <em>Context </em> class should be inherited from <em> DbContext </em> class. In order to do that, we have to add references from <em> Entityframework core.</em></p>
 <h2 id="Install-Entityframework-Core-EF-Core"><a href="#Install-Entityframework-Core-EF-Core" class="headerlink" title="Install Entityframework Core (EF Core)"></a>Install Entityframework Core (EF Core)</h2><p><img src="/images/add-entityframeworkcore-into-project-json.PNG" alt="Add entityframeworkcore references into project.json file"></p>
@@ -215,7 +223,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits6w5cx0001logcuyfv46xr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits730jg00044sgcw2xhlq35" class="article-share-link">Share</a>
       
       
     </footer>
