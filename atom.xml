@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-01T13:34:52.495Z</updated>
+  <updated>2016-10-02T03:53:02.280Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Create a Web API application in .NETCore</title>
-    <link href="http://yoursite.com/2016/09/26/Create-a-Web-API-application-in-NETCore/"/>
-    <id>http://yoursite.com/2016/09/26/Create-a-Web-API-application-in-NETCore/</id>
-    <published>2016-09-26T17:55:14.000Z</published>
-    <updated>2016-10-01T13:34:52.495Z</updated>
+    <link href="http://yoursite.com/2016/10/26/Create-a-Web-API-application-in-NETCore/"/>
+    <id>http://yoursite.com/2016/10/26/Create-a-Web-API-application-in-NETCore/</id>
+    <published>2016-10-25T20:55:14.000Z</published>
+    <updated>2016-10-02T03:53:02.280Z</updated>
     
     <content type="html">&lt;p&gt; Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-new-project.PNG&quot; alt=&quot;Create a new project using dotnet new command.&quot;&gt;&lt;/p&gt;
