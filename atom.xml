@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T03:54:11.498Z</updated>
+  <updated>2016-10-02T05:26:28.303Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,28 +20,9 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T03:54:11.498Z</updated>
+    <updated>2016-10-02T05:26:28.303Z</updated>
     
-    <content type="html">&lt;p&gt; Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/create-new-project.PNG&quot; alt=&quot;Create a new project using dotnet new command.&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Type &lt;strong&gt; dotnet new &lt;/strong&gt; command and create a project in your selected directory.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/service-open-project-in-visual-studio-code.PNG&quot; alt=&quot;Open your project using visual studio code&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Type &lt;strong&gt; code . &lt;/strong&gt; to open your project in visual studio code. It asks to restore dependencies in &lt;em&gt; project.json &lt;/em&gt; file, and ask to add  &lt;em&gt; required assets to build and debug your project. &lt;/em&gt; Add both of them.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/packages-are-restored-and-vscode-folder-has-been-added.PNG&quot; alt=&quot;All the packages are restored and .vscode folder is added into the project&quot;&gt;&lt;/p&gt;
-&lt;p&gt;All the defined packages in &lt;em&gt; project.json &lt;/em&gt; has been restored. &lt;em&gt; launch.json &lt;/em&gt; and &lt;em&gt; tasks.json &lt;/em&gt; is added into the &lt;em&gt; .vscode &lt;/em&gt; folder.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/console-application-output.PNG&quot; alt=&quot;Hello World&quot;&gt;&lt;/p&gt;
-&lt;p&gt;When you build (ctrl + shift + b) and run your project (ctrl + F5), It shows the output of your project in &lt;em&gt; Debug Console &lt;/em&gt; window as above.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/add-kestrel-server-into-your-project.PNG&quot; alt=&quot;Add kestrel server package as a dependency&quot;&gt;&lt;/p&gt;
-&lt;p&gt; Add &lt;strong&gt; Microsoft.AspNetCore.Server.Kestrel &lt;/strong&gt; package into &lt;em&gt; project.json &lt;/em&gt; and turn your application to a web application.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/call-webhostbuilder-run-method.PNG&quot; alt=&quot;Call Run method in Webhostbuilder&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Create a Webhostbuilder instance and call Run method of it. &lt;/p&gt;
-&lt;p&gt; &lt;strong&gt; var host = new WebHostBuilder().Build();&lt;br&gt; host.Run(); &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Try to run your application and it gives an error. &lt;em&gt; No service for type ‘Microsoft.AspNetCore.Hosting.IStartup’ has been registered. &lt;/em&gt; It says we haven’t defined a hosting service to start the application. Let’s try to fix this.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/run-web-application-on-kestrel.PNG&quot; alt=&quot;Run your web application on Kestrel server.&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Run your web application on kestrel server, using &lt;em&gt; UseKestrel() &lt;/em&gt; method.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; var host = new WebHostBuilder().UseKestrel()&lt;br&gt;                        .Configure(app =&amp;gt; { app.Run(context =&amp;gt; context.Response.WriteAsync(“Hello from Kestrel Server”));&lt;br&gt;                                          }).Build();&lt;br&gt;   host.Run(); &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt; build your project and see changes. It’s going to listen to web requests in &lt;em&gt; &lt;a href=&quot;http://localhost:5000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:5000/&lt;/a&gt; &lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Create a new project from Visual Studio 2015, In &lt;em&gt; .NETCore &lt;/em&gt; tab, select &lt;em&gt; ASP.NET Core Web Application (.NET Core) &lt;/em&gt;. Give it a name and click on OK.  &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/select-web-api-template.PNG&quot; alt=&quot;Select Web API from ASP.NET Core templates&quot;&gt;&lt;/p&gt;
@@ -128,8 +109,8 @@
     
     <summary type="html">
     
-      &lt;p&gt; Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/create-new-project.
+      &lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application
     
     </summary>
     

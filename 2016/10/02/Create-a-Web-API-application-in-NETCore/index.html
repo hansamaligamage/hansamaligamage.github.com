@@ -5,27 +5,16 @@
   
   <title>Create a Web API application in .NETCore | Tech Spot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.
+  <meta name="description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
 
-Type  dotnet new  command and create a project in your selected directory.
-
-Type  code .  to open your pro">
+Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET Core Web Application (.NET Core) . Give it a name">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Create a Web API application in .NETCore">
 <meta property="og:url" content="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/index.html">
 <meta property="og:site_name" content="Tech Spot">
-<meta property="og:description" content="Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.
+<meta property="og:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
 
-Type  dotnet new  command and create a project in your selected directory.
-
-Type  code .  to open your pro">
-<meta property="og:image" content="http://yoursite.com/images/create-new-project.PNG">
-<meta property="og:image" content="http://yoursite.com/images/service-open-project-in-visual-studio-code.PNG">
-<meta property="og:image" content="http://yoursite.com/images/packages-are-restored-and-vscode-folder-has-been-added.PNG">
-<meta property="og:image" content="http://yoursite.com/images/console-application-output.PNG">
-<meta property="og:image" content="http://yoursite.com/images/add-kestrel-server-into-your-project.PNG">
-<meta property="og:image" content="http://yoursite.com/images/call-webhostbuilder-run-method.PNG">
-<meta property="og:image" content="http://yoursite.com/images/run-web-application-on-kestrel.PNG">
+Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET Core Web Application (.NET Core) . Give it a name">
 <meta property="og:image" content="http://yoursite.com/images/create-dotnet-core-web-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/select-web-api-template.PNG">
 <meta property="og:image" content="http://yoursite.com/images/build-the-project.PNG">
@@ -62,15 +51,13 @@ Type  code .  to open your pro">
 <meta property="og:image" content="http://yoursite.com/images/try-to-run-your-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/verify-database-is-created.PNG">
 <meta property="og:image" content="http://yoursite.com/images/post-a-movie-mysql.PNG">
-<meta property="og:updated_time" content="2016-10-02T03:54:11.498Z">
+<meta property="og:updated_time" content="2016-10-02T05:26:28.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create a Web API application in .NETCore">
-<meta name="twitter:description" content="Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.
+<meta name="twitter:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
 
-Type  dotnet new  command and create a project in your selected directory.
-
-Type  code .  to open your pro">
-<meta name="twitter:image" content="http://yoursite.com/images/create-new-project.PNG">
+Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET Core Web Application (.NET Core) . Give it a name">
+<meta name="twitter:image" content="http://yoursite.com/images/create-dotnet-core-web-application.PNG">
   
     <link rel="alternate" href="/atom.xml" title="Tech Spot" type="application/atom+xml">
   
@@ -141,26 +128,7 @@ Type  code .  to open your pro">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> Let’s create a service application in .NETCore, We will be using Visual Studio Code as IDE.</p>
-<p><img src="/images/create-new-project.PNG" alt="Create a new project using dotnet new command."></p>
-<p>Type <strong> dotnet new </strong> command and create a project in your selected directory.</p>
-<p><img src="/images/service-open-project-in-visual-studio-code.PNG" alt="Open your project using visual studio code"></p>
-<p>Type <strong> code . </strong> to open your project in visual studio code. It asks to restore dependencies in <em> project.json </em> file, and ask to add  <em> required assets to build and debug your project. </em> Add both of them.</p>
-<p><img src="/images/packages-are-restored-and-vscode-folder-has-been-added.PNG" alt="All the packages are restored and .vscode folder is added into the project"></p>
-<p>All the defined packages in <em> project.json </em> has been restored. <em> launch.json </em> and <em> tasks.json </em> is added into the <em> .vscode </em> folder.</p>
-<p><img src="/images/console-application-output.PNG" alt="Hello World"></p>
-<p>When you build (ctrl + shift + b) and run your project (ctrl + F5), It shows the output of your project in <em> Debug Console </em> window as above.</p>
-<p><img src="/images/add-kestrel-server-into-your-project.PNG" alt="Add kestrel server package as a dependency"></p>
-<p> Add <strong> Microsoft.AspNetCore.Server.Kestrel </strong> package into <em> project.json </em> and turn your application to a web application.</p>
-<p><img src="/images/call-webhostbuilder-run-method.PNG" alt="Call Run method in Webhostbuilder"></p>
-<p>Create a Webhostbuilder instance and call Run method of it. </p>
-<p> <strong> var host = new WebHostBuilder().Build();<br> host.Run(); </strong></p>
-<p>Try to run your application and it gives an error. <em> No service for type ‘Microsoft.AspNetCore.Hosting.IStartup’ has been registered. </em> It says we haven’t defined a hosting service to start the application. Let’s try to fix this.</p>
-<p><img src="/images/run-web-application-on-kestrel.PNG" alt="Run your web application on Kestrel server."></p>
-<p>Run your web application on kestrel server, using <em> UseKestrel() </em> method.</p>
-<p><strong> var host = new WebHostBuilder().UseKestrel()<br>                        .Configure(app =&gt; { app.Run(context =&gt; context.Response.WriteAsync(“Hello from Kestrel Server”));<br>                                          }).Build();<br>   host.Run(); </strong></p>
-<p> build your project and see changes. It’s going to listen to web requests in <em> <a href="http://localhost:5000/" target="_blank" rel="external">http://localhost:5000/</a> </em></p>
-<p>Let’s try to create a .NETCore application from <em> Visual Studio 2015 </em></p>
+        <p>Let’s try to create a .NETCore application from <em> Visual Studio 2015 </em></p>
 <p><img src="/images/create-dotnet-core-web-application.PNG" alt="Create .NETCore web application from Visual Studio"></p>
 <p>Create a new project from Visual Studio 2015, In <em> .NETCore </em> tab, select <em> ASP.NET Core Web Application (.NET Core) </em>. Give it a name and click on OK.  </p>
 <p><img src="/images/select-web-api-template.PNG" alt="Select Web API from ASP.NET Core templates"></p>
@@ -247,7 +215,7 @@ Type  code .  to open your pro">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits3fl7h0002d0gcjgwzt22h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits6q9ke0001o0gckznty6hx" class="article-share-link">Share</a>
       
       
     </footer>
