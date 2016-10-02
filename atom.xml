@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T05:52:21.973Z</updated>
+  <updated>2016-10-02T05:55:58.029Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T05:52:21.973Z</updated>
+    <updated>2016-10-02T05:55:58.029Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -54,7 +54,7 @@
 &lt;p&gt;Add &lt;strong&gt; “Microsoft.EntityframeworkCore.Tools” : “1.0.0-preview2-final” &lt;/strong&gt; in tools section of &lt;em&gt; project.json. &lt;/em&gt; Try to run migration and it gives an error again!!, &lt;em&gt; Could not invoke this command with the startup project ‘demo’. Check that ‘Microsoft.EntityFrameworkCore.Design’ has been added to “dependencies” in the startup project and that the version of ‘Microsoft.EntityFrameworkCore.Tools’ in “tools” and ‘Microsoft.EntityFrameworkCore.Design’ are the same. See &lt;a href=&quot;http://go.microsoft.com/fwlink/?LinkId=798221&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://go.microsoft.com/fwlink/?LinkId=798221&lt;/a&gt; for more details, &lt;/em&gt; What’s we are missing,&lt;/p&gt;
 &lt;p&gt;We haven’t added &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; as a reference, We have to add EFCore Design references to run migrations scripts. Let’s add it and check. And also it mentions &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; and &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Tools’ &lt;/em&gt; version should be same.&lt;/p&gt;
 &lt;h2 id=&quot;Add-EFCore-Design-reference&quot;&gt;&lt;a href=&quot;#Add-EFCore-Design-reference&quot; class=&quot;headerlink&quot; title=&quot;Add EFCore Design reference.&quot;&gt;&lt;/a&gt;Add EFCore Design reference.&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-entityframeworkcore-design-reference.PNG&quot; alt=&quot;Add entityframeworkcore design reference&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Add &lt;em&gt; “Microsoft.EntityFrameworkCore.Design”: “1.0.0-preview2-final” &lt;/em&gt; reference into project.json file. Note that, &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; and &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Tools’ &lt;/em&gt; version are same.&lt;/p&gt;
+&lt;p&gt;Add &lt;strong&gt; “Microsoft.EntityFrameworkCore.Design”: “1.0.0-preview2-final” &lt;/strong&gt; reference into project.json file. Note that, &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; and &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Tools’ &lt;/em&gt; version are same.&lt;/p&gt;
 &lt;p&gt;Then try to run migrations command again and it gives another error, &lt;em&gt; No parameterless constructor was found on ‘MovieDbContext’. Either add a parameterless constructor to ‘MovieDbContext’ or add an implementation of ‘IDbContextFactory&lt;moviedbcontext&gt;‘ in the same assembly as ‘MovieDbContext’. &lt;/moviedbcontext&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Check-MovieDbContext-class&quot;&gt;&lt;a href=&quot;#Check-MovieDbContext-class&quot; class=&quot;headerlink&quot; title=&quot;Check MovieDbContext class&quot;&gt;&lt;/a&gt;Check MovieDbContext class&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/moviecontext-class.PNG&quot; alt=&quot;MovieDbContext class with constructor&quot;&gt;&lt;/p&gt;
 &lt;p&gt; In MovieDbContext class, define constructor with context options and call base class method.&lt;/p&gt;
