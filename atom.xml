@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T05:26:28.303Z</updated>
+  <updated>2016-10-02T05:31:05.150Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T05:26:28.303Z</updated>
+    <updated>2016-10-02T05:31:05.150Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -28,9 +28,9 @@
 &lt;p&gt;&lt;img src=&quot;/images/select-web-api-template.PNG&quot; alt=&quot;Select Web API from ASP.NET Core templates&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Select &lt;em&gt; Web API &lt;/em&gt; from ASP.NET Core templates and click on OK.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/build-the-project.PNG&quot; alt=&quot;build the project and see changes&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Check folder structure of the application, It includes a &lt;em&gt; Program.cs &lt;/em&gt; and &lt;em&gt; Startup &lt;/em&gt; file. It includes a &lt;em&gt; project.json &lt;/em&gt; file to define all required packages for your application. &lt;em&gt; appsettings.json &lt;/em&gt; file maintains application settings same as &lt;em&gt; web.config &lt;/em&gt; file in a ASP.NET Web application. &lt;em&gt; Controllers &lt;/em&gt; folder has all Web API Controllers. wwwroot&lt;/p&gt;
+&lt;p&gt;Check folder structure of the application, It includes a &lt;em&gt; Program.cs &lt;/em&gt; and &lt;em&gt; Startup &lt;/em&gt; file. It includes a &lt;em&gt; project.json &lt;/em&gt; file to define all required packages for your application. &lt;em&gt; appsettings.json &lt;/em&gt; file maintains application settings same as &lt;em&gt; web.config &lt;/em&gt; file in a ASP.NET Web application. &lt;em&gt; Controllers &lt;/em&gt; folder has all Web API Controllers.&lt;/p&gt;
 &lt;h1 id=&quot;Open-service-application-from-Visual-Studio-Code&quot;&gt;&lt;a href=&quot;#Open-service-application-from-Visual-Studio-Code&quot; class=&quot;headerlink&quot; title=&quot;Open service application from Visual Studio Code.&quot;&gt;&lt;/a&gt;Open service application from Visual Studio Code.&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/open-application-in-visual-studio-code.PNG&quot; alt=&quot;Open your application in Visual Studio Code&quot;&gt;&lt;/p&gt;
-&lt;p&gt;cd into the application directory and open &lt;em&gt; Visual Studio Code &lt;/em&gt; using &lt;em&gt; code . &lt;/em&gt; command. You can see folder structure of your application as above. Add assets to build and debug your application as the info dialog box shows.&lt;/p&gt;
+&lt;p&gt;cd into the application directory and open &lt;em&gt; Visual Studio Code &lt;/em&gt; using &lt;em&gt; code . &lt;/em&gt; command. You can see folder structure of your application as above. Add assets to build and debug your application as the info dialog box suggests.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/vscode-folder-is-added.PNG&quot; alt=&quot;vscode folder is added&quot;&gt;&lt;/p&gt;
 &lt;p&gt;vscode folder is added into the solution with launch.json and tasks.json file.&lt;/p&gt;
 &lt;h1 id=&quot;Dependencies-in-project-json-file&quot;&gt;&lt;a href=&quot;#Dependencies-in-project-json-file&quot; class=&quot;headerlink&quot; title=&quot;Dependencies in project.json file&quot;&gt;&lt;/a&gt;Dependencies in project.json file&lt;/h1&gt;&lt;p&gt;Let’s see what are the dependencies required for a mvc application.&lt;/p&gt;
