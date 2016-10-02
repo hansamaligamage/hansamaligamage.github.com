@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T06:11:14.986Z</updated>
+  <updated>2016-10-02T06:15:04.935Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T06:11:14.986Z</updated>
+    <updated>2016-10-02T06:15:04.935Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -78,7 +78,8 @@
 &lt;h2 id=&quot;Add-data-using-Postman&quot;&gt;&lt;a href=&quot;#Add-data-using-Postman&quot; class=&quot;headerlink&quot; title=&quot;Add data using Postman&quot;&gt;&lt;/a&gt;Add data using Postman&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/post-a-movie.PNG&quot; alt=&quot;ping to api/post a movie&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Postman is a tool to test your service apis. Although we can test &lt;em&gt; GET &lt;/em&gt; requests through browser, to test &lt;em&gt; POST &lt;/em&gt; requests, we need to use &lt;em&gt; Postman. &lt;/em&gt; Add a movie using Postman and retrive it using web browser.&lt;/p&gt;
 &lt;p&gt;We have created a service API using .NETCore and Sql Server. Let’s try to run this same application on Ubuntu with &lt;em&gt; MySQL. &lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Clone-your-application-in-Ubuntu&quot;&gt;&lt;a href=&quot;#Clone-your-application-in-Ubuntu&quot; class=&quot;headerlink&quot; title=&quot;Clone your application in Ubuntu&quot;&gt;&lt;/a&gt;Clone your application in Ubuntu&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/git-clone.PNG&quot; alt=&quot;Clone your application in Ubuntu&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Clone-your-application-in-Ubuntu&quot;&gt;&lt;a href=&quot;#Clone-your-application-in-Ubuntu&quot; class=&quot;headerlink&quot; title=&quot;Clone your application in Ubuntu&quot;&gt;&lt;/a&gt;Clone your application in Ubuntu&lt;/h2&gt;&lt;p&gt;Let’s try to open your application in Ubuntu, We are going to connect this application to MySQL server,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/git-clone.PNG&quot; alt=&quot;Clone your application in Ubuntu&quot;&gt;&lt;/p&gt;
 &lt;p&gt; Type &lt;em&gt; git clone …&lt;/em&gt; with repository url, Your project will be downloaded. Then cd into application directory and open it in visual studio code.&lt;/p&gt;
 &lt;h2 id=&quot;Restore-packages-and-build-your-application&quot;&gt;&lt;a href=&quot;#Restore-packages-and-build-your-application&quot; class=&quot;headerlink&quot; title=&quot;Restore packages and build your application&quot;&gt;&lt;/a&gt;Restore packages and build your application&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/dotnet-restore-in-ubuntu.PNG&quot; alt=&quot;Restore packages and build application&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Restore packages defined in project.json file and Build your application. It all works fine. &lt;/p&gt;
