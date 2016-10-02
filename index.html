@@ -125,7 +125,9 @@
 <h2 id="Define-connectionstring-in-appsettings-file"><a href="#Define-connectionstring-in-appsettings-file" class="headerlink" title="Define connectionstring in appsettings file"></a>Define connectionstring in appsettings file</h2><p><img src="/images/connectionstring_in_appsettings_json.PNG" alt="Add connectionstring in appsettings.json file"></p>
 <p>Add connectionstring in <em> appsetings.json </em> file like this, <strong> “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” </strong>  </p>
 <h2 id="Startup-class-implementation"><a href="#Startup-class-implementation" class="headerlink" title="Startup class implementation"></a>Startup class implementation</h2><p><img src="/images/startup-class-configure-services-method.PNG" alt="Configure services in startup class"></p>
-<p>In <em> Configure services </em> method, it’s going to add some services into the application.<br>Add the database <em> context </em> and define the <em> connectionstring </em> of your database, in <em> configure service </em> method, it’s missing some references, since we havent add any <em> EntityframeworkCore sqlserver </em> references.</p>
+<p>In <em> Configure services </em> method, it’s going to add some services into the application. </p>
+<p><strong>  services.AddDbContext<moviedbcontext>(options =&gt;<br>               options.UseSqlServer(Configuration.GetConnectionString(“DefaultConnection”))); </moviedbcontext></strong></p>
+<p>Add the database <em> context </em> and define the <em> connectionstring </em> of your database, in <em> configure service </em> method, it’s missing some references, since we havent add any <em> EntityframeworkCore sqlserver </em> references.</p>
 <h2 id="Add-EFCore-Sqlserver-references"><a href="#Add-EFCore-Sqlserver-references" class="headerlink" title="Add EFCore Sqlserver references"></a>Add EFCore Sqlserver references</h2><p><img src="/images/EFCore_sqlserver-references.PNG" alt="Add EntityFrameworkCore sqlserver reference"></p>
 <p>Add <strong> “Microsoft.EntityFrameworkCore.SqlServer”: “1.0.0” </strong> reference in project.json file and restore them.</p>
 <p><img src="/images/pass-sqlserver-connectionstring.PNG" alt="Add EFCore sqlserver references"></p>
@@ -178,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citsvrhob0000dwgcxajjxke0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citsvz93n00010kgc03rmnzas" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citsvrhog0001dwgctdyt9c22" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citsvz93h00000kgcd28l0zdu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citsvrhp9000ddwgca1liw7hg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citsvz94b000f0kgcmcuhri4b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citsvrhpa000edwgcm3eocxyb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citsvz94a000e0kgcfpww8now" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citsvrhoo0004dwgczp4umzkt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citsvz93r00030kgcddj7msuf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +448,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citsvrhos0006dwgcg9yjzpah" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citsvz93w00060kgcicmznvh7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -513,7 +515,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citsvrhop0005dwgc15v7lond" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citsvz93z00070kgc4ht0naw0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -560,7 +562,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citsvrhom0003dwgcr6ft0raq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citsvz93s00040kgc1janyh5r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -619,7 +621,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citsvrhox0008dwgc0cstk6eq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citsvz93u00050kgcoqkhdm4v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -704,7 +706,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citsvrhok0002dwgcw87kvbyt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citsvz93p00020kgci2e9sxk6" class="article-share-link">Share</a>
       
       
     </footer>
