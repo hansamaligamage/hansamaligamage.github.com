@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T05:57:40.951Z</updated>
+  <updated>2016-10-02T05:59:54.326Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T05:57:40.951Z</updated>
+    <updated>2016-10-02T05:59:54.326Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -59,7 +59,7 @@
 &lt;h2 id=&quot;Check-MovieDbContext-class&quot;&gt;&lt;a href=&quot;#Check-MovieDbContext-class&quot; class=&quot;headerlink&quot; title=&quot;Check MovieDbContext class&quot;&gt;&lt;/a&gt;Check MovieDbContext class&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/moviecontext-class.PNG&quot; alt=&quot;MovieDbContext class with constructor&quot;&gt;&lt;/p&gt;
 &lt;p&gt; In &lt;em&gt; MovieDbContext &lt;/em&gt; class, define constructor with context options and call base class method.&lt;/p&gt;
 &lt;h2 id=&quot;Define-connectionstring-in-appsettings-file&quot;&gt;&lt;a href=&quot;#Define-connectionstring-in-appsettings-file&quot; class=&quot;headerlink&quot; title=&quot;Define connectionstring in appsettings file&quot;&gt;&lt;/a&gt;Define connectionstring in appsettings file&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/connectionstring_in_appsettings_json.PNG&quot; alt=&quot;Add connectionstring in appsettings.json file&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Add connectionstring in appsetings file like this, &lt;em&gt; “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” &lt;/em&gt;  &lt;/p&gt;
+&lt;p&gt;Add connectionstring in &lt;em&gt; appsetings.json &lt;/em&gt; file like this, &lt;strong&gt; “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” &lt;/strong&gt;  &lt;/p&gt;
 &lt;h2 id=&quot;Startup-class-implementation&quot;&gt;&lt;a href=&quot;#Startup-class-implementation&quot; class=&quot;headerlink&quot; title=&quot;Startup class implementation&quot;&gt;&lt;/a&gt;Startup class implementation&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/startup-class-configure-services-method.PNG&quot; alt=&quot;Configure services in startup class&quot;&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;em&gt; Configure services &lt;/em&gt; method, add the database context and define the connectionstring of your database, in configure service method, it’s missing some references, since we havent add any EntityframeworkCore sqlserver references.&lt;/p&gt;
 &lt;h2 id=&quot;Add-EFCore-Sqlserver-references&quot;&gt;&lt;a href=&quot;#Add-EFCore-Sqlserver-references&quot; class=&quot;headerlink&quot; title=&quot;Add EFCore Sqlserver references&quot;&gt;&lt;/a&gt;Add EFCore Sqlserver references&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/EFCore_sqlserver-references.PNG&quot; alt=&quot;Add EntityFrameworkCore sqlserver reference&quot;&gt;&lt;/p&gt;
