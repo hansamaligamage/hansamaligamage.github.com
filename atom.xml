@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T05:59:54.326Z</updated>
+  <updated>2016-10-02T06:04:21.655Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T05:59:54.326Z</updated>
+    <updated>2016-10-02T06:04:21.655Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -61,7 +61,7 @@
 &lt;h2 id=&quot;Define-connectionstring-in-appsettings-file&quot;&gt;&lt;a href=&quot;#Define-connectionstring-in-appsettings-file&quot; class=&quot;headerlink&quot; title=&quot;Define connectionstring in appsettings file&quot;&gt;&lt;/a&gt;Define connectionstring in appsettings file&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/connectionstring_in_appsettings_json.PNG&quot; alt=&quot;Add connectionstring in appsettings.json file&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add connectionstring in &lt;em&gt; appsetings.json &lt;/em&gt; file like this, &lt;strong&gt; “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” &lt;/strong&gt;  &lt;/p&gt;
 &lt;h2 id=&quot;Startup-class-implementation&quot;&gt;&lt;a href=&quot;#Startup-class-implementation&quot; class=&quot;headerlink&quot; title=&quot;Startup class implementation&quot;&gt;&lt;/a&gt;Startup class implementation&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/startup-class-configure-services-method.PNG&quot; alt=&quot;Configure services in startup class&quot;&gt;&lt;/p&gt;
-&lt;p&gt;In &lt;em&gt; Configure services &lt;/em&gt; method, add the database context and define the connectionstring of your database, in configure service method, it’s missing some references, since we havent add any EntityframeworkCore sqlserver references.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt; Configure services &lt;/em&gt; method, it’s going to add some services into the application.&lt;br&gt;Add the database &lt;em&gt; context &lt;/em&gt; and define the &lt;em&gt; connectionstring &lt;/em&gt; of your database, in &lt;em&gt; configure service &lt;/em&gt; method, it’s missing some references, since we havent add any &lt;em&gt; EntityframeworkCore sqlserver &lt;/em&gt; references.&lt;/p&gt;
 &lt;h2 id=&quot;Add-EFCore-Sqlserver-references&quot;&gt;&lt;a href=&quot;#Add-EFCore-Sqlserver-references&quot; class=&quot;headerlink&quot; title=&quot;Add EFCore Sqlserver references&quot;&gt;&lt;/a&gt;Add EFCore Sqlserver references&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/EFCore_sqlserver-references.PNG&quot; alt=&quot;Add EntityFrameworkCore sqlserver reference&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add &lt;em&gt; “Microsoft.EntityFrameworkCore.SqlServer”: “1.0.0” &lt;/em&gt; reference in project.json file and restore them.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/pass-sqlserver-connectionstring.PNG&quot; alt=&quot;Add EFCore sqlserver references&quot;&gt;&lt;/p&gt;
