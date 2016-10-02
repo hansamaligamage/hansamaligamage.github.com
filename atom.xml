@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T06:26:30.808Z</updated>
+  <updated>2016-10-02T06:29:20.876Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T06:26:30.808Z</updated>
+    <updated>2016-10-02T06:29:20.876Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -95,6 +95,7 @@
 &lt;h2 id=&quot;Add-MySQL-EFCore-reference-in-project-json-file&quot;&gt;&lt;a href=&quot;#Add-MySQL-EFCore-reference-in-project-json-file&quot; class=&quot;headerlink&quot; title=&quot;Add MySQL EFCore reference in project.json file&quot;&gt;&lt;/a&gt;Add MySQL EFCore reference in project.json file&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-mysql-EFCore-reference.PNG&quot; alt=&quot;Add mysql EFCore reference&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add &lt;strong&gt; “MySql.Data.EntityFrameworkCore” : “7.0.4-ir-191” &lt;/strong&gt; reference in &lt;em&gt; project.json file &lt;/em&gt; and restore them.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/add-mysql-reference-in-startup-class.PNG&quot; alt=&quot;Add mysql reference in Startup class&quot;&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt; services.AddDbContext&lt;moviedbcontext&gt;(options =&amp;gt;&lt;br&gt;                options.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”))); &lt;/moviedbcontext&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Add &lt;strong&gt; using MySQL.Data.EntityFrameworkCore.Extensions; &lt;/strong&gt; statement in &lt;em&gt; startup &lt;/em&gt; class, It seems works fine now.&lt;/p&gt;
 &lt;p&gt;In windows with Sql server, We run migration scripts and ensure database is created. But with Ubuntu, we can’t do that. Somehow we have to ensure our database is created. Let’s give it a try.&lt;/p&gt;
 &lt;h2 id=&quot;Ensure-MySQL-database-got-created&quot;&gt;&lt;a href=&quot;#Ensure-MySQL-database-got-created&quot; class=&quot;headerlink&quot; title=&quot;Ensure MySQL database got created&quot;&gt;&lt;/a&gt;Ensure MySQL database got created&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/ensure-mysql-database-got-created.PNG&quot; alt=&quot;Ensure mysql database is created&quot;&gt;&lt;/p&gt;
