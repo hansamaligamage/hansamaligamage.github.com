@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-02T06:15:04.935Z</updated>
+  <updated>2016-10-02T06:21:48.054Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-02T06:15:04.935Z</updated>
+    <updated>2016-10-02T06:21:48.054Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -86,9 +86,10 @@
 &lt;h2 id=&quot;Let’s-try-to-run-our-application&quot;&gt;&lt;a href=&quot;#Let’s-try-to-run-our-application&quot; class=&quot;headerlink&quot; title=&quot;Let’s try to run our application&quot;&gt;&lt;/a&gt;Let’s try to run our application&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/dotnet-run-in-ubuntu.PNG&quot; alt=&quot;Run your application&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Let’s try to run our application without any modifications, It seems working fine. Let’s navigate to &lt;em&gt; api/values &lt;/em&gt;, It calls READ service of &lt;em&gt; Values &lt;/em&gt; service. It returns 200 - OK as response. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/read-service-in-movie-service.PNG&quot; alt=&quot;Read service in movie controller&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Ping to &lt;em&gt; api/movies, &lt;/em&gt; it returns an empty array, since we don’t have a database. Check the terminal and try to find any erros, It shows a &lt;em&gt; fail &lt;/em&gt; error in red. It says &lt;em&gt; Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory[1]&lt;br&gt; An exception occurred in the database while iterating the results of a query. System.NotSupportedException: The keyword ‘integrated security’ is not supported on this platform. at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString) … &lt;/em&gt;&lt;br&gt; It says an error as &lt;em&gt; The keyword ‘integrated security’ is not supported on this platform. &lt;/em&gt; If you remember, where we have used &lt;em&gt; integrated security &lt;/em&gt;, that’s in sql server connectionString. We can’t operate with Sql server on Ubuntu. We have to install My SQL server to store data in your application. Let’s do that.&lt;/p&gt;
+&lt;p&gt;Ping to &lt;em&gt; api/movies, &lt;/em&gt; it returns an empty array, since we don’t have a database. Check the terminal and try to find any erros, It shows a &lt;em&gt; fail &lt;/em&gt; error in red. It says &lt;em&gt; Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory[1]&lt;br&gt; An exception occurred in the database while iterating the results of a query. System.NotSupportedException: The keyword ‘integrated security’ is not supported on this platform. at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString) … &lt;/em&gt;&lt;br&gt; It says an error as &lt;em&gt; The keyword ‘integrated security’ is not supported on this platform. &lt;/em&gt; If you remember, where we have used &lt;em&gt; integrated security &lt;/em&gt;, that’s in &lt;em&gt; sql server connectionString. &lt;/em&gt; We can’t operate with Sql server on Ubuntu. We have to install My SQL server to store data in your application. Let’s do that.&lt;/p&gt;
 &lt;h2 id=&quot;Add-MySQL-connectionString&quot;&gt;&lt;a href=&quot;#Add-MySQL-connectionString&quot; class=&quot;headerlink&quot; title=&quot;Add MySQL connectionString&quot;&gt;&lt;/a&gt;Add MySQL connectionString&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/define-mysql-connectionstring.PNG&quot; alt=&quot;Define mysql connectionString&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Add mysql connectionString in appsetings.json file, &lt;em&gt; movieDB &lt;/em&gt; will get created in mysql server.&lt;/p&gt;
+&lt;p&gt;Add mysql connectionString in &lt;em&gt; appsetings.json &lt;/em&gt; file, &lt;em&gt; movieDB &lt;/em&gt; will get created in mysql server.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;   “DefaultConnection” : “server=localhost;database=movieDB;uid=root;pwd=hansamali;sslmode=none;” &lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Add-MySQL-service-in-your-application&quot;&gt;&lt;a href=&quot;#Add-MySQL-service-in-your-application&quot; class=&quot;headerlink&quot; title=&quot;Add MySQL service in your application&quot;&gt;&lt;/a&gt;Add MySQL service in your application&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/configure-my-sql-service.PNG&quot; alt=&quot;Add mysql service into your application&quot;&gt;&lt;/p&gt;
 &lt;p&gt;If you remember, we added Sql service into the application when we run in winodows. In Ubuntu also same thing we have to do. Add MySQL service into your application with dbContext class. But it seems we are missing something in here.&lt;br&gt; Note that, &lt;em&gt; Microsoft.EntityframeworkCore &lt;/em&gt; has been highlighted. Your application doesn’t use that reference anymore. It’s a reference from Sql server. We have to add a reference from MySQL to proceed with this. Let’s try to add it.&lt;/p&gt;
 &lt;h2 id=&quot;Add-MySQL-EFCore-reference-in-project-json-file&quot;&gt;&lt;a href=&quot;#Add-MySQL-EFCore-reference-in-project-json-file&quot; class=&quot;headerlink&quot; title=&quot;Add MySQL EFCore reference in project.json file&quot;&gt;&lt;/a&gt;Add MySQL EFCore reference in project.json file&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-mysql-EFCore-reference.PNG&quot; alt=&quot;Add mysql EFCore reference&quot;&gt;&lt;/p&gt;

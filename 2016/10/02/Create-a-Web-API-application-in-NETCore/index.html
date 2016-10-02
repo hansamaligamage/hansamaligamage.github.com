@@ -51,7 +51,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <meta property="og:image" content="http://yoursite.com/images/try-to-run-your-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/verify-database-is-created.PNG">
 <meta property="og:image" content="http://yoursite.com/images/post-a-movie-mysql.PNG">
-<meta property="og:updated_time" content="2016-10-02T06:15:04.935Z">
+<meta property="og:updated_time" content="2016-10-02T06:21:48.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create a Web API application in .NETCore">
 <meta name="twitter:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
@@ -95,9 +95,9 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -192,9 +192,10 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <h2 id="Let’s-try-to-run-our-application"><a href="#Let’s-try-to-run-our-application" class="headerlink" title="Let’s try to run our application"></a>Let’s try to run our application</h2><p><img src="/images/dotnet-run-in-ubuntu.PNG" alt="Run your application"></p>
 <p>Let’s try to run our application without any modifications, It seems working fine. Let’s navigate to <em> api/values </em>, It calls READ service of <em> Values </em> service. It returns 200 - OK as response. </p>
 <p><img src="/images/read-service-in-movie-service.PNG" alt="Read service in movie controller"></p>
-<p>Ping to <em> api/movies, </em> it returns an empty array, since we don’t have a database. Check the terminal and try to find any erros, It shows a <em> fail </em> error in red. It says <em> Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory[1]<br> An exception occurred in the database while iterating the results of a query. System.NotSupportedException: The keyword ‘integrated security’ is not supported on this platform. at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString) … </em><br> It says an error as <em> The keyword ‘integrated security’ is not supported on this platform. </em> If you remember, where we have used <em> integrated security </em>, that’s in sql server connectionString. We can’t operate with Sql server on Ubuntu. We have to install My SQL server to store data in your application. Let’s do that.</p>
+<p>Ping to <em> api/movies, </em> it returns an empty array, since we don’t have a database. Check the terminal and try to find any erros, It shows a <em> fail </em> error in red. It says <em> Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory[1]<br> An exception occurred in the database while iterating the results of a query. System.NotSupportedException: The keyword ‘integrated security’ is not supported on this platform. at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString) … </em><br> It says an error as <em> The keyword ‘integrated security’ is not supported on this platform. </em> If you remember, where we have used <em> integrated security </em>, that’s in <em> sql server connectionString. </em> We can’t operate with Sql server on Ubuntu. We have to install My SQL server to store data in your application. Let’s do that.</p>
 <h2 id="Add-MySQL-connectionString"><a href="#Add-MySQL-connectionString" class="headerlink" title="Add MySQL connectionString"></a>Add MySQL connectionString</h2><p><img src="/images/define-mysql-connectionstring.PNG" alt="Define mysql connectionString"></p>
-<p>Add mysql connectionString in appsetings.json file, <em> movieDB </em> will get created in mysql server.</p>
+<p>Add mysql connectionString in <em> appsetings.json </em> file, <em> movieDB </em> will get created in mysql server.</p>
+<p><strong>   “DefaultConnection” : “server=localhost;database=movieDB;uid=root;pwd=hansamali;sslmode=none;” </strong></p>
 <h2 id="Add-MySQL-service-in-your-application"><a href="#Add-MySQL-service-in-your-application" class="headerlink" title="Add MySQL service in your application"></a>Add MySQL service in your application</h2><p><img src="/images/configure-my-sql-service.PNG" alt="Add mysql service into your application"></p>
 <p>If you remember, we added Sql service into the application when we run in winodows. In Ubuntu also same thing we have to do. Add MySQL service into your application with dbContext class. But it seems we are missing something in here.<br> Note that, <em> Microsoft.EntityframeworkCore </em> has been highlighted. Your application doesn’t use that reference anymore. It’s a reference from Sql server. We have to add a reference from MySQL to proceed with this. Let’s try to add it.</p>
 <h2 id="Add-MySQL-EFCore-reference-in-project-json-file"><a href="#Add-MySQL-EFCore-reference-in-project-json-file" class="headerlink" title="Add MySQL EFCore reference in project.json file"></a>Add MySQL EFCore reference in project.json file</h2><p><img src="/images/add-mysql-EFCore-reference.PNG" alt="Add mysql EFCore reference"></p>
@@ -217,7 +218,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits8gqvw00000kgctz8v0fxa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="cits8pe4c00006ggcjfznfd2x" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -228,7 +229,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
   
   
     <a href="/2016/09/16/Create-a-web-application-with-Yeoman/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">Create a web application with Yeoman!</div>
     </a>
   
@@ -261,7 +262,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -298,7 +299,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
