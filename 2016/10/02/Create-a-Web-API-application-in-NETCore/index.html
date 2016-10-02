@@ -51,7 +51,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <meta property="og:image" content="http://yoursite.com/images/try-to-run-your-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/verify-database-is-created.PNG">
 <meta property="og:image" content="http://yoursite.com/images/post-a-movie-mysql.PNG">
-<meta property="og:updated_time" content="2016-10-02T17:18:19.109Z">
+<meta property="og:updated_time" content="2016-10-02T17:31:34.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create a Web API application in .NETCore">
 <meta name="twitter:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
@@ -205,7 +205,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <p>Add <strong> “MySql.Data.EntityFrameworkCore” : “7.0.4-ir-191” </strong> reference in <em> project.json file </em> and restore them.</p>
 <p><img src="/images/add-mysql-reference-in-startup-class.PNG" alt="Add mysql reference in Startup class"></p>
 <p> <strong> services.AddDbContext<moviedbcontext>(options =&gt;<br>                options.UseMySQL(Configuration.GetConnectionString(“DefaultConnection”))); </moviedbcontext></strong></p>
-<p>Add <strong> using MySQL.Data.EntityFrameworkCore.Extensions; </strong> statement in <em> startup </em> class, It seems works fine now.</p>
+<p>Add <strong> using MySQL.Data.EntityFrameworkCore.Extensions; </strong> statement in <em> startup </em> class, It works fine now.</p>
 <p>In windows with Sql server, We run migration scripts and ensure database is created. But with Ubuntu, we can’t do that. Somehow we have to ensure our database is created. Let’s give it a try.</p>
 <h2 id="Ensure-MySQL-database-got-created"><a href="#Ensure-MySQL-database-got-created" class="headerlink" title="Ensure MySQL database got created"></a>Ensure MySQL database got created</h2><p><img src="/images/ensure-mysql-database-got-created.PNG" alt="Ensure mysql database is created"></p>
 <p>Add this lines of code to ensure MySQL database got created.</p>
@@ -217,13 +217,14 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <p>run <strong> mysql -u root -p </strong> command to access mysql shell, then type <strong> show databases; </strong> to view all the available databases. You can see <em> movieDB. </em> is successfuly created.</p>
 <h2 id="Let’s-add-some-data-into-Movie-database-in-MySQL"><a href="#Let’s-add-some-data-into-Movie-database-in-MySQL" class="headerlink" title="Let’s add some data into Movie database in MySQL"></a>Let’s add some data into Movie database in MySQL</h2><p><img src="/images/post-a-movie-mysql.PNG" alt="Add a movie into database"></p>
 <p>Call POST service in <em> movie controller </em> and add a movie into the mysql database. Refresh read movie service, it shows available movies in your mysql database.<br>Connect to the mysql shell and try to view data in <em> Movies </em> table.</p>
+<p>Go to mysql shell by typing <strong> mysql -u root -p </strong>, Then type <strong> show database </strong> to view available databases, to go inside a database and query it type <strong> use movieDB </strong>, You can see available tables in <em> movieDB </em> using <strong> show tables; </strong> Type a select query to view data as <strong> select * from Movies; </strong></p>
 <p>In this blog post, I described how to run a web api application in windows with Sqlserver. And then we tried to configure same service application on Ubuntu with MySql server, with less amount of coding we could achieve that.<br>It was a  really cool feature in .NETCore</p>
 <p>You can find a sample application from here, <a href="https://github.com/hansamaligamage/dotnetcore-webapi" target="_blank" rel="external">https://github.com/hansamaligamage/dotnetcore-webapi</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citsw5ojz0000j0gcnd7ob0s3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citswmqg20000mcgcsiqcr9jx" class="article-share-link">Share</a>
       
       
     </footer>
