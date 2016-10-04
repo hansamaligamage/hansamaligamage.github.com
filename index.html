@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -111,7 +111,7 @@
 <h2 id="Install-Entityframework-Core-EF-Core"><a href="#Install-Entityframework-Core-EF-Core" class="headerlink" title="Install Entityframework Core (EF Core)"></a>Install Entityframework Core (EF Core)</h2><p><img src="/images/add-entityframeworkcore-into-project-json.PNG" alt="Add entityframeworkcore references into project.json file"></p>
 <p>Add <em> entityframeworkcore </em> reference as a dependency into project.json file,  <strong> “Microsoft.EntityFrameworkCore”: “1.0.0” </strong> and resolve reference error in <em> MovieDbContext </em> class by adding <strong> using Microsoft.EntityFrameworkCore </strong> statement. </p>
 <h2 id="Define-the-connectionstring"><a href="#Define-the-connectionstring" class="headerlink" title="Define the connectionstring"></a>Define the connectionstring</h2><p><img src="/images/define-connectionstring-in-appsetings-json.PNG" alt="Define the connectionstring in appsetings.json file"></p>
-<p>Define the connectionstring in appsettings.json file to connect to the Sql server, <strong>  “DefaultConnection”: “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” </strong></p>
+<p>Define the connectionstring in appsettings.json file to connect to the Sql server, <strong>  “ConnectionStrings”: { “DefaultConnection”: “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” } </strong></p>
 <h2 id="Add-entities-in-moviecontext-class"><a href="#Add-entities-in-moviecontext-class" class="headerlink" title="Add entities in moviecontext class"></a>Add entities in moviecontext class</h2><p><img src="/images/run-ef-migrations.PNG" alt="run EFCore migrations"></p>
 <p>Try to run migrations for <em> MovieDbContext </em> class, <strong> dotnet ef migrations add InitialMigration </strong> It gives an error. <em> No executable found matching command “dotnet-ef” </em>, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.</p>
 <h2 id="Add-EFCore-tools"><a href="#Add-EFCore-tools" class="headerlink" title="Add EFCore tools"></a>Add EFCore tools</h2><p><img src="/images/add-entityframeworkcore-tools.PNG" alt="Add EFCore tools and run migrations"></p>
@@ -182,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citswpqd800009ggcdreqtxhu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citv90f7l000070gc7en35we0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -238,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citswpqdf00019ggclefkxmxa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/" data-id="citv90f7x000370gcetfbhqke" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -287,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citswpqed000f9ggcsyq42zas" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Yeoman-go-easy-with-NETCore/" data-id="citv90f8k000f70gcxyvv0pr5" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -341,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citswpqec000e9ggc2m9i96vc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Web-Application-in-NETCore-Ubuntu/" data-id="citv90f8j000e70gcjylnxjqw" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -405,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citswpqdj00039ggcrq1avuyk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/15/Hello-World-in-NETCore-Ubuntu/" data-id="citv90f7y000470gc0cbngjin" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -450,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citswpqdo00059ggc5obmorct" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/11/Install-NETCore-on-Ubuntu/" data-id="citv90f84000770gcxm3zvx72" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -517,7 +517,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citswpqdq00069ggc927rbize" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/08/27/Install-Ubuntu-in-VM/" data-id="citv90f80000670gcnu148y4o" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -564,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citswpqdu00079ggcziu9fcdb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/29/How-to-generate-a-license-key-for-your-system/" data-id="citv90f7u000270gcv1iscgds" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -623,7 +623,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citswpqdk00049ggc3sexnyew" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/21/I-want-to-run-a-time-consuming-long-process-in-a-one-request/" data-id="citv90f7z000570gceh73l1iy" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -708,7 +708,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citswpqdh00029ggcrtg5v7yn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/19/Easy-steps-to-create-a-windows-service/" data-id="citv90f7s000170gcrd3xsbb4" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -747,7 +747,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -784,7 +784,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Hansamali Gamage<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
