@@ -27,7 +27,6 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <meta property="og:image" content="http://yoursite.com/images/add-entityframeworkcore-into-project-json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/define-connectionstring-in-appsetings-json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/moviecontext-class.PNG">
-<meta property="og:image" content="http://yoursite.com/images/connectionstring_in_appsettings_json.PNG">
 <meta property="og:image" content="http://yoursite.com/images/run-ef-migrations.PNG">
 <meta property="og:image" content="http://yoursite.com/images/add-entityframeworkcore-tools.PNG">
 <meta property="og:image" content="http://yoursite.com/images/add-entityframeworkcore-design-reference.PNG">
@@ -51,7 +50,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <meta property="og:image" content="http://yoursite.com/images/try-to-run-your-application.PNG">
 <meta property="og:image" content="http://yoursite.com/images/verify-database-is-created.PNG">
 <meta property="og:image" content="http://yoursite.com/images/post-a-movie-mysql.PNG">
-<meta property="og:updated_time" content="2016-10-04T10:48:26.294Z">
+<meta property="og:updated_time" content="2016-10-04T10:51:43.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create a Web API application in .NETCore">
 <meta name="twitter:description" content="Let’s try to create a .NETCore application from  Visual Studio 2015 
@@ -156,8 +155,6 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
 <p>Define the connectionstring in appsettings.json file to connect to the Sql server, <strong>  “ConnectionStrings”: { “DefaultConnection”: “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” } </strong></p>
 <h2 id="Check-MovieDbContext-class"><a href="#Check-MovieDbContext-class" class="headerlink" title="Check MovieDbContext class"></a>Check MovieDbContext class</h2><p><img src="/images/moviecontext-class.PNG" alt="MovieDbContext class with constructor"></p>
 <p> In <em> MovieDbContext </em> class, define constructor with context options and call base class method.</p>
-<h2 id="Define-connectionstring-in-appsettings-file"><a href="#Define-connectionstring-in-appsettings-file" class="headerlink" title="Define connectionstring in appsettings file"></a>Define connectionstring in appsettings file</h2><p><img src="/images/connectionstring_in_appsettings_json.PNG" alt="Add connectionstring in appsettings.json file"></p>
-<p>Add connectionstring in <em> appsetings.json </em> file like this, <strong> “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” </strong>  </p>
 <h2 id="Add-entities-in-moviecontext-class"><a href="#Add-entities-in-moviecontext-class" class="headerlink" title="Add entities in moviecontext class"></a>Add entities in moviecontext class</h2><p><img src="/images/run-ef-migrations.PNG" alt="run EFCore migrations"></p>
 <p>Try to run migrations for <em> MovieDbContext </em> class, <strong> dotnet ef migrations add InitialMigration </strong> It gives an error. <em> No executable found matching command “dotnet-ef” </em>, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.</p>
 <h2 id="Add-EFCore-tools"><a href="#Add-EFCore-tools" class="headerlink" title="Add EFCore tools"></a>Add EFCore tools</h2><p><img src="/images/add-entityframeworkcore-tools.PNG" alt="Add EFCore tools and run migrations"></p>
@@ -224,7 +221,7 @@ Create a new project from Visual Studio 2015, In  .NETCore  tab, select  ASP.NET
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citvd4ifr0002ncgcvwpu0ep7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/" data-id="citvd8a110000rogcewampfvk" class="article-share-link">Share</a>
       
       
     </footer>
