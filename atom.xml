@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-04T08:53:27.021Z</updated>
+  <updated>2016-10-04T10:48:26.294Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/"/>
     <id>http://yoursite.com/2016/10/02/Create-a-Web-API-application-in-NETCore/</id>
     <published>2016-10-01T20:55:14.000Z</published>
-    <updated>2016-10-04T08:53:27.021Z</updated>
+    <updated>2016-10-04T10:48:26.294Z</updated>
     
     <content type="html">&lt;p&gt;Let’s try to create a .NETCore application from &lt;em&gt; Visual Studio 2015 &lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/create-dotnet-core-web-application.PNG&quot; alt=&quot;Create .NETCore web application from Visual Studio&quot;&gt;&lt;/p&gt;
@@ -48,6 +48,10 @@
 &lt;p&gt;Add &lt;em&gt; entityframeworkcore &lt;/em&gt; reference as a dependency into project.json file,  &lt;strong&gt; “Microsoft.EntityFrameworkCore”: “1.0.0” &lt;/strong&gt; and resolve reference error in &lt;em&gt; MovieDbContext &lt;/em&gt; class by adding &lt;strong&gt; using Microsoft.EntityFrameworkCore &lt;/strong&gt; statement. &lt;/p&gt;
 &lt;h2 id=&quot;Define-the-connectionstring&quot;&gt;&lt;a href=&quot;#Define-the-connectionstring&quot; class=&quot;headerlink&quot; title=&quot;Define the connectionstring&quot;&gt;&lt;/a&gt;Define the connectionstring&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/define-connectionstring-in-appsetings-json.PNG&quot; alt=&quot;Define the connectionstring in appsetings.json file&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Define the connectionstring in appsettings.json file to connect to the Sql server, &lt;strong&gt;  “ConnectionStrings”: { “DefaultConnection”: “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” } &lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Check-MovieDbContext-class&quot;&gt;&lt;a href=&quot;#Check-MovieDbContext-class&quot; class=&quot;headerlink&quot; title=&quot;Check MovieDbContext class&quot;&gt;&lt;/a&gt;Check MovieDbContext class&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/moviecontext-class.PNG&quot; alt=&quot;MovieDbContext class with constructor&quot;&gt;&lt;/p&gt;
+&lt;p&gt; In &lt;em&gt; MovieDbContext &lt;/em&gt; class, define constructor with context options and call base class method.&lt;/p&gt;
+&lt;h2 id=&quot;Define-connectionstring-in-appsettings-file&quot;&gt;&lt;a href=&quot;#Define-connectionstring-in-appsettings-file&quot; class=&quot;headerlink&quot; title=&quot;Define connectionstring in appsettings file&quot;&gt;&lt;/a&gt;Define connectionstring in appsettings file&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/connectionstring_in_appsettings_json.PNG&quot; alt=&quot;Add connectionstring in appsettings.json file&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Add connectionstring in &lt;em&gt; appsetings.json &lt;/em&gt; file like this, &lt;strong&gt; “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” &lt;/strong&gt;  &lt;/p&gt;
 &lt;h2 id=&quot;Add-entities-in-moviecontext-class&quot;&gt;&lt;a href=&quot;#Add-entities-in-moviecontext-class&quot; class=&quot;headerlink&quot; title=&quot;Add entities in moviecontext class&quot;&gt;&lt;/a&gt;Add entities in moviecontext class&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/run-ef-migrations.PNG&quot; alt=&quot;run EFCore migrations&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Try to run migrations for &lt;em&gt; MovieDbContext &lt;/em&gt; class, &lt;strong&gt; dotnet ef migrations add InitialMigration &lt;/strong&gt; It gives an error. &lt;em&gt; No executable found matching command “dotnet-ef” &lt;/em&gt;, We have to install entityframeworkcore tools to run migrations from .NET cli. Let’s try to do that.&lt;/p&gt;
 &lt;h2 id=&quot;Add-EFCore-tools&quot;&gt;&lt;a href=&quot;#Add-EFCore-tools&quot; class=&quot;headerlink&quot; title=&quot;Add EFCore tools&quot;&gt;&lt;/a&gt;Add EFCore tools&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-entityframeworkcore-tools.PNG&quot; alt=&quot;Add EFCore tools and run migrations&quot;&gt;&lt;/p&gt;
@@ -56,10 +60,6 @@
 &lt;h2 id=&quot;Add-EFCore-Design-reference&quot;&gt;&lt;a href=&quot;#Add-EFCore-Design-reference&quot; class=&quot;headerlink&quot; title=&quot;Add EFCore Design reference.&quot;&gt;&lt;/a&gt;Add EFCore Design reference.&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/add-entityframeworkcore-design-reference.PNG&quot; alt=&quot;Add entityframeworkcore design reference&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Add &lt;strong&gt; “Microsoft.EntityFrameworkCore.Design”: “1.0.0-preview2-final” &lt;/strong&gt; reference into project.json file. Note that, &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Design’ &lt;/em&gt; and &lt;em&gt; ‘Microsoft.EntityFrameworkCore.Tools’ &lt;/em&gt; version are same.&lt;/p&gt;
 &lt;p&gt;Then try to run migrations command again and it gives another error, &lt;em&gt; No parameterless constructor was found on ‘MovieDbContext’. Either add a parameterless constructor to ‘MovieDbContext’ or add an implementation of ‘IDbContextFactory&lt;moviedbcontext&gt;‘ in the same assembly as ‘MovieDbContext’. &lt;/moviedbcontext&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Check-MovieDbContext-class&quot;&gt;&lt;a href=&quot;#Check-MovieDbContext-class&quot; class=&quot;headerlink&quot; title=&quot;Check MovieDbContext class&quot;&gt;&lt;/a&gt;Check MovieDbContext class&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/moviecontext-class.PNG&quot; alt=&quot;MovieDbContext class with constructor&quot;&gt;&lt;/p&gt;
-&lt;p&gt; In &lt;em&gt; MovieDbContext &lt;/em&gt; class, define constructor with context options and call base class method.&lt;/p&gt;
-&lt;h2 id=&quot;Define-connectionstring-in-appsettings-file&quot;&gt;&lt;a href=&quot;#Define-connectionstring-in-appsettings-file&quot; class=&quot;headerlink&quot; title=&quot;Define connectionstring in appsettings file&quot;&gt;&lt;/a&gt;Define connectionstring in appsettings file&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/connectionstring_in_appsettings_json.PNG&quot; alt=&quot;Add connectionstring in appsettings.json file&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Add connectionstring in &lt;em&gt; appsetings.json &lt;/em&gt; file like this, &lt;strong&gt; “DefaultConnection” : “Data Source=localhost;Initial Catalog=movieDB;Integrated Security=true” &lt;/strong&gt;  &lt;/p&gt;
 &lt;h2 id=&quot;Startup-class-implementation&quot;&gt;&lt;a href=&quot;#Startup-class-implementation&quot; class=&quot;headerlink&quot; title=&quot;Startup class implementation&quot;&gt;&lt;/a&gt;Startup class implementation&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/startup-class-configure-services-method.PNG&quot; alt=&quot;Configure services in startup class&quot;&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;em&gt; Configure services &lt;/em&gt; method, it’s going to add some services into the application. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;  services.AddDbContext&lt;moviedbcontext&gt;(options =&amp;gt;&lt;br&gt;               options.UseSqlServer(Configuration.GetConnectionString(“DefaultConnection”))); &lt;/moviedbcontext&gt;&lt;/strong&gt;&lt;/p&gt;
