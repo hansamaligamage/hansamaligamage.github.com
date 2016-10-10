@@ -131,10 +131,10 @@
     <link href="http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/"/>
     <id>http://yoursite.com/2016/09/16/Create-a-web-application-with-Yeoman/</id>
     <published>2016-09-15T18:30:59.000Z</published>
-    <updated>2016-10-10T04:36:07.823Z</updated>
+    <updated>2016-10-10T04:37:12.493Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Run-Yo-command&quot;&gt;&lt;a href=&quot;#Run-Yo-command&quot; class=&quot;headerlink&quot; title=&quot;Run Yo command&quot;&gt;&lt;/a&gt;Run Yo command&lt;/h1&gt;&lt;p&gt;First of all create a new directory and cd into it. Then run &lt;em&gt; yo &lt;/em&gt; command.&lt;/p&gt;
-&lt;p&gt;If you haven’t installes Yeoman, follow this post &lt;a href=&quot;http://hansamaligamage.github.io/2016/09/15/Yeoman-go-easy-with-NETCore/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://hansamaligamage.github.io/2016/09/15/Yeoman-go-easy-with-NETCore/&lt;/a&gt; It shows how to install Yeoman in Linux environment.&lt;/p&gt;
+&lt;p&gt;If you haven’t installed Yeoman yet, follow this post &lt;a href=&quot;http://hansamaligamage.github.io/2016/09/15/Yeoman-go-easy-with-NETCore/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://hansamaligamage.github.io/2016/09/15/Yeoman-go-easy-with-NETCore/&lt;/a&gt; It shows how to install Yeoman in Linux environment.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/run-yo-command.PNG&quot; alt=&quot;Yo command&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Run &lt;em&gt; Yo &lt;/em&gt; command, and check what happens.&lt;br&gt;It points to &lt;em&gt; Install a generator &lt;/em&gt; by default. It doesn’t point to &lt;em&gt; Run a generator, &lt;/em&gt; until we install a generator.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/install-aspnet-generator.PNG&quot; alt=&quot;install a generator&quot;&gt;&lt;/p&gt;
